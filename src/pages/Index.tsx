@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Compass } from 'lucide-react';
 import { guideData } from '@/data/guideData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
+import guideHeroLogo from '@/gallery/logo.png';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -13,19 +13,34 @@ const Index = () => {
   const copy = getTranslations(language);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300/40">
       <div className="fixed top-0 right-0 z-40 p-4">
         <LanguageSelector />
       </div>
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-16">
-        <header className="mx-auto max-w-3xl text-center space-y-4">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-lg">
-            <Compass className="h-10 w-10" />
+        <header className="mx-auto max-w-4xl text-center space-y-5">
+          <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-3xl bg-transparent shadow-xl ring-1 ring-border/40">
+            <img
+              src={guideHeroLogo}
+              alt="GuideHero logo"
+              className="h-24 w-24 object-contain"
+            />
           </div>
-          <h1 className="text-4xl font-bold text-foreground">GuideHero</h1>
+          <div className="space-y-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">GuideHero</span>
+            <h1 className="text-4xl font-bold text-foreground">Curated City Intelligence</h1>
+          </div>
           <p className="text-base text-muted-foreground">
             {copy.home.tagline}
           </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => navigate('/spain')}>
+              Explore Spain
+            </Button>
+            <Button variant="outline" onClick={() => navigate('/ireland')}>
+              Discover Ireland
+            </Button>
+          </div>
         </header>
 
         <section className="mt-12 grid gap-6 md:grid-cols-2">
