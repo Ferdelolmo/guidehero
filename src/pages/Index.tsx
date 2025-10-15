@@ -13,7 +13,7 @@ const Index = () => {
   const copy = getTranslations(language);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-100 via-orange-200 to-orange-300/40">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-amber-200/40">
       <div className="fixed top-0 right-0 z-40 p-4">
         <LanguageSelector />
       </div>
@@ -28,7 +28,7 @@ const Index = () => {
           </div>
           <div className="space-y-3">
             <span className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">GuideHero</span>
-            <h1 className="text-4xl font-bold text-foreground">Curated City Intelligence</h1>
+            <h1 className="text-4xl font-bold text-foreground"></h1>
           </div>
           <p className="text-base text-muted-foreground">
             {copy.home.tagline}
