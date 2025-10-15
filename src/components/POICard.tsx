@@ -33,17 +33,17 @@ export const POICard = ({ poi, distance, onClick }: POICardProps) => {
       <div className="relative h-48 overflow-hidden">
         <img
           src={poi.images[0]}
-          alt={poi.name}
+          alt={poi.name[language]}
           className="w-full h-full object-cover transition-transform hover:scale-110"
         />
-        <div className="absolute top-3 right-3">
-          <Badge className={categoryColors[poi.category]}>
+      </div>
+      <CardHeader className="pb-3 space-y-2">
+        <div className="flex items-start justify-between gap-2">
+          <CardTitle className="text-xl text-foreground">{poi.name[language]}</CardTitle>
+          <Badge className={`${categoryColors[poi.category]} shrink-0`}>
             {copy.categories[poi.category]}
           </Badge>
         </div>
-      </div>
-      <CardHeader className="pb-3">
-        <CardTitle className="text-xl text-foreground">{poi.name[language]}</CardTitle>
         <CardDescription className="line-clamp-2 text-muted-foreground">
           {poi.description[language]}
         </CardDescription>

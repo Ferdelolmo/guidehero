@@ -22,8 +22,8 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6567, -4.6995],
     images: [
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1200&q=80',
+      'https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2007/08/07/661642a.jpg',
+      'https://www.turismocastillayleon.com/es/patrimonio-cultura/murallas-puertas/subida-muralla-avila.ficheros/39877-37177_SX_1_bic.jpg/g,39877-37177_SX_1_bic.jpg',
     ],
     audioUrl: 'https://example.com/audio/murallas.mp3',
     category: 'monument',
@@ -48,8 +48,8 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6561, -4.6989],
     images: [
-      'https://images.unsplash.com/photo-1609683136722-7c84a75b5b06?w=1200&q=80',
-      'https://images.unsplash.com/photo-1598374621900-809e9af0e5f9?w=1200&q=80',
+      'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/224000/224942-Avila-Cathedral.jpg',
+      'https://megaconstrucciones.net/images/edificios-religiosos/foto5/avila-catedral.jpg',
     ],
     audioUrl: 'https://example.com/audio/catedral.mp3',
     category: 'church',
@@ -74,7 +74,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6565, -4.6978],
     images: [
-      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80',
+      'https://st3.idealista.com/news/archivos/styles/fullwidth_xl/public/2025-04/images/avila_-_46939602825_plaza_del_mercado_chico_edited.jpg?VersionId=.7L8Ss_svGksZCOAr0JW2cenRPKTUoSz&h=29c25d84&itok=L4aTYqFr',
     ],
     audioUrl: 'https://example.com/audio/plaza-mercado.mp3',
     category: 'square',
@@ -124,7 +124,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6532, -4.7087],
     images: [
-      'https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80',
+      'https://www.kevmrc.com/wp-content/uploads/2016/12/mirador-los-cuatro-postes-avila-spain.jpg',
     ],
     audioUrl: 'https://example.com/audio/cuatro-postes.mp3',
     category: 'viewpoint',
@@ -149,7 +149,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6554, -4.6967],
     images: [
-      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80',
+      'https://queverenelmundo.com/wp-content/uploads/Convento-Santa-Teresa-Avila.jpg',
     ],
     audioUrl: 'https://example.com/audio/convento-teresa.mp3',
     category: 'church',
@@ -174,8 +174,8 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6528, -4.6945],
     images: [
-      'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=1200&q=80',
+      'https://monasteriosantotomas.com/wp-content/uploads/claustro-del-noviciado-monasterio-de-santo-tomas-1.jpg',
+      'https://www.unaventanadesdemadrid.com/objetos/avilaii/sepulcro-principe-juan.jpg',
     ],
     audioUrl: 'https://example.com/audio/monasterio-santo-tomas.mp3',
     category: 'church',
@@ -200,7 +200,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6569, -4.7012],
     images: [
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
+      'https://www.terranostrum.es/images/content/full/Muralla-avila-4.jpg',
     ],
     audioUrl: 'https://example.com/audio/puerta-alcazar.mp3',
     category: 'monument',
@@ -225,7 +225,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6572, -4.6972],
     images: [
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80',
+      'https://www.terranostrum.es/images/content/full/Roman-avila-mercado-grande-2.jpg',
     ],
     audioUrl: 'https://example.com/audio/plaza-mercado-grande.mp3',
     category: 'square',
@@ -250,8 +250,8 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6585, -4.7008],
     images: [
-      'https://images.unsplash.com/photo-1605519279993-9f26739b1e10?w=1200&q=80',
-      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80',
+      'https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/castilla-leon/monasterio_encarnacion_avila_t0500642.jpg_1014274486.jpg',
+      'https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/castilla-leon/la-encarnacion-avila-c-grupo-ciudades-patrimonio-humanidad.jpg',
     ],
     audioUrl: 'https://example.com/audio/monasterio-encarnacion.mp3',
     category: 'church',
@@ -276,7 +276,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6547, -4.6952],
     images: [
-      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Avila_Santo_Tome_el_Viejo.JPG/760px-Mapcarta.jpg',
     ],
     audioUrl: 'https://example.com/audio/plaza-italia.mp3',
     category: 'square',
@@ -301,7 +301,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6559, -4.6958],
     images: [
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
+      'https://upload.wikimedia.org/wikipedia/commons/f/fe/Murallas_de_%C3%81vila%2C_Puerta_del_Peso_de_la_Harina%2C_Casa_de_las_Carnicer%C3%ADas_45.JPG',
     ],
     audioUrl: 'https://example.com/audio/puerta-carnicerias.mp3',
     category: 'monument',
@@ -326,7 +326,7 @@ export const avilaPoints: PointOfInterest[] = [
     }),
     coordinates: [40.6542, -4.6978],
     images: [
-      'https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80',
+      'https://media.traveler.es/photos/61376b6efd8ea62e2db314a2/master/w_1600%2Cc_limit/149072.jpg',
       'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/paseo-rastro.mp3',

@@ -36,7 +36,7 @@ export const guideData: CountryGuide[] = [
       fr: 'Héritage méditerranéen, architecture vibrante et places baignées de soleil.',
     }),
     countrySlug: 'spain',
-    backgroundImageUrl: 'https://placehold.co/800x600?text=Spain+Outline',
+    backgroundImageUrl: 'https://www.insightvacations.com/media/xqom1ben/highlights-spain-guided-tour-62.jpg?center=0.447776661558679%2C0.574375067265142&format=webp&mode=crop&width=1200&height=600&quality=80',
     flagImageUrl: 'https://placehold.co/96x64?text=ES',
     cities: [
       {
@@ -52,10 +52,10 @@ export const guideData: CountryGuide[] = [
           es: 'Murallas medievales, patrimonio de la UNESCO y un recorrido a pie cuidadosamente diseñado.',
           it: 'Mura medievali, patrimonio UNESCO e un percorso a piedi curato nei dettagli.',
           pt: 'Muralhas medievais, patrimônio da UNESCO e um roteiro a pé cuidadosamente curado.',
-          fr: 'Remparts médiévaux, site classé à l'UNESCO et une promenade guidée soigneusement élaborée.',
+          fr: 'Remparts médiévaux, site classé à l\'UNESCO et une promenade guidée soigneusement élaborée.',
         }),
         citySlug: 'avila',
-        imageUrl: 'https://placehold.co/600x400?text=%C3%81vila+Walls',
+        imageUrl: 'https://www.pilgrimagetraveler.com/images/44-avila-at-night.jpg',
         available: true,
       },
       {
@@ -74,7 +74,7 @@ export const guideData: CountryGuide[] = [
           fr: 'Les sites de Gaudí, les quartiers gothiques et les promenades en bord de mer arrivent bientôt.',
         }),
         citySlug: 'barcelona',
-        imageUrl: 'https://placehold.co/600x400?text=Sagrada+Familia',
+        imageUrl: 'https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/cataluna/park-guell-barcelona-s-305364611.jpg',
         available: false,
       },
     ],
@@ -95,7 +95,7 @@ export const guideData: CountryGuide[] = [
       fr: 'Falaises côtières, traditions littéraires et un chaleureux céad míle fáilte.',
     }),
     countrySlug: 'ireland',
-    backgroundImageUrl: 'https://placehold.co/800x600?text=Ireland+Outline',
+    backgroundImageUrl: 'https://images.squarespace-cdn.com/content/v1/5b963169620b851ee93f9abf/1536571024201-QAGH4VNH175JMNMHLG4D/ireland-castle.jpg',
     flagImageUrl: 'https://placehold.co/96x64?text=IE',
     cities: [
       {
