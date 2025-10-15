@@ -13,13 +13,13 @@ const Index = () => {
   const copy = getTranslations(language);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-amber-200/40">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-orange-100 to-amber-200/40">
       <div className="fixed top-0 right-0 z-40 p-4">
         <LanguageSelector />
       </div>
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-16">
         <header className="mx-auto max-w-4xl text-center space-y-5">
-          <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-3xl bg-transparent shadow-xl ring-1 ring-border/40">
+          <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-3xl bg-white shadow-xl ring-1 ring-border/40">
             <img
               src={guideHeroLogo}
               alt="GuideHero logo"
@@ -27,20 +27,13 @@ const Index = () => {
             />
           </div>
           <div className="space-y-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">GuideHero</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70"> </span>
             <h1 className="text-4xl font-bold text-foreground"></h1>
           </div>
           <p className="text-base text-muted-foreground">
             {copy.home.tagline}
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => navigate('/spain')}>
-              Explore Spain
-            </Button>
-            <Button variant="outline" onClick={() => navigate('/ireland')}>
-              Discover Ireland
-            </Button>
-          </div>
+
         </header>
 
         <section className="mt-12 grid gap-6 md:grid-cols-2">
