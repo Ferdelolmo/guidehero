@@ -79,7 +79,7 @@ const POIDetail = () => {
         {/* Location Map */}
         <POILocationMap 
           poiCoordinates={poi.coordinates}
-          poiName={poi.name}
+          poiName={poi.name[language]}
           userLocation={location}
         />
 
