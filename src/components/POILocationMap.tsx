@@ -1,6 +1,8 @@
 import { MapPin, Navigation } from 'lucide-react';
 import { UserLocation } from '@/types/tour';
-import { calculateDistance } from '@/utils/distance';
+import { calculateDistance, formatDistance } from '@/utils/distance';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 interface POILocationMapProps {
   poiCoordinates: [number, number];
@@ -9,6 +11,8 @@ interface POILocationMapProps {
 }
 
 export const POILocationMap = ({ poiCoordinates, poiName, userLocation }: POILocationMapProps) => {
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
   const distance = userLocation 
     ? calculateDistance(
         userLocation.latitude,
@@ -17,13 +21,14 @@ export const POILocationMap = ({ poiCoordinates, poiName, userLocation }: POILoc
         poiCoordinates[1]
       )
     : null;
+  const formattedDistance = distance !== null ? formatDistance(distance) : null;
 
   return (
     <div className="bg-card border border-border rounded-lg p-4 space-y-3" style={{ boxShadow: 'var(--shadow-soft)' }}>
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-foreground">Location</h3>
-        {distance && (
-          <span className="text-sm text-muted-foreground">{distance}</span>
+        <h3 className="text-sm font-semibold text-foreground">{copy.poiDetail.locationHeading}</h3>
+        {formattedDistance && (
+          <span className="text-sm text-muted-foreground">{formattedDistance}</span>
         )}
       </div>
 
@@ -58,7 +63,7 @@ export const POILocationMap = ({ poiCoordinates, poiName, userLocation }: POILoc
               <div className="absolute inset-0 bg-primary/30 rounded-full animate-ping" style={{ width: '24px', height: '24px' }} />
               <Navigation className="w-6 h-6 text-primary fill-primary relative z-10" />
               <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs font-medium text-primary bg-background/90 px-2 py-1 rounded">
-                You
+                {copy.poiDetail.youLabel}
               </div>
             </div>
           </div>
@@ -83,7 +88,7 @@ export const POILocationMap = ({ poiCoordinates, poiName, userLocation }: POILoc
 
       {!userLocation && (
         <p className="text-xs text-muted-foreground text-center">
-          Enable location to see your position
+          {copy.poiDetail.enableLocationPrompt}
         </p>
       )}
     </div>

@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Clock, MapPin } from 'lucide-react';
 import { formatDistance } from '@/utils/distance';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 interface POICardProps {
   poi: PointOfInterest;
@@ -19,6 +21,9 @@ const categoryColors = {
 };
 
 export const POICard = ({ poi, distance, onClick }: POICardProps) => {
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
+
   return (
     <Card 
       className="overflow-hidden cursor-pointer transition-all hover:shadow-lg hover:scale-[1.02] bg-card border-border"
@@ -33,20 +38,20 @@ export const POICard = ({ poi, distance, onClick }: POICardProps) => {
         />
         <div className="absolute top-3 right-3">
           <Badge className={categoryColors[poi.category]}>
-            {poi.category}
+            {copy.categories[poi.category]}
           </Badge>
         </div>
       </div>
       <CardHeader className="pb-3">
-        <CardTitle className="text-xl text-foreground">{poi.name}</CardTitle>
+        <CardTitle className="text-xl text-foreground">{poi.name[language]}</CardTitle>
         <CardDescription className="line-clamp-2 text-muted-foreground">
-          {poi.description}
+          {poi.description[language]}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex items-center gap-4 text-sm text-muted-foreground">
         <div className="flex items-center gap-1">
           <Clock className="w-4 h-4" />
-          <span>{poi.duration} min</span>
+          <span>{poi.duration} {copy.general.minutesShort}</span>
         </div>
         {distance !== undefined && (
           <div className="flex items-center gap-1">

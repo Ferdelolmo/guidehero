@@ -10,11 +10,18 @@ import { LanguageSelector } from '@/components/LanguageSelector';
 import { Button } from '@/components/ui/button';
 import { Loader2, Castle, ArrowLeft } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
+import { guideData } from '@/data/guideData';
 
 const AvilaPage = () => {
   const [activeTab, setActiveTab] = useState<'map' | 'list' | 'info'>('list');
   const { location, error, isLoading } = useGeolocation();
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
+  const spain = guideData.find((country) => country.countrySlug === 'spain');
+  const totalDuration = avilaPoints.reduce((sum, p) => sum + p.duration, 0);
 
   const handlePOIClick = (poi: PointOfInterest) => {
     navigate(`/spain/avila/poi/${poi.id}`);
@@ -48,34 +55,32 @@ const AvilaPage = () => {
             <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto" style={{ boxShadow: 'var(--shadow-medium)' }}>
               <Castle className="w-10 h-10 text-primary-foreground" />
             </div>
-            <h1 className="text-3xl font-bold text-foreground">Ávila Guided Tour</h1>
+            <h1 className="text-3xl font-bold text-foreground">{copy.avila.infoHeroTitle}</h1>
             <p className="text-muted-foreground">
-              Discover the medieval beauty of Ávila, Spain
+              {copy.avila.infoHeroSubtitle}
             </p>
           </div>
 
           <div className="bg-card rounded-lg p-6 border border-border space-y-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
-            <h2 className="text-xl font-semibold text-foreground">About This Tour</h2>
+            <h2 className="text-xl font-semibold text-foreground">{copy.avila.aboutTitle}</h2>
             <p className="text-foreground leading-relaxed">
-              Welcome to your interactive guided tour of Ávila! This UNESCO World Heritage site is home to the best-preserved medieval walls in Spain and countless historical treasures.
+              {copy.avila.aboutDescription}
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• {avilaPoints.length} carefully selected points of interest</li>
-              <li>• GPS-based location tracking and routing</li>
-              <li>• Audio guides for key locations</li>
-              <li>• Beautiful image galleries</li>
-              <li>• Estimated total duration: {avilaPoints.reduce((sum, p) => sum + p.duration, 0)} minutes</li>
+              <li>• {copy.avila.features.poiCount(avilaPoints.length)}</li>
+              <li>• {copy.avila.features.gps}</li>
+              <li>• {copy.avila.features.audio}</li>
+              <li>• {copy.avila.features.gallery}</li>
+              <li>• {copy.avila.features.totalDuration(totalDuration)}</li>
             </ul>
           </div>
 
           <div className="bg-card rounded-lg p-6 border border-border space-y-3" style={{ boxShadow: 'var(--shadow-soft)' }}>
-            <h3 className="font-semibold text-foreground">How to Use</h3>
+            <h3 className="font-semibold text-foreground">{copy.avila.howToUseTitle}</h3>
             <ol className="space-y-2 text-sm text-foreground list-decimal list-inside">
-              <li>Enable GPS location access for the best experience</li>
-              <li>Browse points of interest in the Places tab</li>
-              <li>View locations on the Map tab</li>
-              <li>Tap any location to see details, photos, and audio guides</li>
-              <li>Follow the suggested route or explore at your own pace</li>
+              {copy.avila.howToUseSteps.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
             </ol>
           </div>
         </div>
@@ -85,21 +90,22 @@ const AvilaPage = () => {
     return (
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold text-foreground">Explore Ávila</h1>
+          <h1 className="text-3xl font-bold text-foreground">{copy.avila.listHeading}</h1>
           {isLoading && (
             <div className="flex items-center justify-center gap-2 text-muted-foreground">
               <Loader2 className="w-4 h-4 animate-spin" />
-              <span className="text-sm">Getting your location...</span>
+              <span className="text-sm">{copy.avila.loading}</span>
             </div>
           )}
           {location && (
             <p className="text-sm text-primary font-medium">
-              📍 Showing locations nearest to you
+              📍 {copy.avila.locationActive}
             </p>
           )}
           {error && (
             <p className="text-sm text-destructive">
-              {error}
+              {copy.avila.locationError}
+              <span className="block text-xs text-muted-foreground mt-1">{error}</span>
             </p>
           )}
         </div>
@@ -133,7 +139,7 @@ const AvilaPage = () => {
           className="px-2"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Spain
+          {spain?.name[language] ?? 'Spain'}
         </Button>
       </div>
       <div className="fixed top-0 right-0 z-40 p-4">

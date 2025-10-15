@@ -1,178 +1,337 @@
+import type { LocalizedText } from '@/types/i18n';
 import { PointOfInterest } from '@/types/tour';
+
+const text = (values: LocalizedText): LocalizedText => values;
 
 export const avilaPoints: PointOfInterest[] = [
   {
     id: 'murallas',
-    name: 'Medieval City Walls',
-    description: 'The magnificent 11th-century walls of Ávila are the best-preserved medieval fortifications in Spain. Walk atop these 2.5km walls for breathtaking views of the city and surrounding landscapes.',
+    name: text({
+      en: 'Medieval City Walls',
+      es: 'Murallas medievales',
+      it: 'Mura medievali',
+      pt: 'Muralhas medievais',
+      fr: 'Remparts médiévaux',
+    }),
+    description: text({
+      en: 'The magnificent 11th-century walls of Ávila are the best-preserved medieval fortifications in Spain. Walk atop these 2.5 km walls for breathtaking views of the city and surrounding landscapes.',
+      es: 'La magnífica muralla del siglo XI de Ávila es la fortificación medieval mejor conservada de España. Camina por sus 2,5 km para disfrutar de vistas impresionantes de la ciudad y del paisaje circundante.',
+      it: 'Le magnifiche mura dell\'XI secolo di Ávila sono le fortificazioni medievali meglio conservate di Spagna. Cammina lungo i suoi 2,5 km per ammirare viste mozzafiato sulla città e sui paesaggi circostanti.',
+      pt: 'As magníficas muralhas do século XI de Ávila são as fortificações medievais mais bem preservadas da Espanha. Caminhe pelos seus 2,5 km para apreciar vistas deslumbrantes da cidade e dos arredores.',
+      fr: 'Les magnifiques remparts du XIe siècle d\'Ávila sont les fortifications médiévales les mieux conservées d\'Espagne. Parcourez leurs 2,5 km pour admirer des vues imprenables sur la ville et les paysages environnants.',
+    }),
     coordinates: [40.6567, -4.6995],
     images: [
       'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1200&q=80'
+      'https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/murallas.mp3',
     category: 'monument',
     duration: 45,
-    order: 1
+    order: 1,
   },
   {
     id: 'catedral',
-    name: 'Ávila Cathedral',
-    description: 'Built into the city walls, this unique cathedral fortress dates from the 12th century. It showcases stunning Gothic architecture and houses important religious artworks.',
+    name: text({
+      en: 'Ávila Cathedral',
+      es: 'Catedral de Ávila',
+      it: 'Cattedrale di Ávila',
+      pt: 'Catedral de Ávila',
+      fr: 'Cathédrale d\'Ávila',
+    }),
+    description: text({
+      en: 'Built into the city walls, this unique cathedral fortress dates from the 12th century. It showcases stunning Gothic architecture and houses important religious artworks.',
+      es: 'Integrada en las murallas, esta singular catedral-fortaleza data del siglo XII. Exhibe una impresionante arquitectura gótica y alberga valiosas obras de arte sacro.',
+      it: 'Incorporata nelle mura cittadine, questa singolare cattedrale-fortezza risale al XII secolo. Mostra una straordinaria architettura gotica e custodisce importanti opere sacre.',
+      pt: 'Construída junto às muralhas, esta singular catedral-fortaleza é do século XII. Ostenta uma arquitetura gótica deslumbrante e guarda importantes obras sacras.',
+      fr: 'Intégrée aux remparts, cette cathédrale-forteresse unique date du XIIe siècle. Elle dévoile une architecture gothique remarquable et abrite d\'importantes œuvres religieuses.',
+    }),
     coordinates: [40.6561, -4.6989],
     images: [
       'https://images.unsplash.com/photo-1609683136722-7c84a75b5b06?w=1200&q=80',
-      'https://images.unsplash.com/photo-1598374621900-809e9af0e5f9?w=1200&q=80'
+      'https://images.unsplash.com/photo-1598374621900-809e9af0e5f9?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/catedral.mp3',
     category: 'church',
     duration: 30,
-    order: 2
+    order: 2,
   },
   {
     id: 'plaza-mercado',
-    name: 'Plaza del Mercado Chico',
-    description: 'The heart of Ávila since medieval times, this charming square is surrounded by arcaded buildings and home to the impressive City Hall.',
+    name: text({
+      en: 'Plaza del Mercado Chico',
+      es: 'Plaza del Mercado Chico',
+      it: 'Plaza del Mercado Chico',
+      pt: 'Plaza del Mercado Chico',
+      fr: 'Plaza del Mercado Chico',
+    }),
+    description: text({
+      en: 'The heart of Ávila since medieval times, this charming square is surrounded by arcaded buildings and home to the impressive City Hall.',
+      es: 'El corazón de Ávila desde la Edad Media, esta encantadora plaza está rodeada de soportales y alberga el imponente Ayuntamiento.',
+      it: 'Il cuore di Ávila fin dal Medioevo, questa piazza incantevole è circondata da portici ed è sede dell\'imponente municipio.',
+      pt: 'O coração de Ávila desde a Idade Média, esta charmosa praça é cercada por arcadas e abriga o imponente edifício da câmara municipal.',
+      fr: 'Cœur d\'Ávila depuis le Moyen Âge, cette place charmante est bordée d\'arcades et accueille l\'imposant hôtel de ville.',
+    }),
     coordinates: [40.6565, -4.6978],
     images: [
-      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80'
+      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/plaza-mercado.mp3',
     category: 'square',
     duration: 20,
-    order: 3
+    order: 3,
   },
   {
     id: 'basilica-vicente',
-    name: 'Basilica de San Vicente',
-    description: 'This Romanesque masterpiece honors the martyr San Vicente. Its elaborate western portal and sculpted tomb are remarkable examples of 12th-century art.',
+    name: text({
+      en: 'Basilica de San Vicente',
+      es: 'Basílica de San Vicente',
+      it: 'Basilica di San Vicente',
+      pt: 'Basílica de São Vicente',
+      fr: 'Basilique San Vicente',
+    }),
+    description: text({
+      en: 'This Romanesque masterpiece honors the martyr San Vicente. Its elaborate western portal and sculpted tomb are remarkable examples of 12th-century art.',
+      es: 'Esta joya románica honra al mártir San Vicente. Su elaborado pórtico occidental y el sepulcro esculpido son ejemplos sobresalientes del arte del siglo XII.',
+      it: 'Questo capolavoro romanico celebra il martire San Vicente. Il portale occidentale riccamente decorato e il sepolcro scolpito sono splendidi esempi di arte del XII secolo.',
+      pt: 'Esta obra-prima românica homenageia o mártir São Vicente. O elaborado portal ocidental e o túmulo esculpido são notáveis exemplos de arte do século XII.',
+      fr: 'Ce chef-d\'œuvre roman rend hommage au martyr Saint Vincent. Son portail occidental orné et son tombeau sculpté sont d\'extraordinaires témoins de l\'art du XIIe siècle.',
+    }),
     coordinates: [40.6577, -4.6985],
     images: [
-      'https://images.unsplash.com/photo-1605519279993-9f26739b1e10?w=1200&q=80'
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Basilica_of_San_Vicente%2C_%C3%81vila%2C_Espa%C3%B1a.jpg/1200px-Basilica_of_San_Vicente%2C_%C3%81vila%2C_Espa%C3%B1a.jpg',
     ],
     audioUrl: 'https://example.com/audio/basilica-vicente.mp3',
     category: 'church',
     duration: 25,
-    order: 4
+    order: 4,
   },
   {
     id: 'cuatro-postes',
-    name: 'Los Cuatro Postes',
-    description: 'This iconic monument offers the most photographed view of Ávila. The four columns monument provides spectacular panoramic views of the walled city.',
+    name: text({
+      en: 'Los Cuatro Postes',
+      es: 'Los Cuatro Postes',
+      it: 'Los Cuatro Postes',
+      pt: 'Los Cuatro Postes',
+      fr: 'Los Cuatro Postes',
+    }),
+    description: text({
+      en: 'This iconic monument offers the most photographed view of Ávila. The four columns monument provides spectacular panoramic views of the walled city.',
+      es: 'Este monumento icónico ofrece la vista más fotografiada de Ávila. Sus cuatro columnas brindan panorámicas espectaculares de la ciudad amurallada.',
+      it: 'Questo monumento iconico offre la vista più fotografata di Ávila. Le quattro colonne regalano panorami spettacolari sulla città murata.',
+      pt: 'Este monumento icônico oferece a vista mais fotografada de Ávila. As quatro colunas proporcionam panoramas espetaculares da cidade murada.',
+      fr: 'Ce monument emblématique offre la vue la plus photographiée d\'Ávila. Ses quatre colonnes dévoilent des panoramas spectaculaires sur la ville fortifiée.',
+    }),
     coordinates: [40.6532, -4.7087],
     images: [
-      'https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80'
+      'https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/cuatro-postes.mp3',
     category: 'viewpoint',
     duration: 15,
-    order: 5
+    order: 5,
   },
   {
     id: 'convento-teresa',
-    name: 'Convent of Saint Teresa',
-    description: 'Built on the birthplace of Saint Teresa of Ávila, this baroque convent is a major pilgrimage site. Explore the museum dedicated to her life and legacy.',
+    name: text({
+      en: 'Convent of Saint Teresa',
+      es: 'Convento de Santa Teresa',
+      it: 'Convento di Santa Teresa',
+      pt: 'Convento de Santa Teresa',
+      fr: 'Couvent Sainte Thérèse',
+    }),
+    description: text({
+      en: 'Built on the birthplace of Saint Teresa of Ávila, this baroque convent is a major pilgrimage site. Explore the museum dedicated to her life and legacy.',
+      es: 'Construido sobre la casa natal de Santa Teresa de Jesús, este convento barroco es un importante lugar de peregrinación. Explora el museo dedicado a su vida y legado.',
+      it: 'Costruito sul luogo natale di Santa Teresa d\'Ávila, questo convento barocco è un importante luogo di pellegrinaggio. Esplora il museo dedicato alla sua vita e alla sua eredità.',
+      pt: 'Erguido sobre o local de nascimento de Santa Teresa de Ávila, este convento barroco é um importante destino de peregrinação. Visite o museu dedicado à sua vida e legado.',
+      fr: 'Édifié sur le lieu de naissance de Sainte Thérèse d\'Ávila, ce couvent baroque est un lieu de pèlerinage majeur. Découvrez le musée consacré à sa vie et à son héritage.',
+    }),
     coordinates: [40.6554, -4.6967],
     images: [
-      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80'
+      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/convento-teresa.mp3',
     category: 'church',
     duration: 30,
-    order: 6
+    order: 6,
   },
   {
     id: 'monasterio-santo-tomas',
-    name: 'Monasterio de Santo Tomás',
-    description: 'A magnificent Dominican monastery from the 15th century, housing the tomb of Prince Juan, son of the Catholic Monarchs. Features three beautiful cloisters and impressive Gothic architecture.',
+    name: text({
+      en: 'Monasterio de Santo Tomás',
+      es: 'Monasterio de Santo Tomás',
+      it: 'Monasterio de Santo Tomás',
+      pt: 'Monasterio de Santo Tomás',
+      fr: 'Monasterio de Santo Tomás',
+    }),
+    description: text({
+      en: 'A magnificent Dominican monastery from the 15th century, housing the tomb of Prince Juan, son of the Catholic Monarchs. Features three beautiful cloisters and impressive Gothic architecture.',
+      es: 'Magnífico monasterio dominico del siglo XV que conserva la tumba del príncipe Juan, hijo de los Reyes Católicos. Cuenta con tres bellos claustros y una impresionante arquitectura gótica.',
+      it: 'Magnifico monastero domenicano del XV secolo che custodisce la tomba del principe Juan, figlio dei Re Cattolici. Presenta tre splendidi chiostri e una notevole architettura gotica.',
+      pt: 'Magnífico mosteiro dominicano do século XV que abriga o túmulo do príncipe João, filho dos Reis Católicos. Possui três belos claustros e impressionante arquitetura gótica.',
+      fr: 'Magnifique monastère dominicain du XVe siècle abritant le tombeau du prince Jean, fils des Rois Catholiques. Il compte trois beaux cloîtres et une architecture gothique remarquable.',
+    }),
     coordinates: [40.6528, -4.6945],
     images: [
       'https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=1200&q=80'
+      'https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/monasterio-santo-tomas.mp3',
     category: 'church',
     duration: 35,
-    order: 7
+    order: 7,
   },
   {
     id: 'puerta-alcazar',
-    name: 'Puerta del Alcázar',
-    description: 'One of the nine monumental gates of the medieval walls. This imposing entrance showcases the military architecture of medieval Ávila with its twin towers.',
+    name: text({
+      en: 'Puerta del Alcázar',
+      es: 'Puerta del Alcázar',
+      it: 'Puerta del Alcázar',
+      pt: 'Puerta del Alcázar',
+      fr: 'Puerta del Alcázar',
+    }),
+    description: text({
+      en: 'One of the nine monumental gates of the medieval walls. This imposing entrance showcases the military architecture of medieval Ávila with its twin towers.',
+      es: 'Una de las nueve puertas monumentales de las murallas. Esta imponente entrada muestra la arquitectura militar medieval de Ávila con sus torres gemelas.',
+      it: 'Una delle nove porte monumentali delle mura. Questo imponente ingresso mostra l\'architettura militare medievale di Ávila con le sue torri gemelle.',
+      pt: 'Uma das nove portas monumentais das muralhas. Esta entrada imponente revela a arquitetura militar medieval de Ávila com suas torres gêmeas.',
+      fr: 'L\'une des neuf portes monumentales des remparts. Cette imposante entrée illustre l\'architecture militaire médiévale d\'Ávila avec ses tours jumelles.',
+    }),
     coordinates: [40.6569, -4.7012],
     images: [
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80'
+      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/puerta-alcazar.mp3',
     category: 'monument',
     duration: 15,
-    order: 8
+    order: 8,
   },
   {
     id: 'plaza-mercado-grande',
-    name: 'Plaza del Mercado Grande',
-    description: 'A spacious historic square that was once the site of the largest market in Ávila. Surrounded by noble houses and traditional architecture, it offers a glimpse into daily life through the centuries.',
+    name: text({
+      en: 'Plaza del Mercado Grande',
+      es: 'Plaza del Mercado Grande',
+      it: 'Plaza del Mercado Grande',
+      pt: 'Plaza del Mercado Grande',
+      fr: 'Plaza del Mercado Grande',
+    }),
+    description: text({
+      en: 'A spacious historic square that was once the site of the largest market in Ávila. Surrounded by noble houses and traditional architecture, it offers a glimpse into daily life through the centuries.',
+      es: 'Amplia plaza histórica que albergó el mayor mercado de Ávila. Rodeada de casas nobiliarias y arquitectura tradicional, ofrece una ventana a la vida cotidiana a lo largo de los siglos.',
+      it: 'Ampia piazza storica che ospitava il più grande mercato di Ávila. Circondata da palazzi nobiliari e architettura tradizionale, offre uno sguardo sulla vita quotidiana nei secoli.',
+      pt: 'Ampla praça histórica que abrigou o maior mercado de Ávila. Cercada por casas nobres e arquitetura tradicional, revela o cotidiano de outras épocas.',
+      fr: 'Vaste place historique qui accueillait autrefois le plus grand marché d\'Ávila. Entourée de demeures nobles et d\'architecture traditionnelle, elle offre un aperçu de la vie quotidienne au fil des siècles.',
+    }),
     coordinates: [40.6572, -4.6972],
     images: [
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80'
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/plaza-mercado-grande.mp3',
     category: 'square',
     duration: 15,
-    order: 9
+    order: 9,
   },
   {
     id: 'monasterio-encarnacion',
-    name: 'Monasterio de la Encarnación',
-    description: 'Where Saint Teresa lived for 27 years as a Carmelite nun. This austere convent preserves her cell and numerous relics, offering intimate insight into her spiritual journey.',
+    name: text({
+      en: 'Monasterio de la Encarnación',
+      es: 'Monasterio de la Encarnación',
+      it: 'Monasterio de la Encarnación',
+      pt: 'Monasterio de la Encarnación',
+      fr: 'Monasterio de la Encarnación',
+    }),
+    description: text({
+      en: 'Where Saint Teresa lived for 27 years as a Carmelite nun. This austere convent preserves her cell and numerous relics, offering intimate insight into her spiritual journey.',
+      es: 'Aquí vivió Santa Teresa durante 27 años como monja carmelita. Este sobrio convento conserva su celda y numerosas reliquias, ofreciendo una mirada íntima a su camino espiritual.',
+      it: 'Qui Santa Teresa visse per 27 anni come monaca carmelitana. Questo austero convento conserva la sua cella e numerose reliquie, offrendo uno sguardo intimo sul suo percorso spirituale.',
+      pt: 'Foi aqui que Santa Teresa viveu por 27 anos como freira carmelita. Este convento austero preserva sua cela e diversas relíquias, revelando de perto sua trajetória espiritual.',
+      fr: 'Sainte Thérèse y vécut pendant 27 ans comme carmélite. Ce couvent austère conserve sa cellule et de nombreuses reliques, offrant un aperçu intime de son chemin spirituel.',
+    }),
     coordinates: [40.6585, -4.7008],
     images: [
       'https://images.unsplash.com/photo-1605519279993-9f26739b1e10?w=1200&q=80',
-      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80'
+      'https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/monasterio-encarnacion.mp3',
     category: 'church',
     duration: 30,
-    order: 10
+    order: 10,
   },
   {
     id: 'plaza-italia',
-    name: 'Plaza de Italia',
-    description: 'A charming modern square with beautiful gardens and fountains, offering views of the medieval walls. A peaceful spot to rest and admire the contrast between old and new Ávila.',
+    name: text({
+      en: 'Plaza de Italia',
+      es: 'Plaza de Italia',
+      it: 'Plaza de Italia',
+      pt: 'Plaza de Italia',
+      fr: 'Plaza de Italia',
+    }),
+    description: text({
+      en: 'A charming modern square with beautiful gardens and fountains, offering views of the medieval walls. A peaceful spot to rest and admire the contrast between old and new Ávila.',
+      es: 'Encantadora plaza moderna con jardines y fuentes desde la que se contemplan las murallas medievales. Un rincón tranquilo para descansar y apreciar el contraste entre la Ávila antigua y la moderna.',
+      it: 'Incantevole piazza moderna con giardini e fontane da cui si ammirano le mura medievali. Un luogo tranquillo per riposare e osservare il contrasto tra l\'Ávila antica e quella contemporanea.',
+      pt: 'Charmosa praça moderna com jardins e fontes, de onde se avistam as muralhas medievais. Um recanto tranquilo para descansar e apreciar o contraste entre a Ávila antiga e a atual.',
+      fr: 'Charmante place moderne aux jardins et fontaines offrant une vue sur les remparts médiévaux. Un lieu paisible pour se reposer et apprécier le contraste entre l\'Ávila ancienne et contemporaine.',
+    }),
     coordinates: [40.6547, -4.6952],
     images: [
-      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80'
+      'https://images.unsplash.com/photo-1568632234200-1c4b29c6cb8e?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/plaza-italia.mp3',
     category: 'square',
     duration: 10,
-    order: 11
+    order: 11,
   },
   {
     id: 'puerta-carnicerias',
-    name: 'Puerta de las Carnicerías',
-    description: 'An elegant Renaissance-style gate built in the 16th century. Named after the meat markets that once operated nearby, it features classical columns and refined stonework.',
+    name: text({
+      en: 'Puerta de las Carnicerías',
+      es: 'Puerta de las Carnicerías',
+      it: 'Puerta de las Carnicerías',
+      pt: 'Puerta de las Carnicerías',
+      fr: 'Puerta de las Carnicerías',
+    }),
+    description: text({
+      en: 'An elegant Renaissance-style gate built in the 16th century. Named after the meat markets that once operated nearby, it features classical columns and refined stonework.',
+      es: 'Elegante puerta de estilo renacentista construida en el siglo XVI. Debe su nombre a los mercados de carne cercanos y luce columnas clásicas y una piedra trabajada con delicadeza.',
+      it: 'Elegante porta rinascimentale costruita nel XVI secolo. Deve il nome alle antiche macellerie vicine e presenta colonne classiche e una raffinata lavorazione della pietra.',
+      pt: 'Elegante porta de estilo renascentista erguida no século XVI. Recebeu o nome das antigas carnicerias e exibe colunas clássicas e cantaria refinada.',
+      fr: 'Élégante porte de style Renaissance construite au XVIe siècle. Elle doit son nom aux boucheries voisines et présente des colonnes classiques ainsi qu\'une pierre finement sculptée.',
+    }),
     coordinates: [40.6559, -4.6958],
     images: [
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80'
+      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/puerta-carnicerias.mp3',
     category: 'monument',
     duration: 10,
-    order: 12
+    order: 12,
   },
   {
     id: 'paseo-rastro',
-    name: 'Paseo del Rastro',
-    description: 'A scenic promenade running along the southern walls, offering stunning panoramic views of the Adaja Valley and the Gredos mountains. Perfect for photography and contemplative walks.',
+    name: text({
+      en: 'Paseo del Rastro',
+      es: 'Paseo del Rastro',
+      it: 'Paseo del Rastro',
+      pt: 'Paseo del Rastro',
+      fr: 'Paseo del Rastro',
+    }),
+    description: text({
+      en: 'A scenic promenade running along the southern walls, offering stunning panoramic views of the Adaja Valley and the Gredos mountains. Perfect for photography and contemplative walks.',
+      es: 'Paseo panorámico que bordea la muralla sur y ofrece vistas espectaculares del valle del Adaja y la sierra de Gredos. Ideal para fotografías y paseos contemplativos.',
+      it: 'Passeggiata panoramica lungo il lato sud delle mura con viste spettacolari sulla valle dell\'Adaja e i monti della Gredos. Perfetta per fotografie e passeggiate contemplative.',
+      pt: 'Passeio panorâmico ao longo do lado sul das muralhas, com vistas impressionantes do vale do Adaja e da serra de Gredos. Perfeito para fotos e caminhadas contemplativas.',
+      fr: 'Promenade panoramique longeant le versant sud des remparts, offrant des vues spectaculaires sur la vallée de l\'Adaja et la Sierra de Gredos. Parfait pour la photographie et les balades contemplatives.',
+    }),
     coordinates: [40.6542, -4.6978],
     images: [
       'https://images.unsplash.com/photo-1611348524140-53c9a25263d6?w=1200&q=80',
-      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80'
+      'https://images.unsplash.com/photo-1583224964902-d5a96d9e0a89?w=1200&q=80',
     ],
     audioUrl: 'https://example.com/audio/paseo-rastro.mp3',
     category: 'viewpoint',
     duration: 20,
-    order: 13
-  }
+    order: 13,
+  },
 ];

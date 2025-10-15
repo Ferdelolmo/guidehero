@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { PointOfInterest, UserLocation } from '@/types/tour';
 import { MapPin, Navigation } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 interface MapViewProps {
   points: PointOfInterest[];
@@ -11,6 +13,8 @@ interface MapViewProps {
 
 export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => {
   const mapRef = useRef<HTMLDivElement>(null);
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
 
   return (
     <div className="relative w-full h-full bg-muted">
@@ -43,10 +47,10 @@ export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => 
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    {poi.name}
+                    {poi.name[language]}
                   </span>
                   <Badge variant="secondary" className="text-xs">
-                    Stop {poi.order}
+                    {copy.avila.stopLabel(poi.order)}
                   </Badge>
                 </div>
               </button>
@@ -60,12 +64,12 @@ export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => 
         <div className="flex items-center gap-2 text-sm">
           <MapPin className="w-4 h-4 text-primary" />
           <span className="font-medium text-foreground">
-            {points.length} Points of Interest
+            {copy.avila.mapSummary(points.length)}
           </span>
         </div>
         {userLocation && (
           <p className="text-xs text-muted-foreground mt-1">
-            GPS location active • Tap any location to explore
+            {copy.avila.mapHintActive}
           </p>
         )}
       </div>

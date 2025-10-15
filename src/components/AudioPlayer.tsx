@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Play, Pause, Volume2 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 interface AudioPlayerProps {
   audioUrl: string;
@@ -13,6 +15,8 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -82,12 +86,12 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
           {isPlaying ? (
             <>
               <Pause className="w-4 h-4 mr-2" />
-              Pause
+              {copy.audioPlayer.pause}
             </>
           ) : (
             <>
               <Play className="w-4 h-4 mr-2" />
-              Play Audio Guide
+              {copy.audioPlayer.play}
             </>
           )}
         </Button>

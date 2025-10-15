@@ -4,9 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Compass } from 'lucide-react';
 import { guideData } from '@/data/guideData';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 const Index = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
 
   return (
     <div className="min-h-screen bg-background">
@@ -20,7 +24,7 @@ const Index = () => {
           </div>
           <h1 className="text-4xl font-bold text-foreground">GuideHero</h1>
           <p className="text-base text-muted-foreground">
-            Choose your city and unlock curated walking tours with maps, audio, and insider tips.
+            {copy.home.tagline}
           </p>
         </header>
 
@@ -37,16 +41,16 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70" />
               <div className="relative flex h-full flex-col justify-between p-6">
                 <div className="space-y-2">
-                  <p className="text-sm uppercase tracking-[0.2em] text-white/70">Country Guide</p>
-                  <h2 className="text-3xl font-semibold">{country.name}</h2>
-                  <p className="max-w-sm text-sm text-white/80">{country.description}</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-white/70">{copy.home.countryGuideLabel}</p>
+                  <h2 className="text-3xl font-semibold">{country.name[language]}</h2>
+                  <p className="max-w-sm text-sm text-white/80">{country.description[language]}</p>
                 </div>
                 <Button
                   variant="secondary"
                   className="self-start bg-white/90 text-primary hover:bg-white"
                   onClick={() => navigate(`/${country.countrySlug}`)}
                 >
-                  View Cities
+                  {copy.home.viewCitiesCta}
                 </Button>
               </div>
             </Card>

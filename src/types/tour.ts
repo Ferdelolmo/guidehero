@@ -1,7 +1,9 @@
+import type { LocalizedText } from '@/types/i18n';
+
 export interface PointOfInterest {
   id: string;
-  name: string;
-  description: string;
+  name: LocalizedText;
+  description: LocalizedText;
   coordinates: [number, number]; // [latitude, longitude]
   images: string[];
   audioUrl?: string;

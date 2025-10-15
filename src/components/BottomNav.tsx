@@ -1,5 +1,7 @@
 import { Map, List, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { getTranslations } from '@/data/translations';
 
 interface BottomNavProps {
   activeTab: 'map' | 'list' | 'info';
@@ -7,10 +9,13 @@ interface BottomNavProps {
 }
 
 export const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
+  const { language } = useLanguage();
+  const copy = getTranslations(language);
+
   const tabs = [
-    { id: 'map' as const, icon: Map, label: 'Map' },
-    { id: 'list' as const, icon: List, label: 'Places' },
-    { id: 'info' as const, icon: Info, label: 'Info' },
+    { id: 'map' as const, icon: Map, label: copy.bottomNav.map },
+    { id: 'list' as const, icon: List, label: copy.bottomNav.list },
+    { id: 'info' as const, icon: Info, label: copy.bottomNav.info },
   ];
 
   return (

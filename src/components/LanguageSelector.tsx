@@ -6,7 +6,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useLanguage, Language } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
+import type { Language } from '@/types/i18n';
 
 const languages = [
   { code: 'en' as Language, flag: '🇬🇧' },
