@@ -9,6 +9,12 @@ import { ArrowLeft, MapPin, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const POIDetail = () => {
   const { id } = useParams();
@@ -85,8 +91,53 @@ const POIDetail = () => {
 
         {/* Audio Player */}
         {poi.audioUrl && (
-          <AudioPlayer audioUrl={poi.audioUrl} title={copy.poiDetail.audioGuideTitle(poi.name[language])} />
+          <AudioPlayer audioUrl={poi.audioUrl[language]} title={copy.poiDetail.audioGuideTitle(poi.name[language])} />
         )}
+
+        {poi.extendedSections?.length ? (
+          <Accordion
+            type="single"
+            collapsible
+            className="overflow-hidden rounded-3xl border border-primary/10 bg-gradient-to-br from-primary/5 via-amber-50/40 to-rose-50/60 shadow-inner"
+          >
+            <AccordionItem value="extended-description" className="border-none">
+              <AccordionTrigger className="flex items-center gap-4 px-5 text-left no-underline hover:no-underline">
+                <div className="flex flex-1 flex-col items-start gap-1 text-left">
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">
+                    {copy.poiDetail.deepDiveHeading}
+                  </p>
+                  <h2 className="text-xl font-semibold text-foreground md:text-2xl">
+                    {poi.name[language]}
+                  </h2>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-5 pb-6">
+                <div className="space-y-4 text-base leading-7 text-foreground">
+                  {poi.extendedSections.map((section, index) => (
+                    <div key={index}>
+                      {section.title && <h3 className="text-lg font-semibold">{section.title[language]}</h3>}
+                      {section.paragraphs.map((paragraph, pIndex) => (
+                        <p
+                          key={pIndex}
+                          className="relative overflow-hidden rounded-xl bg-white/70 px-4 py-3 text-base leading-7 text-foreground shadow-sm ring-1 ring-white/40 backdrop-blur"
+                        >
+                          {paragraph[language]}
+                        </p>
+                      ))}
+                      {section.listItems && (
+                        <ul className="list-disc pl-5">
+                          {section.listItems.map((item, lIndex) => (
+                            <li key={lIndex}>{item[language]}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        ) : null}
 
         {/* Navigation buttons */}
         <div className="flex gap-3 pt-4">

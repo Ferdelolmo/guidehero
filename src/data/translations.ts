@@ -54,6 +54,7 @@ interface PoiDetailCopy {
   audioGuideTitle: (name: string) => string;
   durationLabel: (minutes: number) => string;
   locationHeading: string;
+  deepDiveHeading: string;
   youLabel: string;
   enableLocationPrompt: string;
 }
@@ -150,6 +151,7 @@ export const translations: Record<Language, UiCopy> = {
       audioGuideTitle: (name) => `Audio guide: ${name}`,
       durationLabel: (minutes) => `${minutes} ${pluralize(minutes, 'minute', 'minutes')}`,
       locationHeading: 'Location',
+      deepDiveHeading: 'Immersive Story Spotlight',
       youLabel: 'You',
       enableLocationPrompt: 'Enable location to see your position',
     },
@@ -237,6 +239,7 @@ export const translations: Record<Language, UiCopy> = {
       audioGuideTitle: (name) => `Audioguía: ${name}`,
       durationLabel: (minutes) => `${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`,
       locationHeading: 'Ubicación',
+      deepDiveHeading: 'Historia inmersiva',
       youLabel: 'Tú',
       enableLocationPrompt: 'Activa la ubicación para ver tu posición',
     },
@@ -324,6 +327,7 @@ export const translations: Record<Language, UiCopy> = {
       audioGuideTitle: (name) => `Audioguida: ${name}`,
       durationLabel: (minutes) => `${minutes} ${minutes === 1 ? 'minuto' : 'minuti'}`,
       locationHeading: 'Posizione',
+      deepDiveHeading: 'Storia immersiva',
       youLabel: 'Tu',
       enableLocationPrompt: 'Abilita la posizione per vedere dove ti trovi',
     },
@@ -411,6 +415,7 @@ export const translations: Record<Language, UiCopy> = {
       audioGuideTitle: (name) => `Audioguia: ${name}`,
       durationLabel: (minutes) => `${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`,
       locationHeading: 'Localização',
+      deepDiveHeading: 'História imersiva',
       youLabel: 'Você',
       enableLocationPrompt: 'Ative a localização para ver sua posição',
     },
@@ -498,6 +503,7 @@ export const translations: Record<Language, UiCopy> = {
       audioGuideTitle: (name) => `Audioguide : ${name}`,
       durationLabel: (minutes) => `${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`,
       locationHeading: 'Localisation',
+      deepDiveHeading: 'Histoire immersive',
       youLabel: 'Vous',
       enableLocationPrompt: 'Activez la localisation pour voir votre position',
     },
