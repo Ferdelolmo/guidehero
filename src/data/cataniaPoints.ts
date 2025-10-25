@@ -30,8 +30,8 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5024, 15.0876],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/8/86/Catania-Fontana_Elefante.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/e/e7/Catania_piazza_Duomo.jpg',
+      'https://www.antichevolte.it/wp-content/uploads/2019/12/piazza-duomo-catania.jpg',
+      'https://gruppoweekend.altervista.org/wp-content/uploads/2022/12/il-lenzuolo-dacqua-che-sgorga-nel-cuore-di-catania-04.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/piazza-duomo-en.mp3',
@@ -104,8 +104,9 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5025, 15.0872],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/1/15/Catania_Cathedral_-_41869186611.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/2/2b/Catania_cathedral_interior.jpg',
+      'https://www.turismo.it/typo3temp/pics/ca5b2fcbac.jpg',
+      'https://www.cittaecattedrali.it/system/media_images/figures/000/002/613/large/DSC_1311.jpg?1431523397',
+      'https://www.gallipolinelsalento.it/wp-content/uploads/navata-centrale-cattedrale-gallipoli.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/cattedrale-en.mp3',
@@ -178,8 +179,7 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5042, 15.0889],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/b/b0/Via_dei_Crociferi_Catania.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/0/0a/Catania_-_Via_dei_Crociferi_-_panoramio.jpg',
+      'https://melagodoinsicilia.it/wp-content/uploads/2019/09/arco-Benedettine-1024x695.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/via-crociferi-en.mp3',
@@ -259,8 +259,7 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5056, 15.0739],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/5/59/Catania_-_Monastero_dei_Benedettini_-_Chiostro_ponte.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/a/ad/Monastero_dei_benedettini%2C_catania%2C_chiostro_di_levante_%28giardino%29_05.JPG',
+      'https://www.monasterodeibenedettini.it/wp-content/uploads/2024/08/2.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/monastero-en.mp3',
@@ -340,8 +339,7 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5011, 15.0879],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/4/45/Castello_Ursino_Catania.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/3/3e/Castello_Ursino_-_Cortile.jpg',
+      'https://www.progettostoriadellarte.it/wp-content/uploads/2021/04/fig.-7-2.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/castello-ursino-en.mp3',
@@ -421,8 +419,10 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5028, 15.087],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/8/8e/Catania_-_La_Pescheria.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/3/35/Fish_market_Catania_Italy_2009.jpg',
+      'https://siviaggia.it/wp-content/uploads/sites/2/2020/06/catania-mercato-pesce.jpg',
+      'https://www.casadaria.it/wp-content/uploads/2016/03/pescheria.jpg',
+      'https://joven.iberia.com/wp-content/uploads/2019/07/Mercado_Pescheria_Catania.jpg',
+      'https://i.pinimg.com/736x/37/34/c1/3734c1c4fd70959b746cc918469d6683.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/la-pescheria-en.mp3',
@@ -502,8 +502,10 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5034, 15.0881],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/8/84/CT_-_Teatro_romano.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/0/0d/Catania%2C_odeon_%2814%29.JPG',
+      'https://parchiarcheologici.regione.sicilia.it/catania-valle-aci/wp-content/uploads/sites/6/2020/12/ParcoArcheoCatania_0233-1920x1080.jpg?v=1638435828',
+      'https://media.cultura.gov.it/mibac/files/boards/388a5474724a15af0ace7a40ab3301de/Sicilia/Catania/Catania,%20Teatro%20Romano%20e%20Odeon%20di%20Catania.JPEG',
+      'https://parchiarcheologici.regione.sicilia.it/catania-valle-aci/wp-content/uploads/sites/6/2020/12/ParcoArcheoCatania_0215-1920x1280.jpg?v=1638435825',
+      'https://parchiarcheologici.regione.sicilia.it/catania-valle-aci/wp-content/uploads/sites/6/2020/12/ParcoArcheoCatania_0216-1920x1280.jpg?v=1638435826',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/teatro-romano-en.mp3',
@@ -583,8 +585,7 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5061, 15.087],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/7/79/Catania_-_Anfiteatro_romano.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/2/21/Catania%2C_piazza_Stesicoro%2C_anfiteatro_romano_03.JPG',
+      'https://parchiarcheologici.regione.sicilia.it/catania-valle-aci/wp-content/uploads/sites/6/2020/09/ParcoArcheoCatania_0317-1920x1280.jpg?v=1638435877',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/anfiteatro-romano-en.mp3',
@@ -664,8 +665,8 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5063, 15.0885],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/a/a0/Catania_-_Via_Etnea_-_panoramio.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/6/69/Via_etnea%2C_catania%2C_sicilia%2C_italia.JPG',
+      'https://101-zone.com/wp-content/uploads/2023/12/0A1A1936-HDR.jpg-Catania-il-Duomo-e-la-via-Etnea-a-Natale.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr1HwdItONJimAAo2_xrt-Ky0yhsZGuG7nPA&s',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/via-etnea-en.mp3',
@@ -745,8 +746,8 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5078, 15.0888],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/a/aa/Catania_-_Villa_Bellini.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/7/70/Catania%2C_giardino_bellini%2C_03.JPG',
+      'https://www.antichevolte.it/wp-content/uploads/2019/12/parco-villa-bellini-catania.jpg',
+      'https://img1.oastatic.com/img2/94097207/max/variant.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/villa-bellini-en.mp3',
@@ -826,8 +827,10 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5017, 15.09],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/0/0a/Palazzo_Biscari_Catania.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/1/1f/Salone_delle_feste_Palazzo_Biscari.jpg',
+      'https://www.dimorestoricheitaliane.it/wp-content/uploads/2024/04/palazzo-biscari-1.jpg',
+      'https://www.opera-lirica.com/img/cms/Palazzo-Biscari.jpg',
+      'https://siciliasecrets.com/wp-content/uploads/2024/01/Palazzo-Biscari-Sicilia-Secrets266.jpeg',
+      'https://www.museionline.info/templates/yootheme/cache/7b/palbiscarict-7b6b0d0d.jpeg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/palazzo-biscari-en.mp3',
@@ -907,8 +910,8 @@ export const cataniaPoints: PointOfInterest[] = [
     }),
     coordinates: [37.5034, 15.0873],
     images: [
-      'https://upload.wikimedia.org/wikipedia/commons/d/d3/Catania_Piazza_Universit%C3%A0.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/7/7c/Catania%2C_Piazza_Universit%C3%A0%2C_liceo_cutelli.JPG',
+      'https://www.metroitalia.info/img/place/piazza_universita_catania.webp',
+      'https://img.oastatic.com/img2/94221225/max/variant.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/piazza-universita-en.mp3',
