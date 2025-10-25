@@ -122,7 +122,7 @@ export const translations: Record<Language, UiCopy> = {
       stopLabel: (order) => `Stop ${order}`,
       mapSummary: (count) => `${count} ${pluralize(count, 'Point of Interest', 'Points of Interest')}`,
       mapHintActive: 'GPS location active - Tap any location to explore',
-      infoHeroTitle: 'Ávila Guided Tour',
+      infoHeroTitle: 'Autonomous Guided Tours',
       infoHeroSubtitle: 'Discover the medieval beauty of Ávila, Spain',
       aboutTitle: 'About This Tour',
       aboutDescription:
