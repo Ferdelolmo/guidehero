@@ -75,6 +75,7 @@ interface UiCopy {
   home: HomeCopy;
   country: CountryCopy;
   avila: AvilaCopy;
+  catania: AvilaCopy;
   poiDetail: PoiDetailCopy;
   notFound: NotFoundCopy;
   bottomNav: BottomNavCopy;
@@ -126,6 +127,35 @@ export const translations: Record<Language, UiCopy> = {
       aboutTitle: 'About This Tour',
       aboutDescription:
         'Welcome to your interactive guided tour of Ávila! This UNESCO World Heritage site is home to the best-preserved medieval walls in Spain and countless historical treasures.',
+      features: {
+        poiCount: (count) => `${count} carefully selected points of interest`,
+        gps: 'GPS-based location tracking and routing',
+        audio: 'Audio guides for key locations',
+        gallery: 'Beautiful image galleries',
+        totalDuration: (minutes) => `Estimated total duration: ${minutes} minutes`,
+      },
+      howToUseTitle: 'How to Use',
+      howToUseSteps: [
+        'Enable GPS location access for the best experience',
+        'Browse points of interest in the Places tab',
+        'View locations on the Map tab',
+        'Tap any location to see details, photos, and audio guides',
+        'Follow the suggested route or explore at your own pace',
+      ],
+    },
+    catania: {
+      listHeading: 'Explore Catania',
+      loading: 'Getting your location...',
+      locationActive: 'Showing locations nearest to you',
+      locationError: 'We could not access your location. Some features may be limited.',
+      stopLabel: (order) => `Stop ${order}`,
+      mapSummary: (count) => `${count} ${pluralize(count, 'Point of Interest', 'Points of Interest')}`,
+      mapHintActive: 'GPS location active - Tap any location to explore',
+      infoHeroTitle: 'Catania Guided Tour',
+      infoHeroSubtitle: 'Experience the baroque heartbeat of Catania, Sicily',
+      aboutTitle: 'About This Tour',
+      aboutDescription:
+        'Welcome to your interactive guided tour of Catania! Discover Sicilian Baroque palaces, lively markets, and sweeping views of Mount Etna.',
       features: {
         poiCount: (count) => `${count} carefully selected points of interest`,
         gps: 'GPS-based location tracking and routing',
@@ -230,6 +260,35 @@ export const translations: Record<Language, UiCopy> = {
         'Sigue la ruta sugerida o explora a tu ritmo',
       ],
     },
+    catania: {
+      listHeading: 'Explora Catania',
+      loading: 'Obteniendo tu ubicación...',
+      locationActive: 'Mostrando los lugares más cercanos a ti',
+      locationError: 'No pudimos acceder a tu ubicación. Algunas funciones pueden estar limitadas.',
+      stopLabel: (order) => `Parada ${order}`,
+      mapSummary: (count) => `${count} ${count === 1 ? 'punto de interés' : 'puntos de interés'}`,
+      mapHintActive: 'Ubicación GPS activa - Toca un lugar para explorar',
+      infoHeroTitle: 'Recorrido guiado por Catania',
+      infoHeroSubtitle: 'Descubre el latido barroco de Catania, Sicilia',
+      aboutTitle: 'Sobre este tour',
+      aboutDescription:
+        'Bienvenido a tu recorrido interactivo por Catania. Recorre palacios barrocos sicilianos, mercados vibrantes y miradores con vistas al Etna.',
+      features: {
+        poiCount: (count) => `${count} puntos de interés seleccionados`,
+        gps: 'Seguimiento por GPS y rutas sugeridas',
+        audio: 'Audioguías para los puntos clave',
+        gallery: 'Galerías de imágenes espectaculares',
+        totalDuration: (minutes) => `Duración total estimada: ${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`,
+      },
+      howToUseTitle: 'Cómo usarla',
+      howToUseSteps: [
+        'Activa el acceso a tu ubicación para una mejor experiencia',
+        'Explora los puntos de interés en la pestaña Lugares',
+        'Consulta el mapa en la pestaña Mapa',
+        'Toca cualquier lugar para ver detalles, fotos y audioguías',
+        'Sigue la ruta sugerida o explora a tu ritmo',
+      ],
+    },
     poiDetail: {
       notFoundTitle: 'No encontramos este lugar',
       notFoundCta: 'Volver al tour',
@@ -302,6 +361,35 @@ export const translations: Record<Language, UiCopy> = {
       aboutTitle: 'Informazioni sul tour',
       aboutDescription:
         'Benvenuto nel tuo tour guidato interattivo di Ávila! Questo sito patrimonio mondiale UNESCO ospita le mura medievali meglio conservate di Spagna e numerosi tesori storici.',
+      features: {
+        poiCount: (count) => `${count} punti di interesse selezionati`,
+        gps: 'Tracciamento GPS e itinerari suggeriti',
+        audio: 'Audioguide per i punti principali',
+        gallery: 'Splendide gallerie fotografiche',
+        totalDuration: (minutes) => `Durata totale stimata: ${minutes} ${minutes === 1 ? 'minuto' : 'minuti'}`,
+      },
+      howToUseTitle: 'Come funziona',
+      howToUseSteps: [
+        "Abilita il GPS per un'esperienza ottimale",
+        'Sfoglia i punti di interesse nella scheda Luoghi',
+        'Guarda le posizioni nella scheda Mappa',
+        'Tocca qualsiasi luogo per dettagli, foto e audioguide',
+        'Segui il percorso consigliato o esplora al tuo ritmo',
+      ],
+    },
+    catania: {
+      listHeading: 'Esplora Catania',
+      loading: 'Sto recuperando la tua posizione...',
+      locationActive: 'Mostriamo i luoghi più vicini a te',
+      locationError: 'Non è stato possibile accedere alla tua posizione. Alcune funzioni potrebbero essere limitate.',
+      stopLabel: (order) => `Tappa ${order}`,
+      mapSummary: (count) => `${count} ${count === 1 ? 'punto di interesse' : 'punti di interesse'}`,
+      mapHintActive: 'GPS attivo - Tocca un luogo per esplorare',
+      infoHeroTitle: 'Tour guidato di Catania',
+      infoHeroSubtitle: 'Vivi il cuore barocco di Catania, Sicilia',
+      aboutTitle: 'Informazioni sul tour',
+      aboutDescription:
+        'Benvenuto nel tuo tour guidato interattivo di Catania! Scopri palazzi barocchi siciliani, mercati vivaci e viste spettacolari sull\'Etna.',
       features: {
         poiCount: (count) => `${count} punti di interesse selezionati`,
         gps: 'Tracciamento GPS e itinerari suggeriti',
@@ -406,6 +494,35 @@ export const translations: Record<Language, UiCopy> = {
         'Siga o percurso sugerido ou explore no seu ritmo',
       ],
     },
+    catania: {
+      listHeading: 'Explore Catânia',
+      loading: 'Obtendo sua localização...',
+      locationActive: 'Mostrando os locais mais próximos de você',
+      locationError: 'Não foi possível acessar sua localização. Alguns recursos podem ficar limitados.',
+      stopLabel: (order) => `Parada ${order}`,
+      mapSummary: (count) => `${count} ${count === 1 ? 'ponto de interesse' : 'pontos de interesse'}`,
+      mapHintActive: 'Localização GPS ativa - Toque em um ponto para explorar',
+      infoHeroTitle: 'Tour guiado por Catânia',
+      infoHeroSubtitle: 'Sinta o coração barroco de Catânia, Sicília',
+      aboutTitle: 'Sobre este tour',
+      aboutDescription:
+        'Bem-vindo ao seu tour guiado interativo por Catânia! Explore palácios barrocos sicilianos, mercados vibrantes e mirantes com vista para o Etna.',
+      features: {
+        poiCount: (count) => `${count} pontos de interesse selecionados`,
+        gps: 'Rastreamento por GPS e rotas sugeridas',
+        audio: 'Audioguias para os locais principais',
+        gallery: 'Belas galerias de imagens',
+        totalDuration: (minutes) => `Duração total estimada: ${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`,
+      },
+      howToUseTitle: 'Como usar',
+      howToUseSteps: [
+        'Ative o acesso à localização para a melhor experiência',
+        'Veja os pontos de interesse na aba Lugares',
+        'Confira os locais no mapa na aba Mapa',
+        'Toque em qualquer ponto para ver detalhes, fotos e audioguias',
+        'Siga o percurso sugerido ou explore no seu ritmo',
+      ],
+    },
     poiDetail: {
       notFoundTitle: 'Local não encontrado',
       notFoundCta: 'Voltar ao tour',
@@ -478,6 +595,35 @@ export const translations: Record<Language, UiCopy> = {
       aboutTitle: 'À propos de cette visite',
       aboutDescription:
         "Bienvenue dans votre visite guidée interactive d'Ávila ! Ce site classé au patrimoine mondial de l'UNESCO abrite les murailles médiévales les mieux conservées d'Espagne et de nombreux trésors historiques.",
+      features: {
+        poiCount: (count) => `${count} points d'intérêt soigneusement sélectionnés`,
+        gps: 'Suivi GPS et itinéraires suggérés',
+        audio: 'Audioguides pour les lieux clés',
+        gallery: "Superbes galeries d'images",
+        totalDuration: (minutes) => `Durée totale estimée : ${minutes} ${minutes === 1 ? 'minute' : 'minutes'}`,
+      },
+      howToUseTitle: "Mode d'emploi",
+      howToUseSteps: [
+        "Activez la localisation GPS pour une expérience optimale",
+        "Parcourez les points d'intérêt dans l'onglet Lieux",
+        "Visualisez les sites sur l'onglet Carte",
+        "Touchez un lieu pour découvrir détails, photos et audioguides",
+        "Suivez l'itinéraire suggéré ou explorez à votre rythme",
+      ],
+    },
+    catania: {
+      listHeading: 'Explorez Catane',
+      loading: 'Récupération de votre position...',
+      locationActive: 'Affichage des lieux les plus proches',
+      locationError: "Impossible d'accéder à votre position. Certaines fonctions peuvent être limitées.",
+      stopLabel: (order) => `Étape ${order}`,
+      mapSummary: (count) => `${count} ${count === 1 ? "point d'intérêt" : "points d'intérêt"}`,
+      mapHintActive: 'Localisation GPS active - Touchez un lieu pour explorer',
+      infoHeroTitle: 'Visite guidée de Catane',
+      infoHeroSubtitle: 'Vivez le battement baroque de Catane, en Sicile',
+      aboutTitle: 'À propos de cette visite',
+      aboutDescription:
+        "Bienvenue dans votre visite guidée interactive de Catane ! Explorez les palais baroques siciliens, les marchés animés et les panoramas sur l'Etna.",
       features: {
         poiCount: (count) => `${count} points d'intérêt soigneusement sélectionnés`,
         gps: 'Suivi GPS et itinéraires suggérés',

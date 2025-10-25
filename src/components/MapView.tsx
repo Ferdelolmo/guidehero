@@ -9,12 +9,14 @@ interface MapViewProps {
   points: PointOfInterest[];
   userLocation: UserLocation | null;
   onPOISelect: (poi: PointOfInterest) => void;
+  translationKey: 'avila' | 'catania';
 }
 
-export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => {
+export const MapView = ({ points, userLocation, onPOISelect, translationKey }: MapViewProps) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
   const copy = getTranslations(language);
+  const cityCopy = copy[translationKey];
 
   return (
     <div className="relative w-full h-full bg-muted">
@@ -50,7 +52,7 @@ export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => 
                     {poi.name[language]}
                   </span>
                   <Badge variant="secondary" className="text-xs">
-                    {copy.avila.stopLabel(poi.order)}
+                    {cityCopy.stopLabel(poi.order)}
                   </Badge>
                 </div>
               </button>
@@ -64,12 +66,12 @@ export const MapView = ({ points, userLocation, onPOISelect }: MapViewProps) => 
         <div className="flex items-center gap-2 text-sm">
           <MapPin className="w-4 h-4 text-primary" />
           <span className="font-medium text-foreground">
-            {copy.avila.mapSummary(points.length)}
+            {cityCopy.mapSummary(points.length)}
           </span>
         </div>
         {userLocation && (
           <p className="text-xs text-muted-foreground mt-1">
-            {copy.avila.mapHintActive}
+            {cityCopy.mapHintActive}
           </p>
         )}
       </div>

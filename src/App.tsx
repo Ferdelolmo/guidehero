@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import AvilaPage from "./pages/Avila";
+import CataniaPage from "./pages/Catania";
 import CountryPage from "./pages/Country";
 import POIDetail from "./pages/POIDetail";
 import NotFound from "./pages/NotFound";
@@ -22,7 +23,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/spain/avila" element={<AvilaPage />} />
-            <Route path="/spain/avila/poi/:id" element={<POIDetail />} />
+            <Route path="/italy/catania" element={<CataniaPage />} />
+            <Route path="/:countrySlug/:citySlug/poi/:id" element={<POIDetail />} />
             <Route path="/:countrySlug" element={<CountryPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

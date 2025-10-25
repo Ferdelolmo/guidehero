@@ -119,4 +119,44 @@ export const guideData: CountryGuide[] = [
       },
     ],
   },
+  {
+    name: createText({
+      en: 'Italy',
+      es: 'Italia',
+      it: 'Italia',
+      pt: 'Itália',
+      fr: 'Italie',
+    }),
+    description: createText({
+      en: 'Sicilian baroque, volcanic energy, and seaside piazzas bursting with life.',
+      es: 'Barroco siciliano, energía volcánica y piazzas costeras llenas de vida.',
+      it: 'Barocco siciliano, energia vulcanica e piazze sul mare piene di vita.',
+      pt: 'Barroco siciliano, energia vulcânica e praças à beira-mar cheias de vida.',
+      fr: 'Baroque sicilien, énergie volcanique et piazzas côtières pleines de vie.',
+    }),
+    countrySlug: 'italy',
+    backgroundImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Catania_-_Piazza_Duomo_e_Via_Etnea.jpg',
+    flagImageUrl: 'https://placehold.co/96x64?text=IT',
+    cities: [
+      {
+        name: createText({
+          en: 'Catania',
+          es: 'Catania',
+          it: 'Catania',
+          pt: 'Catânia',
+          fr: 'Catane',
+        }),
+        description: createText({
+          en: 'Baroque palaces, bustling markets, and Etna views shape this Sicilian port.',
+          es: 'Palacios barrocos, mercados bulliciosos y vistas del Etna dan forma a este puerto siciliano.',
+          it: 'Palazzi barocchi, mercati vivaci e scorci dell\'Etna plasmano questo porto siciliano.',
+          pt: 'Palácios barrocos, mercados animados e vistas do Etna moldam este porto siciliano.',
+          fr: 'Palais baroques, marchés animés et vues sur l\'Etna façonnent ce port sicilien.',
+        }),
+        citySlug: 'catania',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Catania%2C_Piazza_del_Duomo_e_Cattedrale_di_Sant%27Agata.jpg',
+        available: true,
+      },
+    ],
+  },
 ];

@@ -1,5 +1,4 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { avilaPoints } from '@/data/avilaPoints';
 import { Button } from '@/components/ui/button';
 import { ImageGallery } from '@/components/ImageGallery';
 import { AudioPlayer } from '@/components/AudioPlayer';
@@ -9,6 +8,7 @@ import { ArrowLeft, MapPin, Clock } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
+import { cityDatasets } from '@/data/cityPoints';
 import {
   Accordion,
   AccordionContent,
@@ -17,20 +17,45 @@ import {
 } from '@/components/ui/accordion';
 
 const POIDetail = () => {
-  const { id } = useParams();
+  const { countrySlug, citySlug, id } = useParams();
   const navigate = useNavigate();
-  const poi = avilaPoints.find(p => p.id === id);
   const { location } = useGeolocation();
   const { language } = useLanguage();
   const copy = getTranslations(language);
-  const totalStops = avilaPoints.length;
+  const dataset = citySlug ? cityDatasets[citySlug] : undefined;
+  const points = dataset?.points ?? [];
+  const poi = points.find((p) => p.id === id);
+  const totalStops = points.length;
+  const expectedCountrySlug = dataset?.countrySlug;
+  const cityRoute =
+    expectedCountrySlug && citySlug
+      ? `/${expectedCountrySlug}/${citySlug}`
+      : countrySlug && citySlug
+        ? `/${countrySlug}/${citySlug}`
+        : '/';
+
+  const isMismatch = countrySlug && expectedCountrySlug && countrySlug !== expectedCountrySlug;
+
+  if (!dataset || isMismatch) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-2">{copy.poiDetail.notFoundTitle}</h2>
+          <Button onClick={() => navigate('/')} variant="default">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {copy.poiDetail.notFoundCta}
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   if (!poi) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-foreground mb-2">{copy.poiDetail.notFoundTitle}</h2>
-          <Button onClick={() => navigate('/spain/avila')} variant="default">
+          <Button onClick={() => navigate(cityRoute)} variant="default">
             <ArrowLeft className="w-4 h-4 mr-2" />
             {copy.poiDetail.notFoundCta}
           </Button>
@@ -47,7 +72,7 @@ const POIDetail = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => navigate('/spain/avila')}
+            onClick={() => navigate(cityRoute)}
             className="hover:bg-muted"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -145,9 +170,11 @@ const POIDetail = () => {
             variant="outline"
             className="flex-1"
             onClick={() => {
-              const currentIndex = avilaPoints.findIndex(p => p.id === poi.id);
-              const prevPOI = avilaPoints[currentIndex - 1];
-              if (prevPOI) navigate(`/spain/avila/poi/${prevPOI.id}`);
+              const currentIndex = points.findIndex((p) => p.id === poi.id);
+              const prevPOI = points[currentIndex - 1];
+              if (prevPOI && expectedCountrySlug && citySlug) {
+                navigate(`/${expectedCountrySlug}/${citySlug}/poi/${prevPOI.id}`);
+              }
             }}
             disabled={poi.order === 1}
           >
@@ -157,11 +184,13 @@ const POIDetail = () => {
             variant="default"
             className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => {
-              const currentIndex = avilaPoints.findIndex(p => p.id === poi.id);
-              const nextPOI = avilaPoints[currentIndex + 1];
-              if (nextPOI) navigate(`/spain/avila/poi/${nextPOI.id}`);
+              const currentIndex = points.findIndex((p) => p.id === poi.id);
+              const nextPOI = points[currentIndex + 1];
+              if (nextPOI && expectedCountrySlug && citySlug) {
+                navigate(`/${expectedCountrySlug}/${citySlug}/poi/${nextPOI.id}`);
+              }
             }}
-            disabled={poi.order === avilaPoints.length}
+            disabled={poi.order === points.length}
           >
             {copy.poiDetail.next}
           </Button>
