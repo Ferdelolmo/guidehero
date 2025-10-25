@@ -3,6 +3,14 @@ import { PointOfInterest } from '@/types/tour';
 
 const text = (values: LocalizedText): LocalizedText => values;
 
+const guideTitle = text({
+  en: 'Catania City Guide: 12 Essential Places to Discover',
+  es: 'Guía de Catania: 12 lugares esenciales que descubrir',
+  it: 'Guida di Catania: 12 luoghi essenziali da scoprire',
+  pt: 'Guia de Catânia: 12 lugares essenciais para descobrir',
+  fr: 'Guide de Catane : 12 lieux essentiels à découvrir',
+});
+
 export const cataniaPoints: PointOfInterest[] = [
   {
     id: 'piazza-duomo',
@@ -35,15 +43,57 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 20,
     order: 1,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Piazza del Duomo stands as the beating heart of Catania, a magnificent UNESCO World Heritage Site where centuries of history converge in a spectacular display of Sicilian Baroque architecture. Rebuilt after the devastating 1693 earthquake, the square embodies the resilience and artistic ambition that define the city.",
+            es: "La Piazza del Duomo es el corazón palpitante de Catania, un magnífico sitio Patrimonio de la Humanidad por la UNESCO donde siglos de historia convergen en un espectacular despliegue del barroco siciliano. Reconstruida tras el devastador terremoto de 1693, la plaza encarna la resiliencia y la ambición artística que definen a la ciudad.",
+            it: "Piazza del Duomo è il cuore pulsante di Catania, un magnifico sito UNESCO in cui secoli di storia convergono in uno spettacolare sfoggio di barocco siciliano. Ricostruita dopo il devastante terremoto del 1693, la piazza incarna la resilienza e l'ambizione artistica che definiscono la città.",
+            pt: "A Piazza del Duomo é o coração pulsante de Catânia, um magnífico Património Mundial da UNESCO onde séculos de história convergem num espetáculo de barroco siciliano. Reconstruída após o devastador terramoto de 1693, a praça simboliza a resiliência e a ambição artística que caracterizam a cidade.",
+            fr: "La Piazza del Duomo est le cœur battant de Catane, un magnifique site classé à l'UNESCO où des siècles d'histoire se rejoignent dans un spectaculaire écrin de baroque sicilien. Reconstruite après le séisme dévastateur de 1693, la place incarne la résilience et l'ambition artistique qui définissent la ville.",
+          }),
+          text({
+            en: "At the center rises the iconic Fontana dell'Elefante, featuring a black basalt elephant affectionately known as 'u Liotru'. Created by architect Giovanni Battista Vaccarini between 1735 and 1737, the fountain was inspired by Bernini's Elephant and Obelisk in Rome. The elephant, carved from volcanic lava stone, dates to Roman times, while the Egyptian obelisk on its back stands 3.66 meters tall.",
+            es: "En el centro se alza la icónica Fontana dell'Elefante, con un elefante de basalto negro conocido cariñosamente como 'u Liotru'. Creada por el arquitecto Giovanni Battista Vaccarini entre 1735 y 1737, la fuente se inspiró en el Elefante y Obelisco de Bernini en Roma. El elefante, tallado en piedra volcánica, se remonta a época romana, mientras que el obelisco egipcio sobre su lomo mide 3,66 metros de altura.",
+            it: "Al centro si erge l'iconica Fontana dell'Elefante, con un elefante in basalto nero affettuosamente chiamato 'u Liotru'. Realizzata dall'architetto Giovanni Battista Vaccarini tra il 1735 e il 1737, la fontana s'ispira all'Elefante e Obelisco di Bernini a Roma. L'elefante, scolpito in pietra lavica, risale all'epoca romana, mentre l'obelisco egizio sulla sua schiena è alto 3,66 metri.",
+            pt: "No centro ergue-se a icónica Fontana dell'Elefante, com um elefante de basalto negro conhecido carinhosamente como 'u Liotru'. Criada pelo arquiteto Giovanni Battista Vaccarini entre 1735 e 1737, a fonte foi inspirada no Elefante e Obelisco de Bernini, em Roma. O elefante, esculpido em pedra vulcânica, remonta à época romana, enquanto o obelisco egípcio sobre suas costas tem 3,66 metros de altura.",
+            fr: "Au centre se dresse l'emblématique Fontana dell'Elefante, avec un éléphant en basalte noir surnommé avec affection 'u Liotru'. Conçue par l'architecte Giovanni Battista Vaccarini entre 1735 et 1737, la fontaine s'inspire de l'Éléphant et Obélisque de Bernini à Rome. L'éléphant, taillé dans la pierre de lave, remonte à l'époque romaine, tandis que l'obélisque égyptien posé sur son dos mesure 3,66 mètres.",
+          }),
+          text({
+            en: "Local legends offer different explanations for the elephant's symbolism. One tale recalls the Byzantine magician Eliodoro riding an elephant through the streets, inspiring the name 'Liotru'. Another links the statue to a Catanese victory over Libyan forces and their war elephants. For residents, the elephant protects the city from Mount Etna's eruptions and remains its most beloved emblem.",
+            es: "Las leyendas locales ofrecen distintas explicaciones sobre el simbolismo del elefante. Una relata cómo el mago bizantino Eliodoro recorrió la ciudad montado en un elefante, inspirando el nombre 'Liotru'. Otra vincula la estatua con una victoria catanesa sobre las fuerzas libias y sus elefantes de guerra. Para los habitantes, el elefante protege la ciudad de las erupciones del Etna y sigue siendo su emblema más querido.",
+            it: "Le leggende locali propongono diverse spiegazioni del simbolismo dell'elefante. Una narra del mago bizantino Eliodoro che attraversò la città a dorso di elefante, da cui il nome 'Liotru'. Un'altra lega la statua a una vittoria dei catanesi sulle truppe libiche e sui loro elefanti da guerra. Per i residenti, l'elefante protegge la città dalle eruzioni dell'Etna ed è rimasto il suo simbolo più amato.",
+            pt: "As lendas locais oferecem explicações diferentes para o simbolismo do elefante. Uma recorda o mago bizantino Eliodoro atravessando a cidade montado em um elefante, origem do nome 'Liotru'. Outra associa a estátua a uma vitória catanesa sobre as forças líbias e seus elefantes de guerra. Para os moradores, o elefante protege a cidade das erupções do Etna e continua sendo seu emblema mais querido.",
+            fr: "Les légendes locales donnent différentes explications au symbolisme de l'éléphant. L'une évoque le magicien byzantin Héliodore traversant la ville à dos d'éléphant, d'où le nom 'Liotru'. Une autre relie la statue à une victoire des Catanais sur les forces libyennes et leurs éléphants de guerre. Pour les habitants, l'éléphant protège la ville des éruptions de l'Etna et demeure son emblème le plus aimé.",
+          }),
+          text({
+            en: "Piazza del Duomo is framed by extraordinary buildings that contrast gleaming white marble with dark volcanic stone. Three major thoroughfares converge here: Via Etnea, the ancient north-south axis, Via Giuseppe Garibaldi, and Via Vittorio Emanuele II. Their layout reflects the visionary Baroque planning after the earthquake, with broad streets designed for grand processions and improved seismic resilience.",
+            es: "La Piazza del Duomo está enmarcada por extraordinarios edificios que contrastan el mármol blanco reluciente con la piedra volcánica oscura. Aquí convergen tres grandes arterias: Via Etnea, el antiguo eje norte-sur, Via Giuseppe Garibaldi y Via Vittorio Emanuele II. Su trazado refleja la visión urbanística barroca posterior al terremoto, con calles amplias pensadas para grandes procesiones y mayor resiliencia sísmica.",
+            it: "Piazza del Duomo è circondata da edifici straordinari che mettono in dialogo il candore del marmo con la pietra lavica scura. Qui confluiscono tre grandi arterie: Via Etnea, l'antico asse nord-sud, Via Giuseppe Garibaldi e Via Vittorio Emanuele II. Il tracciato rispecchia la pianificazione barocca lungimirante seguita al terremoto, con strade ampie progettate per le grandi processioni e una migliore risposta sismica.",
+            pt: "A Piazza del Duomo é enquadrada por edifícios extraordinários que combinam o brilho do mármore branco com a pedra vulcânica escura. Três grandes artérias convergem aqui: Via Etnea, o antigo eixo norte-sul, Via Giuseppe Garibaldi e Via Vittorio Emanuele II. O traçado reflete o planejamento barroco visionário pós-terremoto, com ruas largas pensadas para grandes procissões e maior resiliência sísmica.",
+            fr: "La Piazza del Duomo est bordée d'édifices extraordinaires qui opposent le marbre blanc étincelant à la pierre volcanique sombre. Trois grandes artères y convergent : la Via Etnea, l'ancien axe nord-sud, la Via Giuseppe Garibaldi et la Via Vittorio Emanuele II. Leur tracé témoigne de la planification baroque visionnaire adoptée après le séisme, avec de larges rues conçues pour les grandes processions et une meilleure résilience sismique.",
+          }),
+          text({
+            en: "The square also features the Amenano Fountain, where the underground river briefly resurfaces before disappearing beneath the city. This fountain marks the entrance to La Pescheria, Catania's famous fish market. For over three centuries Piazza del Duomo has hosted coronations, civic celebrations, and the grand processions of the Festa di Sant'Agata, remaining the city's primary gathering place.",
+            es: "La plaza también alberga la Fuente del Amenano, donde el río subterráneo emerge brevemente antes de desaparecer bajo la ciudad. Esta fuente marca la entrada a La Pescheria, el famoso mercado de pescado de Catania. Desde hace más de tres siglos, la Piazza del Duomo acoge coronaciones, celebraciones cívicas y las grandiosas procesiones de la Fiesta de Santa Águeda, manteniéndose como el principal punto de encuentro de la ciudad.",
+            it: "La piazza ospita anche la Fontana dell'Amenano, dove il fiume sotterraneo riaffiora per un istante prima di scomparire sotto la città. La fontana segna l'ingresso della Pescheria, il celebre mercato del pesce di Catania. Da oltre tre secoli Piazza del Duomo accoglie incoronazioni, celebrazioni civiche e le grandi processioni della Festa di Sant'Agata, rimanendo il principale luogo di ritrovo cittadino.",
+            pt: "A praça abriga ainda a Fonte do Amenano, onde o rio subterrâneo reaparece brevemente antes de desaparecer sob a cidade. A fonte assinala a entrada da Pescheria, o famoso mercado de peixe de Catânia. Há mais de três séculos, a Piazza del Duomo recebe coroações, celebrações cívicas e as grandes procissões da Festa de Sant'Agata, permanecendo o principal ponto de encontro da cidade.",
+            fr: "La place accueille aussi la Fontaine Amenano, où la rivière souterraine réapparaît brièvement avant de disparaître sous la ville. Cette fontaine marque l'entrée de La Pescheria, le célèbre marché aux poissons de Catane. Depuis plus de trois siècles, la Piazza del Duomo voit défiler couronnements, célébrations civiques et grandioses processions de la fête de Sant'Agata, demeurant le principal lieu de rassemblement de la ville.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'cattedrale-santagata',
     name: text({
-      en: 'Catania Cathedral',
-      es: 'Catedral de Catania',
+      en: 'Catania Cathedral (Cattedrale di Sant\'Agata)',
+      es: 'Catedral de Catania (Cattedrale di Sant\'Agata)',
       it: 'Cattedrale di Sant\'Agata',
-      pt: 'Catedral de Catânia',
-      fr: 'Cathédrale de Catane',
+      pt: 'Catedral de Catânia (Cattedrale di Sant\'Agata)',
+      fr: 'Cathédrale de Catane (Cattedrale di Sant\'Agata)',
     }),
     description: text({
       en: 'Honoring Saint Agatha, this cathedral blends Norman foundations with rich Baroque interiors shaped by the eruptions of Mount Etna.',
@@ -55,6 +105,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5025, 15.0872],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/1/15/Catania_Cathedral_-_41869186611.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/2b/Catania_cathedral_interior.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/cattedrale-en.mp3',
@@ -66,6 +117,48 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'church',
     duration: 25,
     order: 2,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "The Metropolitan Cathedral of Saint Agatha dominates the eastern edge of Piazza del Duomo, the foremost religious monument in Catania and a masterpiece that condenses nine centuries of devotion and artistry. Its profile tells the story of a city repeatedly shattered by disaster yet determined to rebuild with greater splendor each time.",
+            es: "La Catedral Metropolitana de Santa Águeda domina el lado oriental de la Piazza del Duomo, el principal monumento religioso de Catania y una obra maestra que concentra nueve siglos de devoción y arte. Su silueta narra la historia de una ciudad golpeada una y otra vez por desastres, pero siempre decidida a reconstruirse con mayor esplendor.",
+            it: "La Cattedrale Metropolitana di Sant'Agata domina il lato orientale di Piazza del Duomo, principale monumento religioso di Catania e capolavoro che racchiude nove secoli di devozione e arte. Il suo profilo racconta la storia di una città più volte ferita da calamità, ma sempre pronta a rinascere con rinnovato splendore.",
+            pt: "A Catedral Metropolitana de Santa Ágata domina a margem oriental da Piazza del Duomo, o principal monumento religioso de Catânia e uma obra-prima que condensa nove séculos de devoção e arte. Sua silhueta conta a história de uma cidade repetidamente devastada por desastres, mas determinada a reconstruir-se com ainda mais esplendor.",
+            fr: "La cathédrale métropolitaine Sainte-Agathe domine le côté oriental de la Piazza del Duomo, principal monument religieux de Catane et chef-d'œuvre qui condense neuf siècles de foi et d'art. Son profil raconte l'histoire d'une ville maintes fois frappée par les catastrophes, mais toujours décidée à renaître avec encore plus d'éclat.",
+          }),
+          text({
+            en: "Commissioned between 1078 and 1093 by the Norman king Roger I, the cathedral was erected atop the ruins of the Roman Achillean Baths at the site of Saint Agatha's martyrdom. Conceived as both church and fortress, it reflected the turbulent climate of the Norman conquest and the need to defend the fledgling Christian stronghold.",
+            es: "Erigida entre 1078 y 1093 por orden del rey normando Rogelio I, la catedral se levantó sobre las ruinas de los baños romanos de Aquiles, en el lugar del martirio de Santa Águeda. Concebida a la vez como iglesia y fortaleza, respondía al clima turbulento de la conquista normanda y a la necesidad de proteger el naciente bastión cristiano.",
+            it: "Edificata tra il 1078 e il 1093 per volere del re normanno Ruggero I, la cattedrale sorse sulle rovine delle terme romane Achillee, nel luogo del martirio di Sant'Agata. Pensata insieme come chiesa e fortezza, rifletteva il clima turbolento della conquista normanna e la necessità di difendere il nascente baluardo cristiano.",
+            pt: "Erguida entre 1078 e 1093 por ordem do rei normando Rogério I, a catedral foi construída sobre as ruínas das termas romanas de Aquiles, no local do martírio de Santa Ágata. Concebida simultaneamente como igreja e fortaleza, refletia o clima turbulento da conquista normanda e a necessidade de defender o nascente bastião cristão.",
+            fr: "Commandée entre 1078 et 1093 par le roi normand Roger Ier, la cathédrale fut édifiée sur les ruines des thermes romains d'Achille, lieu du martyre de Sainte Agathe. Pensée à la fois comme église et forteresse, elle répondait au climat tumultueux de la conquête normande et au besoin de protéger le jeune bastion chrétien.",
+          }),
+          text({
+            en: "Like the city around it, the cathedral endured repeated devastation. The earthquake of 1169 almost razed the structure, sparing only the apse, and subsequent fires caused further damage. When the catastrophic earthquake of 1693 struck, the building lay in ruins, prompting the Baroque reconstruction led by the architect Giovanni Battista Vaccarini in the eighteenth century.",
+            es: "Al igual que la ciudad que la rodea, la catedral sufrió devastaciones reiteradas. El terremoto de 1169 la dejó casi arrasada, salvando únicamente el ábside, y sucesivos incendios causaron nuevos daños. Tras el catastrófico terremoto de 1693, el templo quedó en ruinas, lo que impulsó la reconstrucción barroca dirigida en el siglo XVIII por el arquitecto Giovanni Battista Vaccarini.",
+            it: "Come la città circostante, la cattedrale subì ripetute devastazioni. Il terremoto del 1169 la ridusse quasi in macerie, salvando solo l'abside, e gli incendi successivi causarono ulteriori danni. Dopo il catastrofico sisma del 1693, l'edificio giaceva in rovina, aprendo la strada alla ricostruzione barocca guidata nel Settecento dall'architetto Giovanni Battista Vaccarini.",
+            pt: "Assim como a cidade ao redor, a catedral enfrentou sucessivas devastacões. O terramoto de 1169 quase a arrasou, poupando apenas a abside, e incêndios posteriores agravaram os estragos. Quando o terremoto catastrófico de 1693 atingiu Catânia, o edifício ficou em ruínas, dando lugar à reconstrução barroca conduzida no século XVIII pelo arquiteto Giovanni Battista Vaccarini.",
+            fr: "À l'image de la ville, la cathédrale connut des destructions répétées. Le séisme de 1169 l'anéantit presque, ne laissant intacte que l'abside, et des incendies ultérieurs aggravèrent les dégâts. Après le tremblement de terre catastrophique de 1693, l'édifice était en ruine, ouvrant la voie à la reconstruction baroque orchestrée au XVIIIe siècle par l'architecte Giovanni Battista Vaccarini.",
+          }),
+          text({
+            en: "The present façade is a triumph of Sicilian Baroque: fourteen Roman granite columns punctuate the gleaming marble elevations, two surviving Norman towers flank the structure, and the play of white stone against dark lava recalls the city's contrasting palette. Medieval elements endure in the transept, the towers, and the apses built with great lava blocks salvaged from imperial constructions.",
+            es: "La fachada actual es un triunfo del barroco siciliano: catorce columnas romanas de granito puntean los alzados de mármol brillante, dos torres normandas supervivientes flanquean el conjunto y el juego entre la piedra blanca y la lava oscura evoca la paleta contrastada de la ciudad. Elementos medievales sobreviven en el crucero, las torres y las ábsides construidas con grandes bloques de lava reaprovechados de edificios imperiales.",
+            it: "L'attuale facciata è un trionfo del barocco siciliano: quattordici colonne romane in granito scandiscono le candide superfici marmoree, due torri normanne superstiti affiancano l'edificio e il dialogo tra pietra bianca e lava scura richiama la tavolozza contrastata della città. Elementi medievali sopravvivono nel transetto, nelle torri e nelle absidi realizzate con grandi blocchi di lava recuperati da edifici imperiali.",
+            pt: "A fachada atual é um triunfo do barroco siciliano: catorze colunas romanas de granito marcam as superfícies marmóreas reluzentes, duas torres normandas remanescentes ladeiam a construção e o contraste entre pedra branca e lava escura remete à paleta característica da cidade. Elementos medievais permanecem no transepto, nas torres e nas ábsides erguidas com grandes blocos de lava recuperados de edifícios imperiais.",
+            fr: "La façade actuelle est un triomphe du baroque sicilien : quatorze colonnes romaines en granit rythment les élévations de marbre éclatant, deux tours normandes rescapées encadrent l'édifice et le contraste entre pierre blanche et lave sombre rappelle la palette caractéristique de la ville. Des éléments médiévaux subsistent dans le transept, les tours et les absides bâties avec de grands blocs de lave récupérés sur des édifices impériaux.",
+          }),
+          text({
+            en: "Inside, soaring vaults and elaborate frescoes frame chapels filled with precious silver reliquaries and the tomb of Vincenzo Bellini, Catania's celebrated native composer. The relics of Saint Agatha rest in the chapel dedicated to her and emerge each February during the Festa di Sant'Agata. The cathedral also houses the tombs of Aragonese monarchs and, through the Diocesan Museum, offers access to the underlying Roman baths, revealing the layers upon which Catania stands.",
+            es: "En el interior, las altas bóvedas y los elaborados frescos enmarcan capillas repletas de valiosos relicarios de plata y el sepulcro de Vincenzo Bellini, el célebre compositor catanés. Las reliquias de Santa Águeda reposan en la capilla que lleva su nombre y salen en procesión cada febrero durante la Fiesta de Sant'Agata. La catedral alberga también sepulcros de monarcas aragoneses y, a través del Museo Diocesano, permite acceder a las termas romanas subyacentes, revelando las capas sobre las que se asienta Catania.",
+            it: "All'interno, volte ardite e affreschi elaborati incorniciano cappelle colme di preziosi reliquiari in argento e del sepolcro di Vincenzo Bellini, il celebre compositore catanese. Le reliquie di Sant'Agata riposano nella cappella a lei dedicata ed escono in processione ogni febbraio durante la Festa di Sant'Agata. La cattedrale custodisce anche le tombe dei sovrani aragonesi e, attraverso il Museo Diocesano, consente di accedere alle sottostanti terme romane, rivelando gli strati su cui poggia Catania.",
+            pt: "No interior, abóbadas elevadas e frescos elaborados emolduram capelas que guardam valiosos relicários de prata e o túmulo de Vincenzo Bellini, o célebre compositor catanês. As relíquias de Santa Ágata repousam na capela a ela dedicada e saem em procissão todo mês de fevereiro durante a Festa di Sant'Agata. A catedral abriga ainda os túmulos de monarcas aragoneses e, por meio do Museu Diocesano, oferece acesso às termas romanas subjacentes, revelando as camadas sobre as quais Catânia foi construída.",
+            fr: "À l'intérieur, de hautes voûtes et des fresques raffinées encadrent des chapelles remplies de précieux reliquaires en argent et du tombeau de Vincenzo Bellini, illustre compositeur natif de Catane. Les reliques de Sainte Agathe reposent dans la chapelle qui lui est dédiée et sortent en procession chaque février lors de la Festa di Sant'Agata. La cathédrale abrite également les tombeaux de souverains aragonais et, via le musée diocésain, donne accès aux thermes romains sous-jacents, révélant les strates sur lesquelles Catane est édifiée.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'via-crociferi',
@@ -86,6 +179,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5042, 15.0889],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/b/b0/Via_dei_Crociferi_Catania.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0a/Catania_-_Via_dei_Crociferi_-_panoramio.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/via-crociferi-en.mp3',
@@ -97,15 +191,64 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 20,
     order: 3,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Via Crociferi represents the pinnacle of Catania's Baroque architecture, an approximately 400-metre-long street recognised by UNESCO as part of the Late Baroque Towns of the Val di Noto. Every façade, balcony, and cornice contributes to an open-air museum that transports visitors straight into eighteenth-century Sicily.",
+            es: "La Via Crociferi representa la cima de la arquitectura barroca de Catania, una calle de unos 400 metros reconocida por la UNESCO como parte de las Ciudades Tardobarrocas del Val di Noto. Cada fachada, balcón y cornisa contribuye a un museo al aire libre que transporta al visitante directamente a la Sicilia del siglo XVIII.",
+            it: "Via dei Crociferi rappresenta l'apice dell'architettura barocca catanese, una strada di circa 400 metri riconosciuta dall'UNESCO come parte delle Città tardo barocche del Val di Noto. Ogni facciata, balcone e cornicione contribuisce a un museo a cielo aperto che riporta i visitatori nella Sicilia del Settecento.",
+            pt: "A Via Crociferi representa o auge da arquitetura barroca de Catânia, uma rua de cerca de 400 metros reconhecida pela UNESCO como parte das Cidades Tardo-Barrocas do Val di Noto. Cada fachada, varanda e cornija compõe um museu a céu aberto que transporta os visitantes diretamente para a Sicília do século XVIII.",
+            fr: "La Via Crociferi représente l'apogée du baroque catanais, une rue d'environ 400 mètres reconnue par l'UNESCO au titre des villes tardo-baroques du Val di Noto. Chaque façade, balcon et corniche participe à un musée à ciel ouvert qui plonge les visiteurs dans la Sicile du XVIIIe siècle.",
+          }),
+          text({
+            en: "Its magnificence was born from catastrophe. After the earthquake of 1693 levelled much of the city, the street was conceived as a monumental axis on which religious orders rebuilt their headquarters. The unified Baroque vision, influenced by Giovanni Battista Vaccarini, ensured that each building complements the next with theatrical harmony.",
+            es: "Su magnificencia nació de la catástrofe. Tras el terremoto de 1693 que arrasó gran parte de la ciudad, la calle se concibió como un eje monumental para que las órdenes religiosas levantaran sus sedes. La visión barroca unificada, influida por Giovanni Battista Vaccarini, hizo que cada edificio dialogara con el siguiente en una armonía teatral.",
+            it: "La sua magnificenza nacque dalla catastrofe. Dopo il terremoto del 1693 che rase al suolo gran parte della città, la via fu pensata come asse monumentale su cui le comunità religiose potessero ricostruire le loro sedi. La visione barocca unitaria, influenzata da Giovanni Battista Vaccarini, fa sì che ogni edificio completi il successivo con armonia teatrale.",
+            pt: "A sua magnificência nasceu da catástrofe. Depois do terramoto de 1693, que destruiu grande parte da cidade, a rua foi concebida como um eixo monumental para que as ordens religiosas reconstruíssem as suas sedes. A visão barroca unificada, influenciada por Giovanni Battista Vaccarini, garante que cada edifício complemente o seguinte com uma harmonia teatral.",
+            fr: "Sa magnificence est née de la catastrophe. Après le séisme de 1693 qui rasa une grande partie de la ville, la rue fut conçue comme un axe monumental où les ordres religieux reconstruisirent leurs sièges. La vision baroque unifiée, influencée par Giovanni Battista Vaccarini, fait dialoguer chaque bâtiment avec le suivant dans une harmonie théâtrale.",
+          }),
+          text({
+            en: "Entering from Piazza San Francesco d'Assisi, visitors pass beneath the Arco di San Benedetto, a graceful archway built in 1704 by Benedictine nuns. Legend claims it was raised overnight to sidestep civic regulations that considered it a seismic hazard, creating a dramatic gateway to the treasures beyond.",
+            es: "Al entrar desde la Piazza San Francesco d'Assisi, los visitantes pasan bajo el Arco di San Benedetto, una elegante arcada erigida en 1704 por monjas benedictinas. La leyenda asegura que se levantó en una sola noche para sortear las ordenanzas cívicas que lo consideraban un riesgo sísmico, creando un portal teatral hacia los tesoros posteriores.",
+            it: "Entrando da Piazza San Francesco d'Assisi si passa sotto l'Arco di San Benedetto, un'elegante arcata costruita nel 1704 dalle monache benedettine. La leggenda vuole che sia stato eretto in una sola notte per aggirare le norme cittadine che lo giudicavano pericoloso in caso di sisma, trasformandolo in un portale scenografico ai tesori successivi.",
+            pt: "Ao entrar pela Piazza San Francesco d'Assisi, os visitantes passam sob o Arco di San Benedetto, uma arcada graciosa erguida em 1704 pelas freiras beneditinas. A lenda diz que foi construída numa única noite para contornar regulamentos civis que a consideravam um risco sísmico, criando um portal teatral para os tesouros adiante.",
+            fr: "En entrant par la Piazza San Francesco d'Assisi, on passe sous l'Arco di San Benedetto, une élégante arcade érigée en 1704 par les religieuses bénédictines. La légende raconte qu'elle fut construite en une nuit pour contourner les règlements municipaux qui la jugeaient dangereuse en cas de séisme, offrant ainsi un portail théâtral vers les trésors de la rue.",
+          }),
+          text({
+            en: "Beyond the arch unfolds a procession of remarkable churches: the Chiesa di San Benedetto with its Angel's Staircase, the Jesuit Collegio with cloisters paved in black-and-white stones, and the Chiesa di San Francesco Borgia now used for cultural exhibitions. Each façade reveals meticulous craftsmanship and spiritual grandeur.",
+            es: "Más allá del arco se despliega una procesión de iglesias notables: la Chiesa di San Benedetto con su Escalera del Ángel, el Colegio de los Jesuitas con claustros pavimentados en piedras blancas y negras, y la Chiesa di San Francesco Borgia hoy destinada a exposiciones culturales. Cada fachada revela un trabajo minucioso y una espiritualidad grandiosa.",
+            it: "Oltre l'arco si sussegue una processione di chiese straordinarie: la Chiesa di San Benedetto con la Scalinata dell'Angelo, il Collegio dei Gesuiti con i chiostri pavimentati a bianchi e neri, e la Chiesa di San Francesco Borgia oggi sede di esposizioni culturali. Ogni facciata racconta di un'artigianalità minuziosa e di una spiritualità solenni.",
+            pt: "Além do arco desenrola-se uma procissão de igrejas notáveis: a Chiesa di San Benedetto com a sua Escadaria do Anjo, o Colégio dos Jesuítas com claustros revestidos de pedras pretas e brancas e a Chiesa di San Francesco Borgia, hoje dedicada a exposições culturais. Cada fachada revela um trabalho minucioso e uma grandiosidade espiritual.",
+            fr: "Au-delà de l'arche se déroule une procession d'églises remarquables : la Chiesa di San Benedetto avec son Escalier de l'Ange, le collège jésuite aux cloîtres pavés de pierres noires et blanches, et la Chiesa di San Francesco Borgia aujourd'hui dédiée aux expositions culturelles. Chaque façade met en lumière un artisanat minutieux et une grandeur spirituelle.",
+          }),
+          text({
+            en: "The jewel of the street is the Chiesa di San Giuliano, attributed to Vaccarini and celebrated for its elegant convex façade and octagonal interior crowned by a polychrome marble altar. From the elevated loggia, cloistered Benedictine nuns once watched the February procession of Sant'Agata, hidden from the crowds below.",
+            es: "La joya de la calle es la Chiesa di San Giuliano, atribuida a Vaccarini y célebre por su elegante fachada convexa y su interior octogonal coronado por un altar de mármol policromado. Desde la logia elevada, las monjas benedictinas de clausura observaban la procesión de Sant'Agata en febrero, ocultas a la multitud.",
+            it: "Il gioiello della via è la Chiesa di San Giuliano, attribuita a Vaccarini e celebre per la facciata convessa e l'interno ottagonale coronato da un altare in marmo policromo. Dalla loggia elevata, le monache benedettine di clausura seguivano la processione di Sant'Agata in febbraio, invisibili alla folla sottostante.",
+            pt: "A joia da rua é a Chiesa di San Giuliano, atribuída a Vaccarini e célebre pela sua fachada convexa elegante e pelo interior octogonal coroado por um altar de mármore policromado. Da loggia elevada, as freiras beneditinas enclausuradas observavam a procissão de Sant'Agata em fevereiro, invisíveis à multidão abaixo.",
+            fr: "Le joyau de la rue est la Chiesa di San Giuliano, attribuée à Vaccarini et célèbre pour sa façade convexe élégante et son intérieur octogonal dominé par un autel en marbre polychrome. Depuis la loggia surélevée, les religieuses bénédictines cloîtrées observaient la procession de Sant'Agata en février, invisibles à la foule.",
+          }),
+          text({
+            en: "Via Crociferi culminates at Villa Cerami, an eighteenth-century palace that now houses the University of Catania's law faculty. The entire street has appeared in films such as 'Storia di una capinera' and 'Il bell'Antonio', its atmospheric beauty making it a natural stage for stories of Sicily.",
+            es: "La Via Crociferi culmina en la Villa Cerami, un palacio del siglo XVIII que hoy alberga la Facultad de Derecho de la Universidad de Catania. Toda la calle ha servido de escenario en películas como 'Storia di una capinera' y 'Il bell'Antonio', ya que su belleza atmosférica la convierte en un escenario natural para las historias de Sicilia.",
+            it: "Via dei Crociferi culmina in Villa Cerami, palazzo settecentesco che oggi ospita la Facoltà di Giurisprudenza dell'Università di Catania. L'intera strada è apparsa in film come 'Storia di una capinera' e 'Il bell'Antonio', perché la sua bellezza atmosferica la rende un palcoscenico naturale per i racconti di Sicilia.",
+            pt: "A Via Crociferi termina na Villa Cerami, um palácio do século XVIII que hoje abriga a Faculdade de Direito da Universidade de Catânia. A rua inteira já apareceu em filmes como 'Storia di una capinera' e 'Il bell'Antonio', pois a sua beleza atmosférica a torna um palco natural para as histórias da Sicília.",
+            fr: "La Via Crociferi se conclut à la Villa Cerami, palais du XVIIIe siècle qui abrite aujourd'hui la faculté de droit de l'Université de Catane. La rue entière a servi de décor à des films tels que 'Storia di una capinera' et 'Il bell'Antonio', tant sa beauté atmosphérique en fait une scène naturelle pour les récits siciliens.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'monastero-benedettini',
     name: text({
-      en: 'Monastero dei Benedettini',
-      es: 'Monasterio de los Benedictinos',
+      en: 'Monastero dei Benedettini di San Nicolò l\'Arena',
+      es: 'Monasterio de los Benedictinos de San Nicolò l\'Arena',
       it: 'Monastero dei Benedettini di San Nicolò l\'Arena',
-      pt: 'Mosteiro dos Beneditinos',
-      fr: 'Monastère des Bénédictins',
+      pt: 'Mosteiro dos Beneditinos de San Nicolò l\'Arena',
+      fr: 'Monastère des Bénédictins de San Nicolò l\'Arena',
     }),
     description: text({
       en: 'One of Europe\'s largest monasteries, now a university campus, where cloisters, gardens, and lava flows weave an extraordinary story.',
@@ -117,6 +260,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5056, 15.0739],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/5/59/Catania_-_Monastero_dei_Benedettini_-_Chiostro_ponte.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/a/ad/Monastero_dei_benedettini%2C_catania%2C_chiostro_di_levante_%28giardino%29_05.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/monastero-en.mp3',
@@ -128,6 +272,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'museum',
     duration: 40,
     order: 4,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "The Benedictine Monastery of San Nicolò l'Arena ranks among the largest monastic complexes in Europe, measuring roughly 210 by 130 metres. Its layered architecture charts the evolution from Renaissance sobriety to exuberant Sicilian Baroque and explains why UNESCO recognises it as a jewel of the Val di Noto heritage.",
+            es: "El Monasterio Benedictino de San Nicolò l'Arena figura entre los complejos monásticos más grandes de Europa, con unos 210 por 130 metros. Su arquitectura estratificada recorre la evolución desde la sobriedad renacentista hasta el barroco siciliano exuberante y explica por qué la UNESCO lo reconoce como una joya del patrimonio del Val di Noto.",
+            it: "Il Monastero Benedettino di San Nicolò l'Arena è tra i complessi monastici più grandi d'Europa, con dimensioni di circa 210 per 130 metri. La sua architettura stratificata racconta il passaggio dalla sobrietà rinascimentale all'esuberanza del barocco siciliano e spiega il riconoscimento UNESCO come gioiello del Val di Noto.",
+            pt: "O Mosteiro Beneditino de San Nicolò l'Arena está entre os maiores complexos monásticos da Europa, medindo cerca de 210 por 130 metros. A sua arquitetura estratificada mostra a evolução da sobriedade renascentista ao barroco siciliano exuberante e justifica o reconhecimento da UNESCO como joia do património do Val di Noto.",
+            fr: "Le monastère bénédictin San Nicolò l'Arena compte parmi les plus vastes complexes monastiques d'Europe, mesurant environ 210 sur 130 mètres. Son architecture stratifiée retrace l'évolution de la sobriété renaissante vers l'exubérance du baroque sicilien et justifie sa reconnaissance par l'UNESCO comme joyau du patrimoine du Val di Noto.",
+          }),
+          text({
+            en: "Founded in 1558 by monks who fled their hillside monastery near Nicolosi to escape Etna's eruptions and brigands, the community dedicated the new foundation to Saint Nicholas of Bari. The suffix 'l'Arena' refers to the reddish volcanic sand prevalent in the area.",
+            es: "Fundado en 1558 por monjes que abandonaron su monasterio en las laderas de Nicolosi para huir de las erupciones del Etna y de los bandoleros, el cenobio se consagró a San Nicolás de Bari. El sufijo 'l'Arena' alude a la arena volcánica rojiza característica de la zona.",
+            it: "Fondato nel 1558 da monaci che lasciarono il loro monastero sui pendii di Nicolosi per sfuggire alle eruzioni dell'Etna e ai briganti, il complesso fu dedicato a San Nicola di Bari. Il suffisso 'l'Arena' richiama la sabbia vulcanica rossastra tipica del territorio.",
+            pt: "Fundado em 1558 por monges que abandonaram o mosteiro nas encostas de Nicolosi para escapar das erupções do Etna e dos bandoleiros, o complexo foi dedicado a São Nicolau de Bari. O sufixo 'l'Arena' refere-se à areia vulcânica avermelhada presente na região.",
+            fr: "Fondé en 1558 par des moines ayant quitté leur monastère sur les pentes de Nicolosi pour fuir les éruptions de l'Etna et les brigands, le complexe fut dédié à Saint Nicolas de Bari. Le suffixe 'l'Arena' renvoie au sable volcanique rougeâtre caractéristique de la zone.",
+          }),
+          text({
+            en: "Two cataclysms shaped the site. In 1669, a monumental lava flow engulfed the monastery's surroundings, raising the ground by up to twelve metres and pushing the coastline more than a kilometre out to sea. Remarkably, the buildings survived, though the landscape was transformed beyond recognition.",
+            es: "Dos cataclismos moldearon el lugar. En 1669, una colada de lava monumental envolvió el entorno del monasterio, elevando el terreno hasta doce metros y desplazando la costa más de un kilómetro hacia el mar. Asombrosamente, los edificios sobrevivieron, aunque el paisaje quedó irreconocible.",
+            it: "Due cataclismi plasmarono il sito. Nel 1669 una colata lavica monumentale avvolse l'area attorno al monastero, innalzando il terreno fino a dodici metri e spingendo la linea di costa di oltre un chilometro verso il mare. Sorprendentemente gli edifici resistettero, sebbene il paesaggio risultasse irriconoscibile.",
+            pt: "Dois cataclismos moldaram o local. Em 1669, uma monumental corrente de lava envolveu o entorno do mosteiro, elevando o terreno em até doze metros e empurrando a linha costeira a mais de um quilómetro para o mar. Notavelmente, os edifícios sobreviveram, embora a paisagem tenha ficado irreconhecível.",
+            fr: "Deux cataclysmes ont façonné le site. En 1669, une coulée de lave monumentale envahit les environs du monastère, élevant le sol de douze mètres et repoussant le littoral de plus d'un kilomètre vers la mer. Les bâtiments survécurent, mais le paysage fut méconnaissable.",
+          }),
+          text({
+            en: "The earthquake and tsunami of 1693 then nearly annihilated the complex, leaving only the basement levels intact. Reconstruction began in 1702 and continued into the nineteenth century, integrating new cloisters and sections designed by Giovanni Battista Vaccarini atop the cooled lava bench.",
+            es: "El terremoto y el tsunami de 1693 casi aniquilaron el complejo, dejando intactos únicamente los niveles inferiores. La reconstrucción comenzó en 1702 y se prolongó hasta el siglo XIX, integrando nuevos claustros y secciones diseñadas por Giovanni Battista Vaccarini sobre la lava ya solidificada.",
+            it: "Il terremoto e lo tsunami del 1693 quasi annientarono il complesso, lasciando intatti solo i livelli inferiori. La ricostruzione iniziò nel 1702 e proseguì fino all'Ottocento, integrando nuovi chiostri e sezioni progettate da Giovanni Battista Vaccarini sulla colata lavica ormai solidificata.",
+            pt: "O terramoto e o tsunami de 1693 quase aniquilaram o complexo, deixando intactos apenas os pisos inferiores. A reconstrução começou em 1702 e prolongou-se até o século XIX, integrando novos claustros e secções desenhadas por Giovanni Battista Vaccarini sobre a lava já solidificada.",
+            fr: "Le séisme et le tsunami de 1693 faillirent ensuite anéantir le complexe, ne laissant intacts que les niveaux inférieurs. La reconstruction débuta en 1702 et se poursuivit jusqu'au XIXe siècle, intégrant de nouveaux cloîtres et des sections conçues par Giovanni Battista Vaccarini sur la coulée de lave refroidie.",
+          }),
+          text({
+            en: "Today the monastery reveals two magnificent cloisters, hanging gardens, underground passages, and even the remains of Roman domus. Its library holds some of Sicily's most precious manuscripts, underscoring the cultural weight the complex has carried for centuries.",
+            es: "Hoy el monasterio muestra dos magníficos claustros, jardines colgantes, pasajes subterráneos e incluso restos de domus romanas. Su biblioteca conserva algunos de los manuscritos más valiosos de Sicilia, muestra del peso cultural que el complejo ha sostenido durante siglos.",
+            it: "Oggi il monastero custodisce due magnifici chiostri, giardini pensili, passaggi sotterranei e perfino resti di domus romane. La biblioteca conserva alcuni dei manoscritti più preziosi della Sicilia, a testimonianza del peso culturale che il complesso esercita da secoli.",
+            pt: "Hoje o mosteiro revela dois claustros magníficos, jardins suspensos, passagens subterrâneas e até vestígios de domus romanas. A sua biblioteca guarda alguns dos manuscritos mais preciosos da Sicília, sublinhando o peso cultural que o complexo carrega há séculos.",
+            fr: "Aujourd'hui, le monastère dévoile deux splendides cloîtres, des jardins suspendus, des passages souterrains et même les vestiges de domus romaines. Sa bibliothèque abrite certains des manuscrits les plus précieux de Sicile, soulignant le poids culturel que le complexe porte depuis des siècles.",
+          }),
+          text({
+            en: "Declared a national monument in 1869, the monastery was acquired by the University of Catania in 1977. Architect Giancarlo De Carlo devised an exemplary restoration project in 1984, allowing the Department of Humanities to flourish within these storied walls. Guided tours by Officine Culturali invite visitors to read this 'book of stone' from antiquity to the present day.",
+            es: "Declarado monumento nacional en 1869, el monasterio fue adquirido por la Universidad de Catania en 1977. El arquitecto Giancarlo De Carlo elaboró en 1984 un proyecto de restauración ejemplar que permitió que el Departamento de Humanidades floreciera dentro de estos muros cargados de historia. Las visitas guiadas de Officine Culturali invitan al público a leer este 'libro de piedra' desde la Antigüedad hasta la actualidad.",
+            it: "Dichiarato monumento nazionale nel 1869, il monastero fu acquisito dall'Università di Catania nel 1977. L'architetto Giancarlo De Carlo ideò nel 1984 un progetto di restauro esemplare, consentendo al Dipartimento di Scienze Umanistiche di prosperare tra queste mura storiche. Le visite guidate di Officine Culturali invitano a leggere questo 'libro di pietra' dall'antichità a oggi.",
+            pt: "Declarado monumento nacional em 1869, o mosteiro foi adquirido pela Universidade de Catânia em 1977. O arquiteto Giancarlo De Carlo elaborou em 1984 um projeto exemplar de restauro, permitindo que o Departamento de Humanidades florescesse dentro destas paredes históricas. As visitas guiadas da Officine Culturali convidam os visitantes a ler este 'livro de pedra' da Antiguidade aos dias de hoje.",
+            fr: "Déclaré monument national en 1869, le monastère fut acquis par l'Université de Catane en 1977. L'architecte Giancarlo De Carlo élabora en 1984 un projet de restauration exemplaire qui permit au département des sciences humaines de prospérer entre ces murs chargés d'histoire. Les visites guidées d'Officine Culturali invitent les visiteurs à lire ce 'livre de pierre' de l'Antiquité à nos jours.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'castello-ursino',
@@ -148,6 +341,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5011, 15.0879],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/4/45/Castello_Ursino_Catania.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/3/3e/Castello_Ursino_-_Cortile.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/castello-ursino-en.mp3',
@@ -159,6 +353,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 30,
     order: 5,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Rising above Piazza Federico II, Castello Ursino stands as a formidable testament to medieval Sicily and the ambitions of Emperor Frederick II of Swabia. Built between 1239 and 1250, it formed part of the royal network of fortresses safeguarding the Kingdom of Sicily.",
+            es: "Dominando la Piazza Federico II, el Castello Ursino se erige como un formidable testimonio de la Sicilia medieval y de las ambiciones del emperador Federico II de Suabia. Construido entre 1239 y 1250, integraba la red real de fortalezas que protegían el Reino de Sicilia.",
+            it: "Ergendosi su Piazza Federico II, il Castello Ursino è un formidabile testimone della Sicilia medievale e delle ambizioni dell'imperatore Federico II di Svevia. Edificato tra il 1239 e il 1250, faceva parte della rete di fortezze reali a difesa del Regno di Sicilia.",
+            pt: "Elevando-se sobre a Piazza Federico II, o Castello Ursino é um formidável testemunho da Sicília medieval e das ambições do imperador Frederico II da Suábia. Construído entre 1239 e 1250, integrava a rede de fortalezas reais que protegiam o Reino da Sicília.",
+            fr: "Dominant la Piazza Federico II, le Castello Ursino constitue un témoignage imposant de la Sicile médiévale et des ambitions de l'empereur Frédéric II de Souabe. Construit entre 1239 et 1250, il faisait partie du réseau royal de forteresses protégeant le royaume de Sicile.",
+          }),
+          text({
+            en: "Its name likely derives from 'Castrum Sinus', the castle of the gulf, a nod to its original coastal position. When first erected, it overlooked the sea from a promontory, encircled by a moat and advanced defences that kept the sometimes-rebellious population of Catania under close watch.",
+            es: "Su nombre probablemente deriva de 'Castrum Sinus', el castillo del golfo, en alusión a su posición costera original. En sus inicios dominaba el mar desde un promontorio, rodeado por un foso y defensas avanzadas que mantenían a raya a la a veces rebelde población de Catania.",
+            it: "Il nome probabilmente deriva da 'Castrum Sinus', il castello del golfo, riferendosi alla sua primitiva posizione costiera. All'origine dominava il mare da un promontorio, circondato da un fossato e da difese avanzate che sorvegliavano da vicino la talvolta ribelle popolazione catanese.",
+            pt: "O nome provavelmente deriva de 'Castrum Sinus', o castelo do golfo, numa referência à sua posição costeira original. No início, dominava o mar a partir de um promontório, cercado por um fosso e defesas avançadas que mantinham sob vigilância a por vezes rebelde população de Catânia.",
+            fr: "Son nom dériverait de 'Castrum Sinus', le château du golfe, en référence à sa position côtière originelle. À l'époque, il surplombait la mer depuis un promontoire, entouré d'un fossé et de défenses avancées qui maintenaient sous contrôle la population catanaise parfois rebelle.",
+          }),
+          text({
+            en: "Frederick II entrusted construction to his 'praepositus aedificiorum', the master builder Riccardo da Lentini. Despite financial strain, the work advanced rapidly: excavations reveal a double curtain wall—an outer layer of carefully hewn lava blocks and an inner layer of rougher masonry tied together by transverse walls.",
+            es: "Federico II confió la construcción a su 'praepositus aedificiorum', el maestro Ricardo da Lentini. A pesar de las dificultades económicas, las obras avanzaron con rapidez: las excavaciones muestran una doble muralla, con un manto exterior de sillares de lava cuidadosamente labrados y otro interior de mampostería más tosca unidos por muros transversales.",
+            it: "Federico II affidò la costruzione al suo 'praepositus aedificiorum', il maestro Riccardo da Lentini. Nonostante le ristrettezze economiche, i lavori avanzarono celermente: gli scavi rivelano una doppia cortina muraria, con un guscio esterno di blocchi di lava squadrati e uno interno di muratura più grezza collegati da muri trasversali.",
+            pt: "Frederico II confiou a construção ao seu 'praepositus aedificiorum', o mestre Riccardo da Lentini. Apesar das dificuldades financeiras, as obras avançaram rapidamente: escavações revelam uma dupla cortina de muralhas — uma camada externa de blocos de lava cuidadosamente talhados e outra interna de alvenaria mais tosca, ligadas por paredes transversais.",
+            fr: "Frédéric II confia la construction à son 'praepositus aedificiorum', le maître Riccardo da Lentini. Malgré les difficultés financières, les travaux avancèrent rapidement : les fouilles révèlent une double enceinte, avec une couche externe de blocs de lave soigneusement taillés et une couche interne de maçonnerie plus grossière, reliées par des murs transversaux.",
+          }),
+          text({
+            en: "The castle's geometry reflects the empire's taste for rational design: a near-perfect square perimeter with four corner towers and four median towers enclosing a central courtyard. This symmetry embodied the authority of the crown and the engineering prowess of the Frederickian court.",
+            es: "La geometría del castillo refleja el gusto imperial por el diseño racional: un perímetro casi cuadrado con cuatro torres en las esquinas y cuatro torres medianas que encierran un patio central. Esta simetría plasmaba la autoridad de la corona y la pericia ingenieril de la corte federiciana.",
+            it: "La geometria del castello rispecchia il gusto imperiale per il disegno razionale: un perimetro pressoché quadrato con quattro torri angolari e quattro torri mediane che racchiudono un cortile centrale. Questa simmetria incarnava l'autorità della corona e l'abilità ingegneristica della corte sveva.",
+            pt: "A geometria do castelo reflete o gosto imperial pelo desenho racional: um perímetro praticamente quadrado com quatro torres de canto e quatro torres medianas que encerram um pátio central. Essa simetria encarnava a autoridade da coroa e a perícia de engenharia da corte federiciana.",
+            fr: "La géométrie du château reflète le goût impérial pour le dessin rationnel : un périmètre presque carré avec quatre tours d'angle et quatre tours médianes enveloppant une cour centrale. Cette symétrie incarnait l'autorité de la couronne et le savoir-faire ingénierique de la cour fédéricienne.",
+          }),
+          text({
+            en: "Castello Ursino served as backdrop to pivotal chapters in Sicilian history. During the Sicilian Vespers parliament of 1295 it witnessed the deposition of King James II of Aragon and the proclamation of Frederick III. For centuries it housed the Aragonese royal court and remained a symbol of state power.",
+            es: "El Castello Ursino fue escenario de capítulos clave de la historia siciliana. Durante el parlamento de las Vísperas Sicilianas de 1295 presenció la deposición del rey Jaime II de Aragón y la proclamación de Federico III. Durante siglos albergó la corte real aragonesa y se mantuvo como símbolo del poder estatal.",
+            it: "Il Castello Ursino fu teatro di momenti cruciali della storia siciliana. Nel parlamento dei Vespri del 1295 assistette alla deposizione di Giacomo II d'Aragona e alla proclamazione di Federico III. Per secoli ospitò la corte reale aragonese e rimase simbolo del potere statale.",
+            pt: "O Castello Ursino foi palco de momentos decisivos da história siciliana. No parlamento das Vésperas Sicilianas de 1295 assistiu à deposição do rei Jaime II de Aragão e à proclamação de Frederico III. Durante séculos abrigou a corte real aragonesa e permaneceu símbolo do poder estatal.",
+            fr: "Le Castello Ursino fut le théâtre de moments décisifs de l'histoire sicilienne. Lors du parlement des Vêpres siciliennes de 1295, il assista à la destitution du roi Jacques II d'Aragon et à la proclamation de Frédéric III. Pendant des siècles, il abrita la cour royale aragonaise et demeura un symbole du pouvoir de l'État.",
+          }),
+          text({
+            en: "The eruption of 1669 encircled the fortress with lava, erasing its moat and pushing the shoreline far away, turning the 'castle of the gulf' into an inland citadel. Later used as barracks and prison, it was restored in the 1930s and has housed the Museo Civico di Catania since 1934, displaying art, archaeology, and the famed Biscari collections in its atmospheric halls.",
+            es: "La erupción de 1669 rodeó la fortaleza de lava, borró el foso y alejó la línea de costa, transformando el 'castillo del golfo' en una ciudadela interior. Posteriormente se utilizó como cuartel y prisión, y fue restaurado en la década de 1930. Desde 1934 alberga el Museo Cívico de Catania, que expone arte, arqueología y las célebres colecciones Biscari en sus salas cargadas de historia.",
+            it: "L'eruzione del 1669 circondò la fortezza di lava, cancellò il fossato e allontanò la linea di costa, trasformando il 'castello del golfo' in una cittadella nell'entroterra. In seguito fu adibito a caserma e prigione, quindi restaurato negli anni Trenta. Dal 1934 ospita il Museo Civico di Catania, con raccolte d'arte, archeologia e le celebri collezioni Biscari nelle sue sale suggestive.",
+            pt: "A erupção de 1669 envolveu a fortaleza com lava, apagou o fosso e afastou a linha costeira, transformando o 'castelo do golfo' numa cidadela interior. Mais tarde serviu como quartel e prisão, sendo restaurado na década de 1930. Desde 1934 abriga o Museo Civico di Catania, que apresenta arte, arqueologia e as célebres coleções Biscari nas suas salas cheias de atmosfera.",
+            fr: "L'éruption de 1669 encercla la forteresse de lave, effaça son fossé et repoussa le littoral, transformant le 'château du golfe' en citadelle intérieure. Utilisé plus tard comme caserne puis prison, il fut restauré dans les années 1930. Depuis 1934, il accueille le Museo Civico di Catania, présentant art, archéologie et les célèbres collections Biscari dans ses salles évocatrices.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'la-pescheria',
@@ -179,6 +422,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5028, 15.087],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/8/8e/Catania_-_La_Pescheria.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/3/35/Fish_market_Catania_Italy_2009.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/la-pescheria-en.mp3',
@@ -190,6 +434,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'square',
     duration: 15,
     order: 6,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "La Pescheria is far more than a fish market: it is a theatre of Sicilian life, an assault on the senses, and one of Italy's oldest trading traditions. Established in the nineteenth century, it still beats with the authentic rhythm of Catania every morning.",
+            es: "La Pescheria es mucho más que un mercado de pescado: es un teatro de la vida siciliana, un asalto a los sentidos y una de las tradiciones comerciales más antiguas de Italia. Fundado en el siglo XIX, todavía late cada mañana con el ritmo auténtico de Catania.",
+            it: "La Pescheria è molto più di un mercato del pesce: è un teatro della vita siciliana, un'esperienza sensoriale e una delle più antiche tradizioni commerciali d'Italia. Fondato nell'Ottocento, pulsa ancora oggi ogni mattina al ritmo autentico di Catania.",
+            pt: "La Pescheria é muito mais do que um mercado de peixe: é um teatro da vida siciliana, um ataque aos sentidos e uma das tradições comerciais mais antigas da Itália. Fundado no século XIX, continua a pulsar todas as manhãs com o ritmo autêntico de Catânia.",
+            fr: "La Pescheria est bien davantage qu'un marché aux poissons : c'est un théâtre de la vie sicilienne, une expérience sensorielle totale et l'une des plus anciennes traditions commerciales d'Italie. Fondé au XIXe siècle, il vibre encore chaque matin au rythme authentique de Catane.",
+          }),
+          text({
+            en: "Tucked just behind Piazza del Duomo at the Amenano Fountain, the market owes its location to the subterranean river diverted centuries ago to provide running water. The marble fountain creates a shimmering curtain that traders have long used to rinse the day's catch.",
+            es: "Situado justo detrás de la Piazza del Duomo, junto a la Fuente del Amenano, el mercado debe su ubicación al río subterráneo que se desvió hace siglos para aportar agua corriente. La fuente de mármol crea un velo reluciente que los vendedores han utilizado durante generaciones para limpiar la pesca del día.",
+            it: "Nascosto dietro Piazza del Duomo presso la Fontana dell'Amenano, il mercato deve la sua posizione al fiume sotterraneo deviato secoli fa per fornire acqua corrente. La fontana marmorea crea un velo scintillante che i venditori utilizzano da generazioni per sciacquare il pescato del giorno.",
+            pt: "Escondido atrás da Piazza del Duomo, junto à Fonte do Amenano, o mercado deve a sua localização ao rio subterrâneo desviado há séculos para fornecer água corrente. A fonte de mármore cria um véu cintilante que os vendedores usam há gerações para lavar o pescado do dia.",
+            fr: "Nichée derrière la Piazza del Duomo, près de la Fontaine Amenano, la Pescheria doit son emplacement à la rivière souterraine détournée il y a des siècles pour fournir de l'eau courante. La fontaine de marbre forme un rideau scintillant que les marchands utilisent depuis des générations pour rincer la pêche du jour.",
+          }),
+          text({
+            en: "The market opens at dawn, typically between 7 a.m. and early afternoon from Monday to Saturday. Those who arrive before sunrise watch fishermen unload their catch and witness the first competitive cries of the day reverberate off the surrounding palazzi.",
+            es: "El mercado abre al amanecer, generalmente de lunes a sábado entre las 7 de la mañana y el mediodía o la primera hora de la tarde. Quienes llegan antes del amanecer ven cómo los pescadores descargan sus capturas y escuchan los primeros gritos competitivos del día rebotar en los palacios circundantes.",
+            it: "Il mercato apre all'alba, di solito dal lunedì al sabato tra le 7 e il primo pomeriggio. Chi arriva prima del sorgere del sole assiste allo scarico del pescato e ascolta i primi richiami competitivi risuonare tra i palazzi circostanti.",
+            pt: "O mercado abre ao amanhecer, geralmente de segunda a sábado entre as 7 horas e o início da tarde. Quem chega antes do nascer do sol vê os pescadores descarregar o pescado e ouve os primeiros pregões competitivos ecoarem nos palácios ao redor.",
+            fr: "Le marché ouvre à l'aube, généralement du lundi au samedi entre 7 heures et le début de l'après-midi. Ceux qui arrivent avant le lever du soleil voient les pêcheurs décharger leurs prises et entendent les premiers cris concurrents résonner sur les palais environnants.",
+          }),
+          text({
+            en: "Bright awnings shelter mountains of swordfish steaks, tuna, sardines, octopus, squid, prawns, and spiky sea urchins. Some creatures still wriggle while being displayed, and crustaceans clatter over one another as vendors hold them high for inspection.",
+            es: "Bajo toldos de colores se apilan montañas de filetes de pez espada, atunes, sardinas, pulpos, calamares, gambas y erizos de mar espinosos. Algunas piezas aún se agitan al exhibirse y los crustáceos trepan unos sobre otros mientras los vendedores los alzan para que el público los examine.",
+            it: "Sotto tende colorate si accumulano montagne di tranci di pesce spada, tonni, sardine, polpi, calamari, gamberi ed echinodermi spinosi. Alcuni esemplari si dibattono ancora, e i crostacei si arrampicano gli uni sugli altri mentre i venditori li sollevano per la valutazione.",
+            pt: "Sob toldos coloridos amontoam-se lombos de espadarte, atuns, sardinhas, polvos, lulas, camarões e ouriços-do-mar espinhosos. Alguns exemplares ainda se debatem quando são exibidos, e os crustáceos se empilham uns sobre os outros enquanto os vendedores os erguem para inspeção.",
+            fr: "Sous des auvents colorés s'entassent des montagnes de steaks d'espadon, de thon, de sardines, de poulpes, de calmars, de crevettes et d'oursins hérissés. Certains spécimens frétillent encore, et les crustacés s'entrechoquent tandis que les marchands les brandissent pour inspection.",
+          }),
+          text({
+            en: "The vendors are actors in their own right—gregarious, theatrical, and keen to demonstrate freshness. Their chants create an improvised soundtrack of bartered prices, jokes, and local dialect, filling the air with sound as pungent as the briny aromas.",
+            es: "Los vendedores son actores en sí mismos: gregarios, teatrales y deseosos de demostrar la frescura de su mercancía. Sus cantos generan una banda sonora improvisada de precios regateados, bromas y dialecto local, llenando el aire con un sonido tan intenso como el aroma salobre.",
+            it: "I venditori sono attori provetti: gregarî, teatrali e desiderosi di dimostrare la freschezza della merce. I loro richiami creano una colonna sonora improvvisata di prezzi contrattati, battute e dialetto locale, che riempie l'aria con la stessa intensità del profumo salmastro.",
+            pt: "Os vendedores são atores por direito próprio — gregários, teatrais e ansiosos por demonstrar a frescura da mercadoria. Os seus pregões criam uma trilha sonora improvisada de preços negociados, piadas e dialeto local, enchendo o ar com um som tão forte quanto os aromas salgados.",
+            fr: "Les vendeurs sont de véritables acteurs : grégaires, théâtraux et soucieux de prouver la fraîcheur de leurs produits. Leurs chants composent une bande sonore improvisée faite de prix négociés, de plaisanteries et de dialecte local, saturant l'air d'un brouhaha aussi intense que les effluves salés.",
+          }),
+          text({
+            en: "Around the fishmongers, stalls sell seasonal vegetables, cheeses, meats, and ready-to-eat specialties like fried anchovies and seafood arancini. Locals still rely on La Pescheria for daily shopping, and by night the same square transforms into a lively scene of bars and restaurants, proof that this market sustains Catania from dawn until long after dusk.",
+            es: "En torno a los pescaderos, los puestos venden verduras de temporada, quesos, carnes y especialidades listas para comer como boquerones fritos o arancini de marisco. Los habitantes siguen confiando en La Pescheria para sus compras diarias, y al caer la noche la plaza se convierte en un animado escenario de bares y restaurantes, prueba de que este mercado sostiene a Catania desde el amanecer hasta mucho después del anochecer.",
+            it: "Attorno ai pescivendoli si trovano banchi di verdure di stagione, formaggi, carni e specialità pronte come acciughe fritte e arancini di mare. I catanesi continuano a fare qui la spesa quotidiana e, la sera, la piazza si trasforma in un vivace scenario di bar e ristoranti, prova che il mercato sostiene Catania dall'alba ben oltre il tramonto.",
+            pt: "À volta dos peixeiros há bancas de legumes da estação, queijos, carnes e especialidades prontas como anchovas fritas e arancini de frutos do mar. Os moradores continuam a comprar aqui o que precisam diariamente e, à noite, a praça transforma-se num cenário animado de bares e restaurantes, prova de que o mercado sustenta Catânia do amanhecer muito além do anoitecer.",
+            fr: "Autour des poissonniers, des étals proposent légumes de saison, fromages, viandes et spécialités prêtes à déguster comme les anchois frits ou les arancini aux fruits de mer. Les habitants continuent d'y faire leurs achats quotidiens et, le soir venu, la place se mue en un lieu animé de bars et de restaurants, preuve que ce marché nourrit Catane de l'aube bien après la tombée de la nuit.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'teatro-romano',
@@ -210,6 +503,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5034, 15.0881],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/8/84/CT_-_Teatro_romano.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0d/Catania%2C_odeon_%2814%29.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/teatro-romano-en.mp3',
@@ -221,6 +515,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 30,
     order: 7,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Hidden within Catania's nineteenth-century urban fabric, the Teatro Romano and its adjoining Odeon are among the city's most remarkable archaeological revelations. Together they expose two millennia of performance culture layered beneath the modern streets.",
+            es: "Ocultos bajo el tejido urbano del siglo XIX, el Teatro Romano y el contiguo Odeón figuran entre los hallazgos arqueológicos más notables de Catania. Ambos revelan dos milenios de cultura escénica superpuestos bajo las calles modernas.",
+            it: "Nascosti sotto il tessuto urbano ottocentesco, il Teatro Romano e l'adiacente Odeon sono tra le scoperte archeologiche più straordinarie di Catania. Insieme svelano duemila anni di cultura scenica stratificati sotto le vie moderne.",
+            pt: "Escondidos sob o tecido urbano do século XIX, o Teatro Romano e o Odeon adjacente estão entre as revelações arqueológicas mais notáveis de Catânia. Juntos expõem dois milénios de cultura de espetáculo sob as ruas modernas.",
+            fr: "Cachés sous le tissu urbain du XIXe siècle, le Teatro Romano et l'Odeon attenant comptent parmi les découvertes archéologiques les plus remarquables de Catane. Ils dévoilent deux millénaires de culture scénique sous les rues contemporaines.",
+          }),
+          text({
+            en: "The larger theatre was built in the second century AD, likely atop an earlier Greek structure from the fifth or fourth century BCE. Some scholars even associate it with the venue where Alcibiades addressed the Katanaioi during the Peloponnesian War, adding a dramatic historical flourish to the site.",
+            es: "El teatro mayor se construyó en el siglo II d. C., probablemente sobre una estructura griega anterior del siglo V o IV a. C. Algunos estudiosos lo vinculan con el lugar donde Alcibíades se dirigió a los cataneos durante la Guerra del Peloponeso, lo que añade un matiz histórico fascinante.",
+            it: "Il teatro maggiore fu edificato nel II secolo d.C., probabilmente su una struttura greca del V o IV secolo a.C. Alcuni studiosi lo collegano persino al luogo in cui Alcibiade parlò ai Catanesi durante la guerra del Peloponneso, regalando al sito un suggestivo tocco storico.",
+            pt: "O teatro maior foi construído no século II d.C., provavelmente sobre uma estrutura grega anterior do século V ou IV a.C. Alguns estudiosos chegam a associá-lo ao local onde Alcibíades se dirigiu aos cataneos durante a Guerra do Peloponeso, conferindo ao sítio um toque histórico cativante.",
+            fr: "Le grand théâtre fut bâti au IIe siècle après J.-C., probablement sur une structure grecque antérieure du Ve ou IVe siècle av. J.-C. Certains chercheurs l'associent même au lieu où Alcibiade s'adressa aux Catanais durant la guerre du Péloponnèse, conférant au site une note historique supplémentaire.",
+          }),
+          text({
+            en: "Carved into the hillside and oriented toward the sea, the theatre could seat around 7,000 spectators on twenty-one rows divided by volcanic rock stairways. Marble columns framed the scaenae frons, while ingenious hydraulics channelled the Amenano River to animate water features or power stage machinery.",
+            es: "Tallado en la ladera y orientado hacia el mar, el teatro podía albergar a unos 7.000 espectadores en veintiuna gradas divididas por escaleras de roca volcánica. Columnas de mármol enmarcaban la scaenae frons, mientras ingeniosos sistemas hidráulicos canalizaban el río Amenano para animar fuentes o mover la maquinaria escénica.",
+            it: "Scavato nel pendio e orientato verso il mare, il teatro poteva accogliere circa 7.000 spettatori su ventuno ordini di gradinate separati da scale in pietra lavica. Colonne di marmo incorniciavano la scaenae frons, mentre ingegnosi sistemi idraulici canalizzavano il fiume Amenano per animare giochi d'acqua o alimentare macchinari scenici.",
+            pt: "Escavado na encosta e orientado para o mar, o teatro podia receber cerca de 7.000 espectadores em vinte e uma filas divididas por escadarias de pedra vulcânica. Colunas de mármore enquadravam a scaenae frons, enquanto engenhosos sistemas hidráulicos canalizavam o rio Amenano para animar repuxos ou acionar maquinaria cénica.",
+            fr: "Taillé dans la colline et tourné vers la mer, le théâtre pouvait accueillir environ 7 000 spectateurs sur vingt-et-un gradins séparés par des escaliers en pierre volcanique. Des colonnes de marbre encadraient la scaenae frons, tandis qu'un ingénieux réseau hydraulique canalisait la rivière Amenano pour animer des jeux d'eau ou alimenter la machinerie scénique.",
+          }),
+          text({
+            en: "With the decline of the Roman Empire, the theatre was stripped of its marble and stones, which were reused for new buildings including the Cathedral of Sant'Agata. Medieval houses gradually engulfed the structure, embedding it within the neighbourhood for centuries.",
+            es: "Con el declive del Imperio romano, el teatro fue despojado de su mármol y de sus sillares, reutilizados en nuevas construcciones como la Catedral de Sant'Agata. Las casas medievales acabaron engullendo la estructura, integrándola en el vecindario durante siglos.",
+            it: "Con il declino dell'Impero romano, il teatro fu spogliato di marmi e pietre, riutilizzati in nuove costruzioni come la Cattedrale di Sant'Agata. Le case medievali finirono per inglobare la struttura, incorporandola nel quartiere per secoli.",
+            pt: "Com o declínio do Império Romano, o teatro foi despojado do mármore e das pedras, reutilizados em novas construções, incluindo a Catedral de Sant'Agata. As casas medievais acabaram por engolir a estrutura, incorporando-a à vizinhança durante séculos.",
+            fr: "Avec le déclin de l'Empire romain, le théâtre fut dépouillé de ses marbres et de ses pierres, réemployés dans de nouveaux bâtiments comme la cathédrale Sant'Agata. Des maisons médiévales finirent par engloutir la structure, l'intégrant au quartier pendant des siècles.",
+          }),
+          text({
+            en: "In 1770, Prince Ignazio Paternò Castello di Biscari began excavations, clearing houses built within the cavea. The theatre remained partially buried until the mid-twentieth century, when systematic digs in 1959 finally freed it from later additions; some homes, however, still cling to its perimeter.",
+            es: "En 1770, el príncipe Ignazio Paternò Castello di Biscari inició excavaciones, derribando casas levantadas en la cavea. El teatro siguió parcialmente sepultado hasta mediados del siglo XX, cuando las excavaciones sistemáticas de 1959 lo liberaron por fin de las adiciones posteriores; no obstante, algunas viviendas siguen aferradas a su perímetro.",
+            it: "Nel 1770 il principe Ignazio Paternò Castello di Biscari avviò gli scavi, demolendo le case costruite nella cavea. Il teatro rimase parzialmente interrato fino alla metà del Novecento, quando gli scavi sistematici del 1959 lo liberarono dalle aggiunte moderne; alcune abitazioni, tuttavia, si aggrappano ancora al suo perimetro.",
+            pt: "Em 1770, o príncipe Ignazio Paternò Castello di Biscari iniciou escavações, demolindo casas construídas na cavea. O teatro continuou parcialmente enterrado até meados do século XX, quando as escavações sistemáticas de 1959 o libertaram das adições posteriores; algumas casas, contudo, ainda se agarram ao perímetro.",
+            fr: "En 1770, le prince Ignazio Paternò Castello di Biscari entama des fouilles, faisant démolir les maisons édifiées dans la cavea. Le théâtre demeura partiellement enfoui jusqu'au milieu du XXe siècle, lorsque les fouilles systématiques de 1959 le débarrassèrent des ajouts postérieurs ; certaines habitations restent toutefois accrochées à son pourtour.",
+          }),
+          text({
+            en: "West of the main theatre rises the smaller Odeon, seating about 1,500 spectators for musical and dramatic performances. Modern walkways allow visitors to explore both venues, which now host summer events that rekindle the ancient vocation of these stones. Finds from the excavations are displayed nearby and in the Museo Civico at Castello Ursino.",
+            es: "Al oeste del teatro principal se alza el Odeón, más pequeño, con capacidad para unos 1.500 espectadores en espectáculos musicales y dramáticos. Pasarelas modernas permiten explorar ambos espacios, que hoy acogen eventos estivales que reavivan la vocación antigua de estas piedras. Los hallazgos de las excavaciones se exhiben en los edificios vecinos y en el Museo Cívico del Castello Ursino.",
+            it: "A ovest del teatro principale sorge l'Odeon, più piccolo, che ospitava circa 1.500 spettatori per spettacoli musicali e teatrali. Passerelle moderne consentono di esplorare entrambi i siti, che oggi ospitano eventi estivi ridando vita alla vocazione antica di queste pietre. I reperti degli scavi sono esposti nei vicini edifici e al Museo Civico del Castello Ursino.",
+            pt: "A oeste do teatro principal ergue-se o menor Odeon, com capacidade para cerca de 1.500 espectadores em apresentações musicais e dramáticas. Passadiços modernos permitem explorar os dois espaços, que hoje recebem eventos de verão que reacendem a vocação antiga dessas pedras. Os achados das escavações estão expostos nas proximidades e no Museo Civico do Castello Ursino.",
+            fr: "À l'ouest du théâtre principal se trouve le plus petit Odeon, qui accueillait environ 1 500 spectateurs pour des représentations musicales et dramatiques. Des passerelles modernes permettent d'explorer les deux édifices, qui reçoivent désormais des événements estivaux ravivant la vocation antique de ces pierres. Les découvertes des fouilles sont exposées à proximité et au Museo Civico du Castello Ursino.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'anfiteatro-romano',
@@ -236,11 +579,12 @@ export const cataniaPoints: PointOfInterest[] = [
       es: 'Imagina el rugido de la multitud en este enorme anfiteatro, capaz de acoger a miles junto a la actual Piazza Stesicoro.',
       it: 'Immagina il boato della folla in questo vasto anfiteatro, capace un tempo di accogliere migliaia di persone ai margini dell\'odierna Piazza Stesicoro.',
       pt: 'Imagine o rugido das multidões neste grande anfiteatro, que já recebeu milhares às margens da atual Piazza Stesicoro.',
-      fr: 'Imaginez le grondement des foules dans ce vaste amphithéâtre qui accueillait jadis des milliers de personnes près de l\'actuelle Piazza Stesicoro.',
+      fr: "Imaginez le grondement des foules dans ce vaste amphithéâtre qui accueillait jadis des milliers de personnes près de l'actuelle Piazza Stesicoro.",
     }),
     coordinates: [37.5061, 15.087],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/7/79/Catania_-_Anfiteatro_romano.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/2/21/Catania%2C_piazza_Stesicoro%2C_anfiteatro_romano_03.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/anfiteatro-romano-en.mp3',
@@ -252,6 +596,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 25,
     order: 8,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Beneath the bustle of Piazza Stesicoro lies one of Italy's largest Roman amphitheatres, eclipsed only by the Colosseum. Today only a section is visible, yet the surviving fragment hints at the colossal scale of the 'Black Colosseum'.",
+            es: "Bajo el bullicio de la Piazza Stesicoro se esconde uno de los mayores anfiteatros romanos de Italia, solo superado por el Coliseo. Hoy es visible solo un fragmento, pero lo que queda permite intuir la escala colosal del 'Coliseo Negro'.",
+            it: "Sotto il viavai di Piazza Stesicoro si trova uno dei più grandi anfiteatri romani d'Italia, superato solo dal Colosseo. Oggi è visibile solo una porzione, ma quel frammento suggerisce la scala colossale del 'Colosseo nero'.",
+            pt: "Sob a agitação da Piazza Stesicoro encontra-se um dos maiores anfiteatros romanos da Itália, superado apenas pelo Coliseu. Atualmente vê-se apenas um trecho, mas o fragmento restante revela a escala colossal do 'Coliseu Negro'.",
+            fr: "Sous l'effervescence de la Piazza Stesicoro se cache l'un des plus vastes amphithéâtres romains d'Italie, dépassé seulement par le Colisée. Aujourd'hui, seule une portion est visible, mais elle suffit à évoquer l'échelle colossale du 'Colisée noir'.",
+          }),
+          text({
+            en: "Built in the second century AD under emperors Hadrian or Antoninus Pius, the amphitheatre occupied the northern fringe of ancient Catania. In the third century it was expanded dramatically, tripling in size to accommodate the city's growing appetite for spectacles.",
+            es: "Construido en el siglo II d. C. bajo los emperadores Adriano o Antonino Pío, el anfiteatro ocupaba el extremo norte de la antigua Catania. En el siglo III se amplió de forma espectacular, triplicando su tamaño para saciar el creciente apetito de espectáculos de la ciudad.",
+            it: "Costruito nel II secolo d.C. sotto gli imperatori Adriano o Antonino Pio, l'anfiteatro sorgeva al margine settentrionale dell'antica Catania. Nel III secolo fu ampliato in modo spettacolare, triplicando le dimensioni per accogliere il crescente desiderio di spettacoli della città.",
+            pt: "Construído no século II d.C. sob os imperadores Adriano ou Antonino Pio, o anfiteatro situava-se na margem norte da antiga Catânia. No século III foi ampliado dramaticamente, triplicando de tamanho para acolher o apetite crescente da cidade por espetáculos.",
+            fr: "Construit au IIe siècle apr. J.-C. sous les empereurs Hadrien ou Antonin le Pieux, l'amphithéâtre se situait à la lisière nord de l'ancienne Catane. Au IIIe siècle, il fut agrandi de façon spectaculaire, triplant de taille pour satisfaire la demande croissante de spectacles.",
+          }),
+          text({
+            en: "The elliptical arena measured roughly 70 by 50 metres, while the outer circumference reached 309 metres. With fourteen tiers of seating, it could host 15,000 to 16,000 spectators—nearly double if wooden platforms were added for standing crowds.",
+            es: "La arena elíptica medía aproximadamente 70 por 50 metros, mientras que la circunferencia exterior alcanzaba los 309 metros. Con catorce niveles de gradas podía albergar entre 15.000 y 16.000 espectadores, cifra que se duplicaba casi al añadir plataformas de madera para asistentes de pie.",
+            it: "L'arena ellittica misurava circa 70 per 50 metri, mentre la circonferenza esterna raggiungeva i 309 metri. Con quattordici ordini di gradinate poteva accogliere tra i 15.000 e i 16.000 spettatori, numero che quasi raddoppiava con l'aggiunta di impalcature lignee per il pubblico in piedi.",
+            pt: "A arena elíptica media cerca de 70 por 50 metros, enquanto a circunferência exterior chegava aos 309 metros. Com catorze degraus de assentos, podia acolher entre 15.000 e 16.000 espectadores, número que quase dobrava com a adição de plataformas de madeira para o público em pé.",
+            fr: "L'arène elliptique mesurait environ 70 sur 50 mètres, tandis que la circonférence extérieure atteignait 309 mètres. Avec quatorze gradins, elle pouvait accueillir 15 000 à 16 000 spectateurs, chiffre qui doublait presque avec des plates-formes en bois pour les spectateurs debout.",
+          }),
+          text({
+            en: "Constructed from local lava stone and red brick, the amphitheatre was once sheathed in marble and likely shaded by vast awnings. Here the Romans staged gladiatorial combats, animal hunts, and—according to tradition—spectacular naumachiae in which the arena was flooded for naval battles.",
+            es: "Construido con piedra de lava local y ladrillo rojo, el anfiteatro estuvo antaño revestido de mármol y probablemente cubierto por grandes velarias. En él se escenificaban combates de gladiadores, cacerías de animales y, según la tradición, espectaculares naumaquias en las que se inundaba la arena para recrear batallas navales.",
+            it: "Costruito con pietra lavica locale e mattoni rossi, l'anfiteatro era un tempo rivestito di marmo e probabilmente coperto da grandi velari. Qui si tenevano combattimenti gladiatori, venationes e, secondo la tradizione, spettacolari naumachie con l'arena allagata per simulare battaglie navali.",
+            pt: "Construído com pedra de lava local e tijolo vermelho, o anfiteatro era outrora revestido de mármore e provavelmente sombreado por grandes velários. Ali os romanos encenavam combates de gladiadores, caçadas de animais e, segundo a tradição, espetaculares naumaquias em que a arena era inundada para batalhas navais.",
+            fr: "Construit en pierre de lave locale et en brique rouge, l'amphithéâtre était jadis revêtu de marbre et probablement ombragé par d'immenses velums. On y organisait des combats de gladiateurs, des chasses aux fauves et, selon la tradition, de spectaculaires naumachies où l'arène était inondée pour des batailles navales.",
+          }),
+          text({
+            en: "From the fourth century onward the structure fell into decline, serving as a convenient quarry. Stones and marble were recycled into new buildings, including the Cathedral of Sant'Agata, while urban development gradually hid the monument beneath houses and streets.",
+            es: "A partir del siglo IV la estructura entró en decadencia y se utilizó como una cantera conveniente. Sus piedras y mármoles se reciclaron en nuevas construcciones, entre ellas la Catedral de Sant'Agata, y el desarrollo urbano terminó ocultando el monumento bajo casas y calles.",
+            it: "Dal IV secolo in poi la struttura entrò in declino e fu sfruttata come comoda cava. Pietre e marmi vennero riutilizzati in nuove costruzioni, tra cui la Cattedrale di Sant'Agata, mentre lo sviluppo urbano finì per nascondere il monumento sotto case e strade.",
+            pt: "A partir do século IV a estrutura entrou em declínio e passou a servir como pedreira conveniente. As pedras e mármores foram reutilizados em novas construções, incluindo a Catedral de Sant'Agata, enquanto o crescimento urbano acabou por esconder o monumento sob casas e ruas.",
+            fr: "À partir du IVe siècle, l'édifice déclina et servit de carrière. Ses pierres et ses marbres furent réemployés dans de nouvelles constructions, dont la cathédrale Sant'Agata, tandis que l'expansion urbaine finit par dissimuler le monument sous des maisons et des rues.",
+          }),
+          text({
+            en: "Prince Ignazio Paternò Castello di Biscari first uncovered parts of the amphitheatre in the eighteenth century, and engineer Filadelfo Fichera led major excavations in 1904–1905, revealing the northeastern section visible today. Though sometimes overlooked, this monumental fragment still conveys the grandeur of Roman Catania.",
+            es: "El príncipe Ignazio Paternò Castello di Biscari descubrió por primera vez partes del anfiteatro en el siglo XVIII, y el ingeniero Filadelfo Fichera dirigió excavaciones importantes entre 1904 y 1905, sacando a la luz el sector nororiental que hoy se puede contemplar. Aunque a veces pase desapercibido, este fragmento monumental sigue transmitiendo la grandeza de la Catania romana.",
+            it: "Il principe Ignazio Paternò Castello di Biscari mise per primo in luce parti dell'anfiteatro nel Settecento, e l'ingegnere Filadelfo Fichera guidò grandi scavi tra il 1904 e il 1905, rivelando il settore nord-orientale visibile oggi. Benché talvolta trascurato, questo frammento monumentale restituisce la grandezza della Catania romana.",
+            pt: "O príncipe Ignazio Paternò Castello di Biscari revelou partes do anfiteatro no século XVIII, e o engenheiro Filadelfo Fichera conduziu escavações importantes entre 1904 e 1905, expondo a secção nordeste visível hoje. Embora por vezes passe despercebido, este fragmento monumental ainda transmite a grandeza da Catânia romana.",
+            fr: "Le prince Ignazio Paternò Castello di Biscari mit au jour des parties de l'amphithéâtre au XVIIIe siècle, et l'ingénieur Filadelfo Fichera mena d'importantes fouilles en 1904-1905, révélant la section nord-est visible aujourd'hui. Bien que parfois négligé, ce fragment monumental transmet encore la grandeur de la Catane romaine.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'via-etnea',
@@ -263,15 +656,16 @@ export const cataniaPoints: PointOfInterest[] = [
       fr: 'Via Etnea',
     }),
     description: text({
-      en: 'Catania\'s main boulevard stretches toward Mount Etna, mixing elegant shops, cafés, and sweeping views of the volcano.',
+      en: "Catania's main boulevard stretches toward Mount Etna, mixing elegant shops, cafés, and sweeping views of the volcano.",
       es: 'La avenida principal de Catania se extiende hacia el Etna, con elegantes tiendas, cafés y vistas panorámicas del volcán.',
-      it: 'Il corso principale di Catania corre verso l\'Etna, tra boutique eleganti, caffè e scorci mozzafiato sul vulcano.',
+      it: "Il corso principale di Catania corre verso l'Etna, tra boutique eleganti, caffè e scorci mozzafiato sul vulcano.",
       pt: 'A avenida principal de Catânia segue em direção ao Etna, com lojas elegantes, cafés e vistas amplas do vulcão.',
-      fr: 'L\'artère principale de Catane mène vers l\'Etna, mêlant boutiques élégantes, cafés et vues saisissantes sur le volcan.',
+      fr: "L'artère principale de Catane mène vers l'Etna, mêlant boutiques élégantes, cafés et vues saisissantes sur le volcan.",
     }),
     coordinates: [37.5063, 15.0885],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/a/a0/Catania_-_Via_Etnea_-_panoramio.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/6/69/Via_etnea%2C_catania%2C_sicilia%2C_italia.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/via-etnea-en.mp3',
@@ -283,6 +677,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'square',
     duration: 15,
     order: 9,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Via Etnea is Catania's grand promenade, a straight line of energy linking Piazza del Duomo to the slopes of Mount Etna. Its route follows the ancient Cardo Maximus of Roman Katane, proof that the city's spine has endured for millennia.",
+            es: "La Via Etnea es el gran paseo de Catania, una línea recta de energía que une la Piazza del Duomo con las laderas del Etna. Su trazado sigue el antiguo Cardo Maximus de la Catania romana, prueba de que la columna vertebral de la ciudad ha perdurado durante milenios.",
+            it: "Via Etnea è il grande passeggio di Catania, una linea retta di energia che collega Piazza del Duomo alle pendici dell'Etna. Il tracciato segue l'antico Cardo Maximus della Katane romana, prova che la spina dorsale della città resiste da millenni.",
+            pt: "A Via Etnea é o grande passeio de Catânia, uma linha reta de energia que liga a Piazza del Duomo às encostas do Etna. O traçado segue o antigo Cardo Maximus da Catânia romana, prova de que a espinha dorsal da cidade perdura há milénios.",
+            fr: "La Via Etnea est la grande promenade de Catane, une ligne d'énergie reliant la Piazza del Duomo aux pentes de l'Etna. Son tracé reprend l'ancien Cardo Maximus de la Catane romaine, preuve que la colonne vertébrale de la ville perdure depuis des millénaires.",
+          }),
+          text({
+            en: "Rebuilt after 1693, the boulevard showcases the harmonious contrast of pale limestone and dark lava that defines Catania's Baroque identity. Long stretches are pedestrian-only, encouraging leisurely strolls amid palazzi, churches, and stylish shopfronts.",
+            es: "Reconstruida tras 1693, la avenida exhibe el contraste armonioso entre la piedra caliza clara y la lava oscura que define la identidad barroca de Catania. Amplios tramos son peatonales, lo que invita a pasear con calma entre palacios, iglesias y escaparates elegantes.",
+            it: "Ricostruita dopo il 1693, l'arteria mostra il contrasto armonioso tra la pietra calcarea chiara e la lava scura che caratterizza il barocco catanese. Lunghi tratti sono pedonali, invitando a passeggiare tra palazzi, chiese e vetrine raffinate.",
+            pt: "Reconstruída após 1693, a avenida exibe o contraste harmonioso entre calcário claro e lava escura que define a identidade barroca de Catânia. Trechos longos são exclusivos para pedestres, convidando a passeios tranquilos entre palácios, igrejas e vitrines elegantes.",
+            fr: "Reconstruite après 1693, l'artère met en scène le contraste harmonieux entre calcaire pâle et lave sombre qui caractérise le baroque catanais. De longues sections piétonnes invitent à flâner entre palais, églises et vitrines élégantes.",
+          }),
+          text({
+            en: "On clear days, the volcano appears like a theatrical backdrop at the end of the street. Locals cherish the evening passeggiata here, turning the boulevard into a social stage where generations meet, converse, and simply watch the city flow by.",
+            es: "En los días despejados, el volcán se perfila como un telón teatral al fondo de la calle. Los habitantes aprecian la passeggiata vespertina en este lugar, que convierte la avenida en un escenario social donde las generaciones se encuentran, conversan y observan el discurrir de la ciudad.",
+            it: "Nelle giornate limpide il vulcano appare come un fondale teatrale alla fine della strada. I catanesi amano la passeggiata serale qui, trasformando il corso in un palcoscenico sociale dove le generazioni si incontrano, conversano e osservano il fluire della città.",
+            pt: "Em dias límpidos, o vulcão surge como um pano de fundo teatral no fim da rua. Os moradores adoram fazer a passeggiata vespertina aqui, transformando a avenida num palco social onde gerações se encontram, conversam e observam a cidade passar.",
+            fr: "Par temps clair, le volcan se dresse comme un décor théâtral au bout de la rue. Les habitants chérissent la passeggiata du soir, faisant de l'avenue une scène sociale où les générations se retrouvent, discutent et regardent la ville défiler.",
+          }),
+          text({
+            en: "Landmarks line the route: baroque churches, the university buildings around Piazza Università, and the grand entrance to Villa Bellini, the city's lush public garden. Each block reveals another perspective on Catania's layered history.",
+            es: "A lo largo del recorrido se alinean monumentos: iglesias barrocas, los edificios universitarios de la Piazza Università y la gran entrada a la Villa Bellini, el frondoso jardín público de la ciudad. Cada manzana revela una nueva perspectiva de la historia estratificada de Catania.",
+            it: "Il percorso è costellato di punti di riferimento: chiese barocche, gli edifici universitari attorno a Piazza Università e il grandioso ingresso di Villa Bellini, il rigoglioso giardino pubblico della città. Ogni isolato offre una nuova prospettiva sulla storia stratificata di Catania.",
+            pt: "Marcos pontilham o percurso: igrejas barrocas, os edifícios universitários da Piazza Università e a grande entrada da Villa Bellini, o exuberante jardim público da cidade. Cada quarteirão revela uma nova perspetiva da história em camadas de Catânia.",
+            fr: "Des repères jalonnent le parcours : des églises baroques, les bâtiments universitaires de la Piazza Università et la majestueuse entrée de la Villa Bellini, le jardin public luxuriant de la ville. Chaque pâté de maisons offre une nouvelle perspective sur l'histoire stratifiée de Catane.",
+          }),
+          text({
+            en: "Via Etnea doubles as a shopping avenue, balancing international brands with artisan boutiques and beloved patisseries serving granita, cannoli, and arancini. Rooftop bars such as Etnea Roof invite visitors to toast the skyline, while creative spots like Struffy&Fluffy reinterpret Sicilian sweets.",
+            es: "La Via Etnea es también una avenida comercial que equilibra marcas internacionales con boutiques artesanales y queridas pastelerías que sirven granita, cannoli y arancini. Bares en azoteas como Etnea Roof invitan a brindar por el skyline, mientras que lugares creativos como Struffy&Fluffy reinterpretan los dulces sicilianos.",
+            it: "Via Etnea è anche una via dello shopping che bilancia marchi internazionali, boutique artigianali e amate pasticcerie che servono granite, cannoli e arancini. Roof bar come Etnea Roof invitano a brindare sullo skyline, mentre realtà creative come Struffy&Fluffy reinterpretano i dolci siciliani.",
+            pt: "A Via Etnea funciona também como avenida comercial, equilibrando marcas internacionais com boutiques artesanais e confeitarias queridas que servem granita, cannoli e arancini. Bares nas coberturas como o Etnea Roof convidam a brindar com vista, enquanto espaços criativos como Struffy&Fluffy reinventam os doces sicilianos.",
+            fr: "La Via Etnea est aussi une artère commerçante où se côtoient grandes enseignes internationales, boutiques artisanales et pâtisseries appréciées servant granita, cannoli et arancini. Des rooftops comme l'Etnea Roof invitent à porter un toast sur la skyline, tandis que des adresses créatives comme Struffy&Fluffy réinventent les douceurs siciliennes.",
+          }),
+          text({
+            en: "Be mindful that heavy rain can quickly flood the gently sloping street; seek shelter rather than wading through deep water. As in any lively shopping district, keep an eye on personal belongings, especially during crowded weekends and evening passeggiate.",
+            es: "Ten en cuenta que las lluvias intensas pueden inundar rápidamente la calle en pendiente; es mejor ponerse a resguardo que caminar entre aguas profundas. Como en cualquier zona comercial animada, vigila tus pertenencias, especialmente durante los fines de semana concurridos y las passeggiate nocturnas.",
+            it: "Ricorda che le piogge intense possono allagare rapidamente la strada in lieve pendenza; è preferibile cercare riparo piuttosto che avanzare nell'acqua profonda. Come in ogni zona commerciale vivace, tieni d'occhio gli effetti personali, soprattutto nei fine settimana affollati e durante le passeggiate serali.",
+            pt: "Lembre-se de que chuvas fortes podem inundar rapidamente a rua em suave declive; procure abrigo em vez de atravessar água profunda. Como em qualquer zona comercial movimentada, vigie os seus pertences, sobretudo nos fins de semana cheios e nas passeggiatas noturnas.",
+            fr: "Gardez à l'esprit que de fortes pluies peuvent inonder rapidement cette rue en légère pente ; mieux vaut se mettre à l'abri que s'aventurer dans l'eau profonde. Comme dans tout quartier commerçant animé, surveillez vos effets personnels, surtout les week-ends chargés et lors des passeggiate du soir.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'villa-bellini',
@@ -303,6 +746,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5078, 15.0888],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/a/aa/Catania_-_Villa_Bellini.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/7/70/Catania%2C_giardino_bellini%2C_03.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/villa-bellini-en.mp3',
@@ -314,6 +758,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'viewpoint',
     duration: 20,
     order: 10,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Villa Bellini is Catania's green refuge, the city's oldest public garden spanning more than seven hectares along Via Etnea. Its terraced lawns and shaded avenues offer welcome respite from the urban bustle.",
+            es: "La Villa Bellini es el refugio verde de Catania, el jardín público más antiguo de la ciudad, que se extiende por más de siete hectáreas en torno a la Via Etnea. Sus praderas en terrazas y sus avenidas sombreadas ofrecen un respiro al bullicio urbano.",
+            it: "Villa Bellini è il rifugio verde di Catania, il più antico giardino pubblico della città che si estende per oltre sette ettari lungo Via Etnea. I suoi prati terrazzati e i viali ombreggiati offrono sollievo dal trambusto urbano.",
+            pt: "A Villa Bellini é o refúgio verde de Catânia, o jardim público mais antigo da cidade, que ocupa mais de sete hectares ao longo da Via Etnea. Os relvados em terraços e as alamedas sombreadas oferecem descanso ao bulício urbano.",
+            fr: "La Villa Bellini est le refuge vert de Catane, le plus ancien jardin public de la ville, s'étendant sur plus de sept hectares le long de la Via Etnea. Ses pelouses en terrasses et ses allées ombragées offrent un répit bienvenu à l'agitation citadine.",
+          }),
+          text({
+            en: "Its origins trace back to the eighteenth century, when Prince Ignazio Paternò Castello created a labyrinthine garden around his villa—part of a fashionable European trend that blended fantasy with scientific curiosity.",
+            es: "Sus orígenes se remontan al siglo XVIII, cuando el príncipe Ignazio Paternò Castello creó un jardín laberíntico alrededor de su villa, siguiendo una moda europea que combinaba fantasía y curiosidad científica.",
+            it: "Le sue origini risalgono al Settecento, quando il principe Ignazio Paternò Castello ideò un giardino labirintico attorno alla propria villa, seguendo la moda europea che univa fantasia e curiosità scientifica.",
+            pt: "As origens remontam ao século XVIII, quando o príncipe Ignazio Paternò Castello criou um jardim labiríntico em torno da sua villa, seguindo uma moda europeia que combinava fantasia e curiosidade científica.",
+            fr: "Ses origines remontent au XVIIIe siècle, lorsque le prince Ignazio Paternò Castello aménagea un jardin labyrinthique autour de sa villa, suivant une mode européenne mêlant fantaisie et curiosité scientifique.",
+          }),
+          text({
+            en: "The municipality acquired the property in the mid-nineteenth century to furnish a true public park. Work to unify the various parcels began in 1877, and the garden opened to citizens in 1883, quickly becoming the city's favourite promenade.",
+            es: "El municipio adquirió la propiedad a mediados del siglo XIX para dotar a la ciudad de un auténtico parque público. Las obras para unificar las distintas parcelas comenzaron en 1877 y el jardín se abrió a los ciudadanos en 1883, convirtiéndose en el paseo favorito de la ciudad.",
+            it: "Il Comune acquistò la proprietà a metà Ottocento per dotare la città di un vero parco pubblico. I lavori di unificazione dei lotti iniziarono nel 1877 e il giardino fu aperto ai cittadini nel 1883, diventando presto il passeggio prediletto.",
+            pt: "O município adquiriu a propriedade em meados do século XIX para oferecer à cidade um autêntico parque público. As obras de unificação dos lotes começaram em 1877 e o jardim foi aberto aos cidadãos em 1883, tornando-se rapidamente o passeio preferido.",
+            fr: "La municipalité acquit la propriété au milieu du XIXe siècle afin de doter la ville d'un véritable parc public. Les travaux d'unification débutèrent en 1877 et le jardin fut ouvert aux habitants en 1883, devenant rapidement la promenade favorite.",
+          }),
+          text({
+            en: "A guidebook from 1899 praised the 'bridges of great elegance, underpasses, tunnel, fountains and flower beds' that transformed the area into a delight. The park's layout remains largely formal and symmetrical, dotted with subtropical species that thrive in Catania's climate.",
+            es: "Una guía de 1899 elogiaba los 'puentes de gran elegancia, pasadizos, túnel, fuentes y parterres' que convertían el lugar en un deleite. El diseño del parque mantiene en gran parte su trazado formal y simétrico, salpicado de especies subtropicales que prosperan en el clima de Catania.",
+            it: "Una guida del 1899 lodava i 'ponticelli elegantissimi, sottopassaggi, gallerie, fontane e aiuole' che trasformavano il luogo in un incanto. L'impianto del parco resta in gran parte formale e simmetrico, punteggiato di specie subtropicali che prosperano nel clima catanese.",
+            pt: "Um guia de 1899 elogiava as 'pontes elegantíssimas, passagens inferiores, túnel, fontes e canteiros' que transformavam o lugar num encanto. O traçado do parque continua em grande parte formal e simétrico, pontilhado de espécies subtropicais que prosperam no clima de Catânia.",
+            fr: "Un guide de 1899 saluait les 'ponts d'une grande élégance, passages souterrains, tunnel, fontaines et massifs' qui faisaient de l'endroit un ravissement. Le plan du parc demeure largement formel et symétrique, parsemé d'espèces subtropicales prospérant dans le climat de Catane.",
+          }),
+          text({
+            en: "The botanical collection counts more than one hundred species, including palms, araucarias, ficus, sophoras, and pepper trees lining the avenues. In the 1930s the entrance on Via Etnea was monumentalised, statues celebrating the arts were added, and a circular pool once home to white swans was created.",
+            es: "La colección botánica reúne más de cien especies, entre ellas palmeras, araucarias, ficus, sóforas y falsos pimenteros alineados en las avenidas. En la década de 1930 se monumentalizó la entrada de la Via Etnea, se añadieron estatuas que celebran las artes y se creó un estanque circular que antaño albergó cisnes blancos.",
+            it: "La collezione botanica comprende oltre cento specie, tra cui palme, araucarie, ficus, sofore e Schinus molle che fiancheggiano i viali. Negli anni Trenta fu monumentalizzato l'ingresso su Via Etnea, furono collocate statue dedicate alle arti e venne creata una vasca circolare che un tempo ospitava cigni bianchi.",
+            pt: "A coleção botânica reúne mais de cem espécies, incluindo palmeiras, araucárias, ficus, soforas e aroeiras-pimenteira que margeiam as avenidas. Na década de 1930 monumentalizou-se a entrada da Via Etnea, acrescentaram-se estátuas em homenagem às artes e criou-se uma piscina circular que já acolheu cisnes brancos.",
+            fr: "La collection botanique compte plus d'une centaine d'espèces, dont des palmiers, des araucarias, des ficus, des sophoras et des faux poivriers bordant les allées. Dans les années 1930, l'entrée de la Via Etnea fut monumentalisée, des statues célébrant les arts furent ajoutées et un bassin circulaire, autrefois peuplé de cygnes blancs, fut aménagé.",
+          }),
+          text({
+            en: "Do not miss the floral clock maintained daily by gardeners, the twin hills linked by bridges, or the panoramic terraces offering views of Catania and, on clear days, Mount Etna. Playgrounds, an avenue of illustrious Sicilians, and an amphitheatre for concerts make Villa Bellini a beloved gathering place year-round.",
+            es: "No te pierdas el reloj floral que los jardineros cuidan a diario, las dos colinas unidas por puentes ni las terrazas panorámicas con vistas de Catania y, en días despejados, del Etna. Áreas de juegos, una avenida dedicada a los sicilianos ilustres y un anfiteatro para conciertos convierten a la Villa Bellini en un lugar de encuentro querido todo el año.",
+            it: "Non perdere l'orologio floreale curato quotidianamente dai giardinieri, le due colline unite da ponti né le terrazze panoramiche che offrono viste su Catania e, nelle giornate limpide, sull'Etna. Aree gioco, un viale dedicato agli illustri siciliani e un anfiteatro per concerti fanno di Villa Bellini un luogo amatissimo tutto l'anno.",
+            pt: "Não deixe de ver o relógio floral mantido diariamente pelos jardineiros, as duas colinas ligadas por pontes ou os terraços panorâmicos com vistas de Catânia e, em dias límpidos, do Etna. Parques infantis, uma avenida dos sicilianos ilustres e um anfiteatro para concertos fazem da Villa Bellini um ponto de encontro querido o ano inteiro.",
+            fr: "Ne manquez pas l'horloge florale entretenue chaque jour par les jardiniers, les deux collines reliées par des ponts ni les terrasses panoramiques offrant des vues sur Catane et, par temps clair, sur l'Etna. Aires de jeux, allée des illustres Siciliens et amphithéâtre de concerts font de la Villa Bellini un lieu de rencontre apprécié toute l'année.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'palazzo-biscari',
@@ -334,6 +827,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5017, 15.09],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/0/0a/Palazzo_Biscari_Catania.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/1/1f/Salone_delle_feste_Palazzo_Biscari.jpg',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/palazzo-biscari-en.mp3',
@@ -345,6 +839,55 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'monument',
     duration: 30,
     order: 11,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Palazzo Biscari is the largest and most opulent private residence in Catania, a brilliant example of eighteenth-century Sicilian Baroque. Its 600 rooms extend over an entire city block, preserving the ambitions of the aristocratic Paternò Castello family.",
+            es: "El Palacio Biscari es la residencia privada más grande y suntuosa de Catania, un brillante ejemplo del barroco siciliano del siglo XVIII. Sus 600 habitaciones ocupan una manzana entera y preservan las ambiciones de la familia aristocrática Paternò Castello.",
+            it: "Il Palazzo Biscari è la più grande e sfarzosa residenza privata di Catania, fulgido esempio di barocco siciliano settecentesco. Le sue 600 stanze occupano un intero isolato e conservano le ambizioni della famiglia aristocratica Paternò Castello.",
+            pt: "O Palácio Biscari é a maior e mais opulenta residência privada de Catânia, um brilhante exemplo do barroco siciliano do século XVIII. Os seus 600 aposentos ocupam um quarteirão inteiro e preservam as ambições da família aristocrática Paternò Castello.",
+            fr: "Le palais Biscari est la plus vaste et la plus somptueuse résidence privée de Catane, brillant exemple du baroque sicilien du XVIIIe siècle. Ses 600 pièces couvrent tout un pâté de maisons et conservent les ambitions de la famille aristocratique Paternò Castello.",
+          }),
+          text({
+            en: "In the aftermath of the 1693 earthquake, Prince Ignazio Paternò Castello obtained royal permission to build atop the former city walls, a privilege rarely granted. Construction began in 1702 and continued through successive generations, with Prince Ignazio V completing the complex later in the century.",
+            es: "Tras el terremoto de 1693, el príncipe Ignazio Paternò Castello obtuvo permiso real para construir sobre las antiguas murallas, un privilegio poco común. Las obras comenzaron en 1702 y continuaron con generaciones sucesivas, hasta que el príncipe Ignazio V completó el complejo a finales de siglo.",
+            it: "Dopo il terremoto del 1693 il principe Ignazio Paternò Castello ottenne il raro privilegio di edificare sulle antiche mura cittadine. I lavori iniziarono nel 1702 e proseguirono con le generazioni successive, finché il principe Ignazio V completò il complesso alla fine del secolo.",
+            pt: "Após o terramoto de 1693, o príncipe Ignazio Paternò Castello obteve permissão real para construir sobre as antigas muralhas, um privilégio raro. As obras começaram em 1702 e continuaram com as gerações seguintes, até que o príncipe Ignazio V concluiu o complexo no final do século.",
+            fr: "À la suite du tremblement de terre de 1693, le prince Ignazio Paternò Castello obtint l'autorisation royale de construire sur les anciennes murailles, privilège rarement accordé. Les travaux débutèrent en 1702 et se poursuivirent avec les générations suivantes, jusqu'à ce que le prince Ignazio V achève le complexe à la fin du siècle.",
+          }),
+          text({
+            en: "The palace opens onto a vast courtyard once filled with gardens and pergolas, culminating in a grand double staircase that leads to the noble floor. The interior suites include the Sala dei Feudi with paintings of Biscari estates and the Green Room adorned with terracotta floors inlaid with white Syracuse stone.",
+            es: "El palacio se abre a un vasto patio que antaño estuvo cubierto de jardines y pérgolas, y culmina en una gran escalinata doble que conduce al piano nobile. Las estancias incluyen la Sala dei Feudi, con pinturas de las posesiones Biscari, y la Sala Verde, adornada con suelos de terracota incrustados con piedra blanca de Siracusa.",
+            it: "Il palazzo si apre su un ampio cortile un tempo ricco di giardini e pergolati, culminante in una grande doppia scala che conduce al piano nobile. Tra gli ambienti spiccano la Sala dei Feudi, con dipinti delle tenute Biscari, e la Sala Verde, ornata da pavimenti in terracotta intarsiata con pietra bianca di Siracusa.",
+            pt: "O palácio se abre para um vasto pátio que antigamente abrigava jardins e pérgulas, culminando numa grande escadaria dupla que conduz ao piano nobile. Entre os salões destacam-se a Sala dei Feudi, com pinturas das propriedades Biscari, e a Sala Verde, adornada com pisos de terracota incrustados com pedra branca de Siracusa.",
+            fr: "Le palais s'ouvre sur une vaste cour jadis remplie de jardins et de pergolas, qui se termine par un monumental escalier double menant à l'étage noble. Parmi les salons figurent la Sala dei Feudi, ornée de peintures des domaines Biscari, et la salle verte aux sols de terre cuite incrustés de pierre blanche de Syracuse.",
+          }),
+          text({
+            en: "The crowning jewel is the oval ballroom known as the Salone dell'Orchestra, completed in 1766. Frescoes by Sebastiano Lo Monaco celebrate the Biscari family, mirrors multiply the light, and a musicians' gallery hidden in the dome once filled the room with unseen music.",
+            es: "La joya de la corona es el salón ovalado conocido como Salone dell'Orchestra, terminado en 1766. Frescos de Sebastiano Lo Monaco celebran a la familia Biscari, los espejos multiplican la luz y una galería para músicos oculta en la cúpula llenaba la sala de música invisible.",
+            it: "Il gioiello è il salone ovale detto Salone dell'Orchestra, completato nel 1766. Affreschi di Sebastiano Lo Monaco celebrano la famiglia Biscari, gli specchi moltiplicano la luce e una galleria per i musicisti nascosta nella cupola riempiva la sala di musica invisibile.",
+            pt: "A joia da coroa é o salão oval conhecido como Salone dell'Orchestra, concluído em 1766. Frescos de Sebastiano Lo Monaco celebram a família Biscari, espelhos multiplicam a luz e uma galeria de músicos escondida na cúpula preenchia o salão com música invisível.",
+            fr: "Le joyau est la salle ovale dite Salone dell'Orchestra, achevée en 1766. Des fresques de Sebastiano Lo Monaco célèbrent la famille Biscari, des miroirs multiplient la lumière et une tribune de musiciens cachée dans la coupole remplissait la pièce d'une musique invisible.",
+          }),
+          text({
+            en: "Private apartments conserve rosewood panelling and even an ancient Roman mosaic floor, while the façade facing the old marina features sculpted windows by Antonino Amato. The palace's collections once formed an acclaimed museum that impressed visiting intellectuals such as Goethe.",
+            es: "Los apartamentos privados conservan paneles de palo de rosa e incluso un antiguo mosaico romano, mientras que la fachada hacia la antigua marina luce ventanas esculpidas por Antonino Amato. Las colecciones del palacio llegaron a formar un museo célebre que impresionó a intelectuales visitantes como Goethe.",
+            it: "Gli appartamenti privati conservano boiserie in palissandro e persino un antico mosaico romano, mentre la facciata verso l'antica marina presenta finestre scolpite da Antonino Amato. Le collezioni del palazzo costituirono un museo rinomato che impressionò visitatori illustri come Goethe.",
+            pt: "Os apartamentos privados preservam painéis de pau-rosa e até um antigo mosaico romano, enquanto a fachada voltada para a antiga marina exibe janelas esculpidas por Antonino Amato. As coleções do palácio chegaram a formar um museu célebre que impressionou visitantes ilustres como Goethe.",
+            fr: "Les appartements privés conservent des boiseries en palissandre et même un ancien sol en mosaïque romaine, tandis que la façade tournée vers l'ancienne marina arbore des fenêtres sculptées par Antonino Amato. Les collections du palais formèrent un musée réputé qui impressionna des visiteurs tels que Goethe.",
+          }),
+          text({
+            en: "Today the palace remains partly inhabited by descendants of the family. Its frescoed halls host concerts, exhibitions, fashion shows, and gala evenings, continuing Prince Ignazio's dream of a home that would honour Catania and welcome curious visitors from around the world.",
+            es: "Hoy el palacio sigue habitado en parte por descendientes de la familia. Sus salones frescos acogen conciertos, exposiciones, desfiles de moda y veladas de gala, continuando el sueño del príncipe Ignazio de una casa que honre a Catania y reciba a visitantes curiosos de todo el mundo.",
+            it: "Oggi il palazzo è ancora in parte abitato dai discendenti della famiglia. I saloni affrescati ospitano concerti, mostre, sfilate e serate di gala, proseguendo il sogno del principe Ignazio di una dimora che onori Catania e accolga visitatori curiosi da tutto il mondo.",
+            pt: "Hoje o palácio permanece parcialmente habitado por descendentes da família. Os salões decorados acolhem concertos, exposições, desfiles de moda e noites de gala, dando continuidade ao sonho do príncipe Ignazio de uma casa que honre Catânia e receba visitantes curiosos do mundo inteiro.",
+            fr: "Aujourd'hui, le palais reste partiellement habité par les descendants de la famille. Ses salles fresquées accueillent concerts, expositions, défilés de mode et soirées de gala, poursuivant le rêve du prince Ignazio d'une demeure qui honore Catane et accueille des visiteurs curieux venus du monde entier.",
+          }),
+        ],
+      },
+    ],
   },
   {
     id: 'piazza-universita',
@@ -356,7 +899,7 @@ export const cataniaPoints: PointOfInterest[] = [
       fr: 'Piazza Università',
     }),
     description: text({
-      en: 'Elegant palaces surround this lively square, where evening strolls and student life animate the cafés and arcades.',
+      en: "Elegant palaces surround this lively square, where evening strolls and student life animate the cafés and arcades.",
       es: 'Palacios elegantes rodean esta animada plaza, donde los paseos vespertinos y la vida estudiantil llenan los cafés y soportales.',
       it: 'Palazzi eleganti incorniciano questa piazza vivace, animata da passeggiate serali e dalla vita studentesca tra caffè e portici.',
       pt: 'Palácios elegantes cercam esta praça vibrante, cheia de passeios ao entardecer e da vida estudantil nos cafés e arcadas.',
@@ -365,6 +908,7 @@ export const cataniaPoints: PointOfInterest[] = [
     coordinates: [37.5034, 15.0873],
     images: [
       'https://upload.wikimedia.org/wikipedia/commons/d/d3/Catania_Piazza_Universit%C3%A0.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/7/7c/Catania%2C_Piazza_Universit%C3%A0%2C_liceo_cutelli.JPG',
     ],
     audioUrl: text({
       en: 'https://example.com/audio/piazza-universita-en.mp3',
@@ -376,6 +920,54 @@ export const cataniaPoints: PointOfInterest[] = [
     category: 'square',
     duration: 15,
     order: 12,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: "Piazza Università is one of Catania's most refined squares, a civic parlour where the city's academic soul meets everyday life. Its balanced proportions and polished façades reflect the intellectual prestige of the University of Catania, founded in 1434.",
+            es: "La Piazza Università es una de las plazas más refinadas de Catania, un salón cívico donde el alma académica de la ciudad se encuentra con la vida cotidiana. Sus proporciones equilibradas y sus fachadas pulidas reflejan el prestigio intelectual de la Universidad de Catania, fundada en 1434.",
+            it: "Piazza Università è una delle piazze più raffinate di Catania, un salotto civico in cui l'anima accademica della città incontra la vita quotidiana. Le proporzioni equilibrate e le facciate levigate riflettono il prestigio intellettuale dell'Università di Catania, fondata nel 1434.",
+            pt: "A Piazza Università é uma das praças mais refinadas de Catânia, um salão cívico onde a alma académica da cidade se encontra com a vida quotidiana. As proporções equilibradas e as fachadas polidas reflectem o prestígio intelectual da Universidade de Catânia, fundada em 1434.",
+            fr: "La Piazza Università est l'une des places les plus raffinées de Catane, un salon civique où l'âme académique de la ville rencontre la vie quotidienne. Ses proportions équilibrées et ses façades soignées reflètent le prestige intellectuel de l'université de Catane, fondée en 1434.",
+          }),
+          text({
+            en: "Catania's university is the oldest in Sicily, the thirteenth in Italy and the twenty-ninth in the world. Centuries of scholarship are condensed into this square, where students still gather between lectures just as their predecessors have for generations.",
+            es: "La universidad de Catania es la más antigua de Sicilia, la decimotercera de Italia y la vigésimo novena del mundo. Siglos de estudio se condensan en esta plaza, donde los estudiantes siguen reuniéndose entre clases tal y como lo hicieron sus predecesores durante generaciones.",
+            it: "L'università di Catania è la più antica di Sicilia, la tredicesima d'Italia e la ventinovesima al mondo. Secoli di sapere si condensano in questa piazza, dove gli studenti continuano a riunirsi tra una lezione e l'altra come fecero i loro predecessori.",
+            pt: "A universidade de Catânia é a mais antiga da Sicília, a décima terceira de Itália e a vigésima nona do mundo. Séculos de estudo condensam-se nesta praça, onde os estudantes continuam a reunir-se entre aulas tal como fizeram os seus antepassados.",
+            fr: "L'université de Catane est la plus ancienne de Sicile, la treizième d'Italie et la vingt-neuvième au monde. Des siècles d'érudition se concentrent sur cette place, où les étudiants continuent de se rassembler entre deux cours comme leurs prédécesseurs.",
+          }),
+          text({
+            en: "The pavement lays out polished lava stone with the city's emblem at its centre. At the corners stand four bronze lampposts created in the early twentieth century by Mimì Maria Lazzaro and Domenico Tudisco, each narrating a Catanese legend from Anfinomo and Anapia to Colapesce.",
+            es: "El pavimento despliega piedra de lava pulida con el emblema de la ciudad en el centro. En las esquinas se alzan cuatro farolas de bronce realizadas a principios del siglo XX por Mimì Maria Lazzaro y Domenico Tudisco, cada una narrando una leyenda catanesa, de Anfinomo y Anapia a Colapesce.",
+            it: "La pavimentazione è realizzata in pietra lavica lucidata con lo stemma cittadino al centro. Agli angoli si ergono quattro lampioni in bronzo realizzati all'inizio del Novecento da Mimì Maria Lazzaro e Domenico Tudisco, ciascuno dedicato a una leggenda catanese da Anfinomo e Anapia a Colapesce.",
+            pt: "O pavimento é composto de pedra de lava polida com o emblema da cidade ao centro. Nos cantos erguem-se quatro candeeiros de bronze criados no início do século XX por Mimì Maria Lazzaro e Domenico Tudisco, cada um narrando uma lenda catanesa, de Anfinomo e Anapia a Colapesce.",
+            fr: "Le pavement est composé de pierre de lave polie avec l'emblème de la ville en son centre. Aux angles se dressent quatre candélabres en bronze réalisés au début du XXe siècle par Mimì Maria Lazzaro et Domenico Tudisco, chacun racontant une légende catanaise, d'Anfinomo et Anapia à Colapesce.",
+          }),
+          text({
+            en: "The square is enclosed by elegant palaces rebuilt after 1693 by architects such as Giovanni Battista Vaccarini and the Battaglia brothers. Notable among them are the Siculorum Gymnasium, now the university rectorate and library, Palazzo Gioeni d'Angiò, and Palazzo San Giuliano.",
+            es: "La plaza está rodeada de elegantes palacios reconstruidos tras 1693 por arquitectos como Giovanni Battista Vaccarini y los hermanos Battaglia. Destacan el Siculorum Gymnasium, hoy rectorado y biblioteca universitaria, el Palazzo Gioeni d'Angiò y el Palazzo San Giuliano.",
+            it: "La piazza è incorniciata da eleganti palazzi ricostruiti dopo il 1693 da architetti come Giovanni Battista Vaccarini e i fratelli Battaglia. Tra questi spiccano il Siculorum Gymnasium, oggi rettorato e biblioteca, Palazzo Gioeni d'Angiò e Palazzo San Giuliano.",
+            pt: "A praça é rodeada por palácios elegantes reconstruídos após 1693 por arquitetos como Giovanni Battista Vaccarini e os irmãos Battaglia. Destacam-se o Siculorum Gymnasium, hoje reitoria e biblioteca universitária, o Palazzo Gioeni d'Angiò e o Palazzo San Giuliano.",
+            fr: "La place est encadrée de palais élégants reconstruits après 1693 par des architectes tels que Giovanni Battista Vaccarini et les frères Battaglia. On y remarque le Siculorum Gymnasium, aujourd'hui rectorat et bibliothèque universitaires, ainsi que le Palazzo Gioeni d'Angiò et le Palazzo San Giuliano.",
+          }),
+          text({
+            en: "Students use the arcaded cafés as informal study halls, while street performers add bursts of music and theatre. Evenings see the square glow with warm lighting, and its central position makes it a perfect point of departure for exploring Catania's historic centre.",
+            es: "Los estudiantes utilizan los cafés porticados como aulas informales, y artistas callejeros aportan ráfagas de música y teatro. Por la noche la plaza se ilumina con una luz cálida, y su posición central la convierte en un punto de partida perfecto para explorar el casco histórico de Catania.",
+            it: "Gli studenti usano i caffè sotto i portici come aule informali, mentre artisti di strada animano l'atmosfera con musica e teatro. La sera la piazza si illumina di luci calde, e la posizione centrale la rende un punto di partenza ideale per esplorare il centro storico di Catania.",
+            pt: "Os estudantes utilizam os cafés com arcadas como salas de estudo informais, enquanto artistas de rua acrescentam música e teatro. À noite a praça se enche de luz quente, e a sua posição central faz dela um ponto de partida ideal para explorar o centro histórico de Catânia.",
+            fr: "Les étudiants transforment les cafés voûtés en salles d'étude informelles, tandis que des artistes de rue insufflent musique et théâtre. Le soir, la place s'illumine d'une lumière chaleureuse et sa position centrale en fait un point de départ idéal pour découvrir le centre historique de Catane.",
+          }),
+          text({
+            en: "From this refined square, it is only a short stroll to Piazza del Duomo to the south or Via Crociferi to the north, making Piazza Università an essential waypoint in any exploration of the city.",
+            es: "Desde esta plaza refinada se llega en pocos pasos tanto a la Piazza del Duomo, hacia el sur, como a la Via Crociferi hacia el norte, lo que convierte a la Piazza Università en una parada esencial para explorar la ciudad.",
+            it: "Da questa piazza raffinata bastano pochi passi per raggiungere Piazza del Duomo a sud o Via dei Crociferi a nord, facendo di Piazza Università una tappa imprescindibile per esplorare la città.",
+            pt: "A partir desta praça refinada são apenas poucos passos até à Piazza del Duomo, a sul, ou à Via Crociferi, a norte, tornando a Piazza Università uma paragem essencial em qualquer exploração da cidade.",
+            fr: "Depuis cette place raffinée, il ne faut que quelques pas pour rejoindre la Piazza del Duomo au sud ou la Via Crociferi au nord, faisant de la Piazza Università une étape incontournable de toute exploration de la ville.",
+          }),
+        ],
+      },
+    ],
   },
 ];
-

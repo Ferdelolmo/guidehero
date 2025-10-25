@@ -135,8 +135,8 @@ export const guideData: CountryGuide[] = [
       fr: 'Baroque sicilien, énergie volcanique et piazzas côtières pleines de vie.',
     }),
     countrySlug: 'italy',
-    backgroundImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Catania_-_Piazza_Duomo_e_Via_Etnea.jpg',
-    flagImageUrl: 'https://placehold.co/96x64?text=IT',
+    backgroundImageUrl: 'https://civitavecchia.portmobility.it/sites/default/files/colosseo_5.jpg',
+    flagImageUrl: 'https://civitavecchia.portmobility.it/sites/default/files/colosseo_5.jpg',
     cities: [
       {
         name: createText({
@@ -154,7 +154,7 @@ export const guideData: CountryGuide[] = [
           fr: 'Palais baroques, marchés animés et vues sur l\'Etna façonnent ce port sicilien.',
         }),
         citySlug: 'catania',
-        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Catania%2C_Piazza_del_Duomo_e_Cattedrale_di_Sant%27Agata.jpg',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0AbbrxTIxKFHZZIL1deNkYCtlZABuPn7j-Q&s',
         available: true,
       },
     ],
