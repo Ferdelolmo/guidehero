@@ -973,4 +973,57 @@ export const cataniaPoints: PointOfInterest[] = [
       },
     ],
   },
+  {
+    id: 'fiera-catania',
+    name: text({
+      en: 'Fiera di Catania',
+      es: 'Fiera di Catania',
+      it: 'Fiera di Catania',
+      pt: 'Fiera di Catania',
+      fr: 'Fiera di Catania',
+    }),
+    description: text({
+      en: 'The term "Fiera di Catania" encompasses both the historic daily street market known as Fera \'o Luni in Piazza Carlo Alberto—one of Sicily\'s largest and most colorful traditional markets—and the modern exhibition centers Le Ciminiere and SiciliaFiera, which host trade fairs, cultural events, and exhibitions throughout the year.',
+      es: 'El término "Fiera di Catania" abarca tanto el histórico mercado callejero diario conocido como Fera \'o Luni en la Piazza Carlo Alberto —uno de los mercados tradicionales más grandes y coloridos de Sicilia— como los modernos centros expositivos de Le Ciminiere y SiciliaFiera, que acogen ferias comerciales, eventos culturales y exposiciones durante todo el año.',
+      it: 'Il termine "Fiera di Catania" comprende sia lo storico mercato quotidiano all\'aperto noto come Fera \'o Luni in Piazza Carlo Alberto —uno dei mercati tradizionali più grandi e variopinti della Sicilia— sia i moderni poli fieristici Le Ciminiere e SiciliaFiera, che ospitano fiere, eventi culturali ed esposizioni durante tutto l\'anno.',
+      pt: 'O termo "Fiera di Catania" abrange tanto o histórico mercado diário de rua conhecido como Fera \'o Luni na Piazza Carlo Alberto — um dos maiores e mais coloridos mercados tradicionais da Sicília — quanto os modernos centros expositivos Le Ciminiere e SiciliaFiera, que recebem feiras comerciais, eventos culturais e exposições ao longo de todo o ano.',
+      fr: 'Le terme « Fiera di Catania » englobe à la fois le marché de rue quotidien historique appelé Fera \'o Luni sur la Piazza Carlo Alberto — l’un des plus grands et des plus colorés marchés traditionnels de Sicile — et les centres d’exposition modernes Le Ciminiere et SiciliaFiera, qui accueillent salons professionnels, événements culturels et expositions tout au long de l’année.',
+    }),
+    coordinates: [37.5065, 15.088],
+    images: [
+      'https://upload.wikimedia.org/wikipedia/commons/a/a9/Catania_market.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/0c/Le_Ciminiere_Catania.jpg',
+    ],
+    audioUrl: text({
+      en: 'https://example.com/audio/fiera-catania-en.mp3',
+      es: 'https://example.com/audio/fiera-catania-es.mp3',
+      it: 'https://example.com/audio/fiera-catania-it.mp3',
+      pt: 'https://example.com/audio/fiera-catania-pt.mp3',
+      fr: 'https://example.com/audio/fiera-catania-fr.mp3',
+    }),
+    category: 'square',
+    duration: 20,
+    order: 13,
+    extendedSections: [
+      {
+        title: guideTitle,
+        paragraphs: [
+          text({
+            en: 'We are preparing an in-depth story for the vibrant world of the Fiera di Catania. Soon you will be able to explore its historic roots, modern venues, signature flavors, and the people who keep this market beating day after day.',
+            es: 'Estamos preparando una historia en profundidad sobre el vibrante universo de la Fiera di Catania. Muy pronto podrás descubrir sus raíces históricas, sus espacios modernos, sus sabores emblemáticos y a las personas que mantienen vivo este mercado día tras día.',
+            it: 'Stiamo preparando un racconto approfondito sul vibrante universo della Fiera di Catania. Presto potrai scoprire le sue radici storiche, le sedi moderne, i sapori simbolo e le persone che fanno pulsare questo mercato giorno dopo giorno.',
+            pt: 'Estamos a preparar um relato completo sobre o vibrante universo da Fiera di Catania. Em breve poderás descobrir as suas raízes históricas, os espaços modernos, os sabores emblemáticos e as pessoas que mantêm este mercado pulsante dia após dia.',
+            fr: 'Nous préparons un récit approfondi sur l’univers vibrant de la Fiera di Catania. Bientôt, vous découvrirez ses racines historiques, ses lieux modernes, ses saveurs emblématiques et les personnes qui font battre ce marché jour après jour.',
+          }),
+          text({
+            en: 'Check back soon for curated tips, must-try stalls, and behind-the-scenes insights designed to help you experience the Fiera like a true local.',
+            es: 'Vuelve pronto para encontrar consejos seleccionados, puestos imprescindibles y una mirada entre bastidores pensada para que vivas la Fiera como un auténtico local.',
+            it: 'Torna presto per scoprire consigli selezionati, banchi da non perdere e curiosità dietro le quinte pensate per farti vivere la Fiera come un vero locale.',
+            pt: 'Volta em breve para descobrir sugestões selecionadas, bancas imperdíveis e histórias de bastidores pensadas para que vivas a Fiera como um verdadeiro local.',
+            fr: 'Revenez bientôt pour découvrir des conseils sélectionnés, des stands incontournables et des anecdotes en coulisses afin de vivre la Fiera comme un véritable local.',
+          }),
+        ],
+      },
+    ],
+  },
 ];
