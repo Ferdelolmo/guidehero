@@ -142,6 +142,7 @@ export const avilaPoints: PointOfInterest[] = [
       },
     ],
     coordinates: [40.6561, -4.6989],
+    videoUrl: 'https://www.youtube.com/embed/mRVi9JmqMKQ?autoplay=1&mute=1&loop=1&playlist=mRVi9JmqMKQ',
     images: [
       'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/224000/224942-Avila-Cathedral.jpg',
       'https://megaconstrucciones.net/images/edificios-religiosos/foto5/avila-catedral.jpg',

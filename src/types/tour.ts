@@ -7,6 +7,7 @@ export interface PointOfInterest {
   extendedSections?: POIExtendedSection[];
   coordinates: [number, number]; // [latitude, longitude]
   images: string[];
+  videoUrl?: string;
   audioUrl?: LocalizedText;
   category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square';
   duration: number; // minutes

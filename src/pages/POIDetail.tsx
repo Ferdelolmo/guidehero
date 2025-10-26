@@ -84,7 +84,7 @@ const POIDetail = () => {
       {/* Content */}
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         {/* Image Gallery */}
-        <ImageGallery images={poi.images} alt={poi.name[language]} />
+        <ImageGallery images={poi.images} alt={poi.name[language]} videoUrl={poi.videoUrl} />
 
         {/* Info */}
         <div className="space-y-4">
