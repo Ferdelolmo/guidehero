@@ -8,14 +8,14 @@ import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
 import { LanguageSelector } from '@/components/LanguageSelector';
 import { Button } from '@/components/ui/button';
-import { Loader2, Landmark, ArrowLeft } from 'lucide-react';
+import { Loader2, Landmark, ArrowLeft, Car, UtensilsCrossed } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 import { guideData } from '@/data/guideData';
 
 const CataniaPage = () => {
-  const [activeTab, setActiveTab] = useState<'map' | 'list' | 'info'>('list');
+  const [activeTab, setActiveTab] = useState<'map' | 'list' | 'park' | 'eat' | 'info'>('list');
   const { location, error, isLoading } = useGeolocation();
   const navigate = useNavigate();
   const { language } = useLanguage();
@@ -76,6 +76,28 @@ const CataniaPage = () => {
             </ul>
           </div>
 
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              {
+                title: copy.catania.parkAndGoTitle,
+                description: copy.catania.parkAndGoDescription,
+              },
+              {
+                title: copy.catania.foodTitle,
+                description: copy.catania.foodDescription,
+              },
+            ].map((section) => (
+              <div
+                key={section.title}
+                className="bg-card rounded-lg p-6 border border-border space-y-2"
+                style={{ boxShadow: 'var(--shadow-soft)' }}
+              >
+                <h3 className="text-lg font-semibold text-foreground">{section.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{section.description}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="bg-card rounded-lg p-6 border border-border space-y-3" style={{ boxShadow: 'var(--shadow-soft)' }}>
             <h3 className="font-semibold text-foreground">{copy.catania.howToUseTitle}</h3>
             <ol className="space-y-2 text-sm text-foreground list-decimal list-inside">
@@ -83,6 +105,42 @@ const CataniaPage = () => {
                 <li key={step}>{step}</li>
               ))}
             </ol>
+          </div>
+        </div>
+      );
+    }
+
+    if (activeTab === 'park') {
+      return (
+        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+          <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+              <Car className="h-8 w-8 text-primary" />
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-2xl font-semibold text-foreground">{copy.catania.parkAndGoTitle}</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {copy.catania.parkAndGoDescription}
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (activeTab === 'eat') {
+      return (
+        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+          <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+              <UtensilsCrossed className="h-8 w-8 text-primary" />
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-2xl font-semibold text-foreground">{copy.catania.foodTitle}</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {copy.catania.foodDescription}
+              </p>
+            </div>
           </div>
         </div>
       );

@@ -43,6 +43,10 @@ interface AvilaCopy {
   };
   howToUseTitle: string;
   howToUseSteps: string[];
+  parkAndGoTitle: string;
+  parkAndGoDescription: string;
+  foodTitle: string;
+  foodDescription: string;
 }
 
 interface PoiDetailCopy {
@@ -68,6 +72,8 @@ interface NotFoundCopy {
 interface BottomNavCopy {
   map: string;
   list: string;
+  park: string;
+  eat: string;
   info: string;
 }
 
@@ -142,6 +148,10 @@ export const translations: Record<Language, UiCopy> = {
         'Tap any location to see details, photos, and audio guides',
         'Follow the suggested route or explore at your own pace',
       ],
+      parkAndGoTitle: 'Park and go',
+      parkAndGoDescription: 'Find convenient parking options and set off through Ávila with ease.',
+      foodTitle: 'Taste the city: where and what to eat',
+      foodDescription: 'Discover beloved local dishes, cafés, and sweets to try while you explore Ávila.',
     },
     catania: {
       listHeading: 'Explore Catania',
@@ -171,6 +181,10 @@ export const translations: Record<Language, UiCopy> = {
         'Tap any location to see details, photos, and audio guides',
         'Follow the suggested route or explore at your own pace',
       ],
+      parkAndGoTitle: 'Park and go',
+      parkAndGoDescription: 'Locate trusted parking areas and begin your Catania adventure straight away.',
+      foodTitle: 'Taste the city: where and what to eat',
+      foodDescription: 'Sample Catania\'s markets and must-try dishes with hand-picked food tips.',
     },
     poiDetail: {
       notFoundTitle: 'Location not found',
@@ -193,6 +207,8 @@ export const translations: Record<Language, UiCopy> = {
     bottomNav: {
       map: 'Map',
       list: 'Places',
+      park: 'Park',
+      eat: 'Eat',
       info: 'Info',
     },
     categories: {
@@ -259,6 +275,10 @@ export const translations: Record<Language, UiCopy> = {
         'Toca cualquier lugar para ver detalles, fotos y audioguías',
         'Sigue la ruta sugerida o explora a tu ritmo',
       ],
+      parkAndGoTitle: 'Aparca y arranca',
+      parkAndGoDescription: 'Encuentra dónde aparcar en Ávila y comienza tu recorrido sin complicaciones.',
+      foodTitle: 'Saborea la ciudad: dónde y qué comer',
+      foodDescription: 'Descubre qué platos, bares y dulces no puedes perderte mientras exploras Ávila.',
     },
     catania: {
       listHeading: 'Explora Catania',
@@ -288,6 +308,10 @@ export const translations: Record<Language, UiCopy> = {
         'Toca cualquier lugar para ver detalles, fotos y audioguías',
         'Sigue la ruta sugerida o explora a tu ritmo',
       ],
+      parkAndGoTitle: 'Aparca y arranca',
+      parkAndGoDescription: 'Descubre dónde estacionar en Catania y lánzate a explorar sin estrés.',
+      foodTitle: 'Saborea la ciudad: dónde y qué comer',
+      foodDescription: 'Te guiamos por mercados, trattorias y delicias imprescindibles para saborear Catania.',
     },
     poiDetail: {
       notFoundTitle: 'No encontramos este lugar',
@@ -310,6 +334,8 @@ export const translations: Record<Language, UiCopy> = {
     bottomNav: {
       map: 'Mapa',
       list: 'Lugares',
+      park: 'Aparcar',
+      eat: 'Comer',
       info: 'Info',
     },
     categories: {
@@ -376,6 +402,10 @@ export const translations: Record<Language, UiCopy> = {
         'Tocca qualsiasi luogo per dettagli, foto e audioguide',
         'Segui il percorso consigliato o esplora al tuo ritmo',
       ],
+      parkAndGoTitle: 'Parcheggia e via',
+      parkAndGoDescription: "Scopri dove lasciare l'auto ad Ávila e parti subito all'avventura.",
+      foodTitle: 'A Napoli che in Spagna, basta che si mangia',
+      foodDescription: 'Suggerimenti su piatti tipici, taverne e dolci da provare durante il tuo soggiorno ad Ávila.',
     },
     catania: {
       listHeading: 'Esplora Catania',
@@ -405,6 +435,10 @@ export const translations: Record<Language, UiCopy> = {
         'Tocca qualsiasi luogo per dettagli, foto e audioguide',
         'Segui il percorso consigliato o esplora al tuo ritmo',
       ],
+      parkAndGoTitle: 'Parcheggia e via',
+      parkAndGoDescription: 'Trova le aree consigliate dove parcheggiare a Catania e inizia subito la visita.',
+      foodTitle: 'A Napoli che in Spagna, basta che si mangia',
+      foodDescription: 'Scopri mercati, trattorie e street food imperdibili per assaporare Catania.',
     },
     poiDetail: {
       notFoundTitle: 'Luogo non trovato',
@@ -427,6 +461,8 @@ export const translations: Record<Language, UiCopy> = {
     bottomNav: {
       map: 'Mappa',
       list: 'Luoghi',
+      park: 'Parcheggio',
+      eat: 'Cibo',
       info: 'Info',
     },
     categories: {
@@ -493,6 +529,10 @@ export const translations: Record<Language, UiCopy> = {
         'Toque em qualquer ponto para ver detalhes, fotos e audioguias',
         'Siga o percurso sugerido ou explore no seu ritmo',
       ],
+      parkAndGoTitle: 'Estacione e siga',
+      parkAndGoDescription: 'Saiba onde deixar o carro em Ávila e comece o passeio sem transtornos.',
+      foodTitle: 'Saboreie a cidade: onde e o que comer',
+      foodDescription: 'Conheça pratos típicos, cafés e doces imperdíveis para aproveitar Ávila ao máximo.',
     },
     catania: {
       listHeading: 'Explore Catânia',
@@ -522,6 +562,10 @@ export const translations: Record<Language, UiCopy> = {
         'Toque em qualquer ponto para ver detalhes, fotos e audioguias',
         'Siga o percurso sugerido ou explore no seu ritmo',
       ],
+      parkAndGoTitle: 'Estacione e siga',
+      parkAndGoDescription: 'Descubra os melhores lugares para estacionar em Catânia e iniciar a visita com tranquilidade.',
+      foodTitle: 'Saboreie a cidade: onde e o que comer',
+      foodDescription: 'Receba indicações de mercados, trattorias e petiscos que revelam os sabores de Catânia.',
     },
     poiDetail: {
       notFoundTitle: 'Local não encontrado',
@@ -544,6 +588,8 @@ export const translations: Record<Language, UiCopy> = {
     bottomNav: {
       map: 'Mapa',
       list: 'Lugares',
+      park: 'Estacionar',
+      eat: 'Comer',
       info: 'Info',
     },
     categories: {
@@ -610,6 +656,10 @@ export const translations: Record<Language, UiCopy> = {
         "Touchez un lieu pour découvrir détails, photos et audioguides",
         "Suivez l'itinéraire suggéré ou explorez à votre rythme",
       ],
+      parkAndGoTitle: 'Garez-vous et partez',
+      parkAndGoDescription: 'Repérez les parkings recommandés à Ávila et commencez votre visite sereinement.',
+      foodTitle: 'Savourez la ville : où et quoi manger',
+      foodDescription: 'Nos conseils gourmands pour les spécialités, cafés et douceurs incontournables d’Ávila.',
     },
     catania: {
       listHeading: 'Explorez Catane',
@@ -639,6 +689,10 @@ export const translations: Record<Language, UiCopy> = {
         "Touchez un lieu pour découvrir détails, photos et audioguides",
         "Suivez l'itinéraire suggéré ou explorez à votre rythme",
       ],
+      parkAndGoTitle: 'Garez-vous et partez',
+      parkAndGoDescription: 'Trouvez facilement où stationner à Catane et partez explorer sans attendre.',
+      foodTitle: 'Savourez la ville : où et quoi manger',
+      foodDescription: 'Découvrez marchés, trattorie et gourmandises à ne pas manquer pour savourer Catane.',
     },
     poiDetail: {
       notFoundTitle: 'Lieu introuvable',
@@ -661,6 +715,8 @@ export const translations: Record<Language, UiCopy> = {
     bottomNav: {
       map: 'Carte',
       list: 'Lieux',
+      park: 'Parking',
+      eat: 'Gastronomie',
       info: 'Infos',
     },
     categories: {

@@ -149,7 +149,7 @@ export const avilaPoints: PointOfInterest[] = [
     ],
     audioUrl: text({
       en: 'https://example.com/audio/catedral-en.mp3',
-      es: 'https://example.com/audio/catedral-es.mp3',
+      es: 'https://ia801001.us.archive.org/12/items/catedral_202510/Catedral.m4a',
       it: 'https://example.com/audio/catedral-it.mp3',
       pt: 'https://example.com/audio/catedral-pt.mp3',
       fr: 'https://example.com/audio/catedral-fr.mp3',

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ImageGallery } from '@/components/ImageGallery';
@@ -36,6 +37,10 @@ const POIDetail = () => {
 
   const isMismatch = countrySlug && expectedCountrySlug && countrySlug !== expectedCountrySlug;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   if (!dataset || isMismatch) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
@@ -49,6 +54,10 @@ const POIDetail = () => {
       </div>
     );
   }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [id]);
 
   if (!poi) {
     return (

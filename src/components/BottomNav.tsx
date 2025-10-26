@@ -1,11 +1,11 @@
-import { Map, List, Info } from 'lucide-react';
+import { Map, List, Info, Car, UtensilsCrossed } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 
 interface BottomNavProps {
-  activeTab: 'map' | 'list' | 'info';
-  onTabChange: (tab: 'map' | 'list' | 'info') => void;
+  activeTab: 'map' | 'list' | 'park' | 'eat' | 'info';
+  onTabChange: (tab: 'map' | 'list' | 'park' | 'eat' | 'info') => void;
 }
 
 export const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
@@ -15,6 +15,8 @@ export const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
   const tabs = [
     { id: 'map' as const, icon: Map, label: copy.bottomNav.map },
     { id: 'list' as const, icon: List, label: copy.bottomNav.list },
+    { id: 'park' as const, icon: Car, label: copy.bottomNav.park },
+    { id: 'eat' as const, icon: UtensilsCrossed, label: copy.bottomNav.eat },
     { id: 'info' as const, icon: Info, label: copy.bottomNav.info },
   ];
 
