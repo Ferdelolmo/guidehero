@@ -77,6 +77,30 @@ interface BottomNavCopy {
   info: string;
 }
 
+interface RutaDeLosPalaciosCopy {
+  title: string;
+  description: string;
+  accordionLabel: string;
+  detailLabels: {
+    address: string;
+    access: string;
+    entry: string;
+    description: string;
+  };
+  accessTags: {
+    public: string;
+    partial: string;
+    private: string;
+  };
+  entryTags: {
+    free: string;
+    ticket: string;
+  };
+  historicalContextTitle: string;
+  historicalContext: string;
+  notAvailable: string;
+}
+
 interface UiCopy {
   home: HomeCopy;
   country: CountryCopy;
@@ -85,6 +109,7 @@ interface UiCopy {
   poiDetail: PoiDetailCopy;
   notFound: NotFoundCopy;
   bottomNav: BottomNavCopy;
+  rutaDeLosPalacios: RutaDeLosPalaciosCopy;
   categories: Record<CategoryKey, string>;
   general: {
     minutesShort: string;
@@ -227,6 +252,29 @@ export const translations: Record<Language, UiCopy> = {
       play: 'Play Audio Guide',
       pause: 'Pause',
     },
+    rutaDeLosPalacios: {
+      title: 'The Route of the Palaces',
+      description: 'The city lived its golden age during the 16th century, a period in which the nobility and wealthy families built these magnificent Renaissance palaces that today characterize the architectural heritage of the city.',
+      accordionLabel: 'Learn more about this palace',
+      detailLabels: {
+        address: 'Address',
+        access: 'Public access',
+        entry: 'Entry',
+        description: 'About this palace',
+      },
+      accessTags: {
+        public: 'Open to the public',
+        partial: 'Limited access',
+        private: 'No public access',
+      },
+      entryTags: {
+        free: 'Free',
+        ticket: 'Ticket required',
+      },
+      historicalContextTitle: 'Historical Context',
+      historicalContext: 'The 16th century represents the golden age of Ávila, when the city experienced an extraordinary boom thanks to the wool textile industry, the construction of churches and convents, and the religious drive of Saint Teresa of Ávila and Saint John of the Cross. This economic and cultural flourishing allowed the nobility and wealthy families to build these magnificent palaces that are now part of the UNESCO World Heritage site declared in 1985.',
+      notAvailable: 'Not available'
+    }
   },
   es: {
     home: {
@@ -354,6 +402,29 @@ export const translations: Record<Language, UiCopy> = {
       play: 'Reproducir audioguía',
       pause: 'Pausa',
     },
+    rutaDeLosPalacios: {
+      title: 'La Ruta de los Palacios',
+      description: 'La ciudad vivió su época dorada durante el siglo XVI, periodo en el que la nobleza y familias adineradas construyeron estos magníficos palacios renacentistas que hoy caracterizan el patrimonio arquitectónico de la ciudad.',
+      accordionLabel: 'Descubre más sobre el palacio',
+      detailLabels: {
+        address: 'Dirección',
+        access: 'Acceso al público',
+        entry: 'Entrada',
+        description: 'Sobre el palacio',
+      },
+      accessTags: {
+        public: 'Abierto al público',
+        partial: 'Acceso limitado',
+        private: 'Sin acceso público',
+      },
+      entryTags: {
+        free: 'Gratis',
+        ticket: 'Requiere entrada',
+      },
+      historicalContextTitle: 'Contexto Histórico',
+      historicalContext: 'El siglo XVI representa la época dorada de Ávila, cuando la ciudad experimentó un auge extraordinario gracias a la industria textil lanar, el levantamiento de iglesias y conventos, y el empuje religioso de Santa Teresa de Ávila y San Juan de la Cruz. Este florecimiento económico y cultural permitió a la nobleza y familias adineradas construir estos magníficos palacios que hoy forman parte del conjunto declarado Patrimonio de la Humanidad por la UNESCO en 1985.',
+      notAvailable: 'No disponible'
+    }
   },
   it: {
     home: {
@@ -481,6 +552,29 @@ export const translations: Record<Language, UiCopy> = {
       play: 'Avvia audioguida',
       pause: 'Pausa',
     },
+    rutaDeLosPalacios: {
+      title: 'La Via dei Palazzi',
+      description: 'La città visse la sua età dell\'oro nel XVI secolo, periodo in cui la nobiltà e le famiglie benestanti costruirono questi magnifici palazzi rinascimentali che oggi caratterizzano il patrimonio architettonico della città.',
+      accordionLabel: 'Scopri di più su questo palazzo',
+      detailLabels: {
+        address: 'Indirizzo',
+        access: 'Accesso al pubblico',
+        entry: 'Ingresso',
+        description: 'Sul palazzo',
+      },
+      accessTags: {
+        public: 'Aperto al pubblico',
+        partial: 'Accesso limitato',
+        private: 'Nessun accesso pubblico',
+      },
+      entryTags: {
+        free: 'Gratuito',
+        ticket: 'Biglietto necessario',
+      },
+      historicalContextTitle: 'Contesto Storico',
+      historicalContext: 'Il XVI secolo rappresenta l\'età dell\'oro di Ávila, quando la città conobbe uno straordinario sviluppo grazie all\'industria tessile della lana, alla costruzione di chiese e conventi e alla spinta religiosa di Santa Teresa d\'Ávila e San Giovanni della Croce. Questa fioritura economica e culturale permise alla nobiltà e alle famiglie benestanti di costruire questi magnifici palazzi che oggi fanno parte del sito dichiarato Patrimonio dell\'Umanità dall\'UNESCO nel 1985.',
+      notAvailable: 'Non disponibile'
+    }
   },
   pt: {
     home: {
@@ -608,6 +702,29 @@ export const translations: Record<Language, UiCopy> = {
       play: 'Reproduzir audioguia',
       pause: 'Pausar',
     },
+    rutaDeLosPalacios: {
+      title: 'A Rota dos Palácios',
+      description: 'A cidade viveu a sua idade de ouro durante o século XVI, período em que a nobreza e as famílias ricas construíram estes magníficos palácios renascentistas que hoje caracterizam o património arquitetónico da cidade.',
+      accordionLabel: 'Saiba mais sobre o palácio',
+      detailLabels: {
+        address: 'Endereço',
+        access: 'Acesso ao público',
+        entry: 'Entrada',
+        description: 'Sobre o palácio',
+      },
+      accessTags: {
+        public: 'Aberto ao público',
+        partial: 'Acesso limitado',
+        private: 'Sem acesso público',
+      },
+      entryTags: {
+        free: 'Gratuito',
+        ticket: 'Ingresso necessário',
+      },
+      historicalContextTitle: 'Contexto Histórico',
+      historicalContext: 'O século XVI representa a idade de ouro de Ávila, quando a cidade conheceu um extraordinário desenvolvimento graças à indústria têxtil da lã, à construção de igrejas e conventos e ao impulso religioso de Santa Teresa de Ávila e São João da Cruz. Este florescimento económico e cultural permitiu à nobreza e às famílias ricas construir estes magníficos palácios que hoje fazem parte do conjunto declarado Património da Humanidade pela UNESCO em 1985.',
+      notAvailable: 'Não disponível'
+    }
   },
   fr: {
     home: {
@@ -735,6 +852,29 @@ export const translations: Record<Language, UiCopy> = {
       play: 'Lancer l\'audioguide',
       pause: 'Pause',
     },
+    rutaDeLosPalacios: {
+      title: 'La Route des Palais',
+      description: 'La ville a connu son âge d\'or au XVIe siècle, période au cours de laquelle la noblesse et les familles riches ont construit ces magnifiques palais de la Renaissance qui caractérisent aujourd\'hui le patrimoine architectural de la ville.',
+      accordionLabel: 'En savoir plus sur ce palais',
+      detailLabels: {
+        address: 'Adresse',
+        access: 'Accès au public',
+        entry: 'Entrée',
+        description: 'À propos du palais',
+      },
+      accessTags: {
+        public: 'Ouvert au public',
+        partial: 'Accès limité',
+        private: 'Aucun accès public',
+      },
+      entryTags: {
+        free: 'Gratuit',
+        ticket: 'Billet requis',
+      },
+      historicalContextTitle: 'Contexte Historique',
+      historicalContext: 'Le XVIe siècle représente l\'âge d\'or d\'Ávila, lorsque la ville a connu un essor extraordinaire grâce à l\'industrie textile de la laine, à la construction d\'églises et de couvents et à l\'élan religieux de sainte Thérèse d\'Ávila et de saint Jean de la Croix. Cet épanouissement économique et culturel a permis à la noblesse et aux familles riches de construire ces magnifiques palais qui font aujourd\'hui partie du site classé au patrimoine mondial de l\'UNESCO en 1985.',
+      notAvailable: 'Non disponible'
+    }
   },
 };
 

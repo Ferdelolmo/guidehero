@@ -433,7 +433,7 @@ export const avilaPoints: PointOfInterest[] = [
         paragraphs: [
           text({
             en: 'Welcome to one of the brightest jewels of Spanish Isabelline Gothic! The Royal Monastery of Santo Tomás in Ávila, recognized as a UNESCO World Heritage Site in 1985, is not only an arresting architectural complex but also a vital witness to the era of the Catholic Monarchs and a treasure chest of captivating stories.',
-            es: '\¡Bienvenidos a una de las joyas más destacadas del gótico isabelino español! El Real Monasterio de Santo Tomás de Ávila, declarado Patrimonio de la Humanidad en 1985, no es solo un conjunto arquitectónico impresionante, sino un testigo fundamental de la época de los Reyes Católicos y un cofre de historias cautivadoras.',
+            es: '¡Bienvenidos a una de las joyas más destacadas del gótico isabelino español! El Real Monasterio de Santo Tomás de Ávila, declarado Patrimonio de la Humanidad en 1985, no es solo un conjunto arquitectónico impresionante, sino un testigo fundamental de la época de los Reyes Católicos y un cofre de historias cautivadoras.',
             it: 'Benvenuti in una delle gemme più luminose del gotico isabellino spagnolo! Il Real Monastero di Santo Tomás di Ávila, dichiarato Patrimonio dell\'Umanità nel 1985, non è solo un insieme architettonico sorprendente, ma anche un testimone fondamentale dell\'epoca dei Re Cattolici e scrigno di storie avvincenti.',
             pt: 'Bem-vindos a uma das joias mais brilhantes do gótico isabelino espanhol! O Real Mosteiro de Santo Tomás de Ávila, declarado Patrimônio da Humanidade em 1985, não é apenas um conjunto arquitetônico impressionante, mas também uma testemunha essencial da época dos Reis Católicos e um cofre de histórias fascinantes.',
             fr: 'Bienvenue dans l\'une des perles les plus éclatantes du gothique isabellin espagnol ! Le Real Monasterio de Santo Tomás d\'Ávila, inscrit au patrimoine mondial en 1985, n\'est pas seulement un ensemble architectural saisissant, c\'est aussi un témoin essentiel de l\'époque des Rois Catholiques et un coffre rempli d\'histoires captivantes.',
@@ -571,11 +571,11 @@ export const avilaPoints: PointOfInterest[] = [
         ],
         listItems: [
           text({
-            en: 'The Facade: a monumental portal with a depressed arch and two robust buttresses that trace an \"H\" for Hispanidad, lavishly decorated with spheres and flanked by ten Burgos-style statues attributed to Gil de Siloé and Diego de la Cruz.',
-            es: 'La fachada: una portada monumental con arco escarzano y dos machones robustos que dibujan una \"H\" de Hispanidad, profusamente decorada con bolas y flanqueada por diez esculturas burgalesas atribuidas a Gil de Siloé y Diego de la Cruz.',
-            it: 'La facciata: un portale monumentale con arco ribassato e due robusti pilastri che disegnano una \"H\" di Hispanidad, riccamente decorato da sfere e affiancato da dieci statue burgalesi attribuite a Gil de Siloé e Diego de la Cruz.',
-            pt: 'A fachada: um portal monumental com arco abatido e dois maciços robustos que desenham um \"H\" de Hispanidade, profusamente decorado com bolas e ladeado por dez esculturas burgalesas atribuídas a Gil de Siloé e Diego de la Cruz.',
-            fr: 'La façade : un portail monumental à arc surbaissé et deux puissants contreforts dessinant un \"H\" d\'Hispanidad, richement décoré de boules et flanqué de dix statues de style burgalais attribuées à Gil de Siloé et Diego de la Cruz.',
+            en: 'The Facade: a monumental portal with a depressed arch and two robust buttresses that trace an "H" for Hispanidad, lavishly decorated with spheres and flanked by ten Burgos-style statues attributed to Gil de Siloé and Diego de la Cruz.',
+            es: 'La fachada: una portada monumental con arco escarzano y dos machones robustos que dibujan una "H" de Hispanidad, profusamente decorada con bolas y flanqueada por diez esculturas burgalesas atribuidas a Gil de Siloé y Diego de la Cruz.',
+            it: 'La facciata: un portale monumentale con arco ribassato e due robusti pilastri che disegnano una "H" di Hispanidad, riccamente decorato da sfere e affiancato da dieci statue burgalesi attribuite a Gil de Siloé e Diego de la Cruz.',
+            pt: 'A fachada: um portal monumental com arco abatido e dois maciços robustos que desenham um "H" de Hispanidade, profusamente decorado com bolas e ladeado por dez esculturas burgalesas atribuídas a Gil de Siloé e Diego de la Cruz.',
+            fr: 'La façade : un portail monumental à arc surbaissé et deux puissants contreforts dessinant un "H" d\'Hispanidad, richement décoré de boules et flanqué de dix statues de style burgalais attribuées à Gil de Siloé et Diego de la Cruz.',
           }),
           text({
             en: 'The High Altarpiece: a masterpiece by the painter Pedro Berruguete, begun in 1494, rising 21 meters high with nineteen panels that narrate episodes from the life of Saint Thomas Aquinas.',
@@ -1046,5 +1046,38 @@ export const avilaPoints: PointOfInterest[] = [
     category: 'viewpoint',
     duration: 20,
     order: 13,
+  },
+  {
+    id: 'ruta-palacios',
+    name: text({
+      en: 'Route of the Palaces',
+      es: 'La Ruta de los Palacios',
+      it: 'La Via dei Palazzi',
+      pt: 'A Rota dos Palácios',
+      fr: 'La Route des Palais',
+    }),
+    description: text({
+      en: 'Discover the magnificent Renaissance palaces of Ávila, built during the city\'s golden age in the 16th century.',
+      es: 'Descubre los magníficos palacios renacentistas de Ávila, construidos durante la época dorada de la ciudad en el siglo XVI.',
+      it: 'Scopri i magnifici palazzi rinascimentali di Ávila, costruiti durante l\'età dell\'oro della città nel XVI secolo.',
+      pt: 'Descubra os magníficos palácios renascentistas de Ávila, construídos durante a idade de ouro da cidade no século XVI.',
+      fr: 'Découvrez les magnifiques palais de la Renaissance d\'Ávila, construits pendant l\'âge d\'or de la ville au XVIe siècle.',
+    }),
+    extendedSections: [],
+    coordinates: [40.6567, -4.7000], // Approximate center of the palaces area
+    images: [
+      'https://www.turismocastillayleon.com/es/patrimonio-cultural/palacios-casas-senoriales/palacio-superunda-avila.ficheros/39877-37177_SX_1_bic.jpg/g,39877-37177_SX_1_bic.jpg',
+    ],
+    audioUrl: text({
+      en: '',
+      es: '',
+      it: '',
+      pt: '',
+      fr: '',
+    }),
+    category: 'monument',
+    duration: 60,
+    order: 14,
+    customLink: '/spain/avila/rutadelospalacios',
   },
 ];

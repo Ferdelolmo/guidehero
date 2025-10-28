@@ -6,7 +6,6 @@ import { calculateDistance } from '@/utils/distance';
 import { POICard } from '@/components/POICard';
 import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
-import { LanguageSelector } from '@/components/LanguageSelector';
 import { Button } from '@/components/ui/button';
 import { Loader2, Castle, ArrowLeft, Car, UtensilsCrossed } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
@@ -24,6 +23,11 @@ const AvilaPage = () => {
   const totalDuration = avilaPoints.reduce((sum, p) => sum + p.duration, 0);
 
   const handlePOIClick = (poi: PointOfInterest) => {
+    if (poi.customLink) {
+      navigate(poi.customLink);
+      return;
+    }
+
     navigate(`/spain/avila/poi/${poi.id}`);
   };
 
@@ -178,9 +182,6 @@ const AvilaPage = () => {
           <ArrowLeft className="mr-2 h-4 w-4" />
           {spain?.name[language] ?? 'Spain'}
         </Button>
-      </div>
-      <div className="fixed top-0 right-0 z-40 p-4">
-        <LanguageSelector />
       </div>
       {renderContent()}
       <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />

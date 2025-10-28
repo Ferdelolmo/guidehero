@@ -12,6 +12,7 @@ export interface PointOfInterest {
   category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square';
   duration: number; // minutes
   order: number;
+  customLink?: string;
 }
 
 export interface POIExtendedSection {
@@ -24,4 +25,18 @@ export interface UserLocation {
   latitude: number;
   longitude: number;
   accuracy: number;
+}
+
+export type PalaceAccess = 'public' | 'partial' | 'private';
+
+export type PalaceEntry = 'free' | 'ticket';
+
+export interface Palace {
+  id: string;
+  name: LocalizedText;
+  description: LocalizedText;
+  address: LocalizedText;
+  publicAccess: PalaceAccess;
+  entryType: PalaceEntry;
+  image: string;
 }

@@ -4,7 +4,6 @@ import { ArrowLeft, MapPin } from 'lucide-react';
 import { guideData } from '@/data/guideData';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { LanguageSelector } from '@/components/LanguageSelector';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 
@@ -38,10 +37,6 @@ const CountryPage = () => {
 
   return (
     <div className="min-h-screen bg-background pb-16">
-      <div className="fixed top-0 right-0 z-40 p-4">
-        <LanguageSelector />
-      </div>
-
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-10 md:py-16">
         <div className="flex items-center gap-3">
           <Button variant="ghost" onClick={() => navigate('/')} className="px-2">

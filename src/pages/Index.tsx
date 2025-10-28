@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import { LanguageSelector } from '@/components/LanguageSelector';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { guideData } from '@/data/guideData';
@@ -14,9 +13,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-orange-100 to-amber-200/40">
-      <div className="fixed top-0 right-0 z-40 p-4">
-        <LanguageSelector />
-      </div>
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 py-16">
         <header className="mx-auto max-w-4xl text-center space-y-5">
           <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-3xl bg-white shadow-xl ring-1 ring-border/40">
