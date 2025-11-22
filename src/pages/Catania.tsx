@@ -210,6 +210,7 @@ const CataniaPage = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
+      <img src="https://i.imgur.com/zlsGy90.jpeg" alt="Catania" className="w-full h-48 object-cover" />
       <div className="fixed top-0 left-0 z-40 p-4">
         <Button
           variant="ghost"
