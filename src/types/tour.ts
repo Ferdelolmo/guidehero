@@ -9,10 +9,12 @@ export interface PointOfInterest {
   images: string[];
   videoUrl?: string;
   audioUrl?: LocalizedText;
-  category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square';
+  category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square' | 'eat' | 'park';
   duration: number; // minutes
   order: number;
   customLink?: string;
+  googleMapsUrl?: string;
+  price?: 'Economic' | 'Fair' | 'Upscale';
 }
 
 export interface POIExtendedSection {

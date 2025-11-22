@@ -18,6 +18,8 @@ const categoryColors = {
   museum: 'bg-secondary text-secondary-foreground border-border',
   viewpoint: 'bg-primary/15 text-primary border-primary/30',
   square: 'bg-muted text-muted-foreground border-border',
+  eat: 'bg-green-100 text-green-800 border-green-200',
+  park: 'bg-blue-100 text-blue-800 border-blue-200',
 };
 
 export const POICard = ({ poi, distance, onClick }: POICardProps) => {
