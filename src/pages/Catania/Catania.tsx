@@ -96,20 +96,25 @@ const CataniaPage = () => {
 
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem value="cuisine-basics" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
-              <AccordionTrigger className="text-left text-lg font-semibold">Sicilian cuisine essentials</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-semibold">{eatContent.cuisineHeading}</AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
                 {eatContent.cuisineDescription}
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="dishes" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
-              <AccordionTrigger className="text-left text-lg font-semibold">Typical dishes</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-semibold">{eatContent.typicalDishesHeading}</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4">
                   {eatContent.typicalDishes.map((dish) => (
-                    <div key={dish.name} className="rounded-lg border border-border p-4 bg-muted/30">
-                      <h3 className="text-base font-semibold text-foreground">{dish.name}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed mt-1">{dish.description}</p>
+                    <div key={dish.name} className="rounded-lg border border-border bg-muted/30 overflow-hidden">
+                      <div className="h-40 w-full overflow-hidden">
+                        <img src={dish.image} alt={dish.name} className="h-full w-full object-cover" />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-base font-semibold text-foreground">{dish.name}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed mt-1">{dish.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -117,12 +122,12 @@ const CataniaPage = () => {
             </AccordionItem>
 
             <AccordionItem value="restaurants" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
-              <AccordionTrigger className="text-left text-lg font-semibold">Restaurant recommendations</AccordionTrigger>
+              <AccordionTrigger className="text-left text-lg font-semibold">{eatContent.restaurantsHeading}</AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-4">
                   {eatContent.restaurants.map((restaurant) => (
                     <div key={restaurant.name} className="rounded-lg border border-border p-4 space-y-3 bg-card/50">
-                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                         <div>
                           <h3 className="text-base font-semibold text-foreground">{restaurant.name}</h3>
                           <p className="text-sm text-muted-foreground leading-relaxed">{restaurant.description}</p>
@@ -137,7 +142,7 @@ const CataniaPage = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
                       >
-                        View on Google Maps
+                        {eatContent.viewOnMapsLabel}
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
