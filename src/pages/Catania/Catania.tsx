@@ -6,13 +6,15 @@ import { POICard } from '@/components/POICard';
 import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
-import { Loader2, ArrowLeft, Car, UtensilsCrossed } from 'lucide-react';
+import { Loader2, ArrowLeft, Car, UtensilsCrossed, ExternalLink } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { guideData } from '@/data/guideData';
 import { getCataniaPlacesContent } from '@/pages/Catania/CataniaPlaces';
 import { getCataniaParkContent } from '@/pages/Catania/CataniaPark';
 import { getCataniaEatContent } from '@/pages/Catania/CataniaEat';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Badge } from '@/components/ui/badge';
 
 const CataniaPage = () => {
   const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat'>('places');
@@ -71,17 +73,79 @@ const CataniaPage = () => {
     if (activeTab === 'eat') {
       return (
         <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
-          <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-              <UtensilsCrossed className="h-8 w-8 text-primary" />
+          <div className="bg-card rounded-xl border border-border overflow-hidden" style={{ boxShadow: 'var(--shadow-soft)' }}>
+            <div className="h-48 w-full overflow-hidden">
+              <img
+                src={eatContent.heroImage}
+                alt="Traditional Sicilian pranzo spread"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <div className="space-y-2">
-              <h2 className="text-2xl font-semibold text-foreground">{eatContent.title}</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {eatContent.description}
-              </p>
+            <div className="p-6 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <UtensilsCrossed className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground">{eatContent.title}</h2>
+                  <p className="text-sm text-muted-foreground">{eatContent.description}</p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <Accordion type="multiple" className="space-y-4">
+            <AccordionItem value="cuisine-basics" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+              <AccordionTrigger className="text-left text-lg font-semibold">Sicilian cuisine essentials</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                {eatContent.cuisineDescription}
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="dishes" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+              <AccordionTrigger className="text-left text-lg font-semibold">Typical dishes</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4">
+                  {eatContent.typicalDishes.map((dish) => (
+                    <div key={dish.name} className="rounded-lg border border-border p-4 bg-muted/30">
+                      <h3 className="text-base font-semibold text-foreground">{dish.name}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed mt-1">{dish.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="restaurants" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+              <AccordionTrigger className="text-left text-lg font-semibold">Restaurant recommendations</AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-4">
+                  {eatContent.restaurants.map((restaurant) => (
+                    <div key={restaurant.name} className="rounded-lg border border-border p-4 space-y-3 bg-card/50">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <h3 className="text-base font-semibold text-foreground">{restaurant.name}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{restaurant.description}</p>
+                        </div>
+                        <Badge variant="secondary" className="w-fit capitalize">
+                          {restaurant.priceLabel}
+                        </Badge>
+                      </div>
+                      <a
+                        href={restaurant.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                      >
+                        View on Google Maps
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       );
     }
