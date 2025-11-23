@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 import { palaces } from '@/data/palaces';
+import { ImageGallery } from '@/components/ImageGallery';
 import {
   Accordion,
   AccordionContent,
@@ -18,7 +19,7 @@ const RutaDeLosPalaciosPage = () => {
   const { language } = useLanguage();
   const copy = getTranslations(language);
   const detailsCopy = copy.rutaDeLosPalacios;
-  const fallbackImage = 'https://placehold.co/600x400?text=Palacio';
+  const fallbackImage = 'https://placehold.co/800x600?text=Palacio';
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -49,26 +50,14 @@ const RutaDeLosPalaciosPage = () => {
             const addressText = address && address.length > 0 ? address : detailsCopy.notAvailable;
             const accessLabel = detailsCopy.accessTags[palace.publicAccess];
             const entryLabel = detailsCopy.entryTags[palace.entryType];
-            const imageSrc = palace.image || fallbackImage;
+            const images = palace.images.length ? palace.images : [fallbackImage];
 
             return (
               <div
                 key={palace.id}
                 className="bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="aspect-video w-full bg-muted">
-                  <img
-                    src={imageSrc}
-                    alt={name}
-                    onError={(event) => {
-                      if (event.currentTarget.src !== fallbackImage) {
-                        event.currentTarget.src = fallbackImage;
-                      }
-                    }}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+                <ImageGallery images={images} alt={name} className="aspect-video" />
                 <div className="p-6 space-y-4">
                   <h2 className="text-2xl font-semibold text-primary">{name}</h2>
                   <Accordion type="single" collapsible>

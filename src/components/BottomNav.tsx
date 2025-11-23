@@ -4,26 +4,35 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 
 interface BottomNavProps {
-  activeTab: 'map' | 'list' | 'park' | 'eat' | 'info';
-  onTabChange: (tab: 'map' | 'list' | 'park' | 'eat' | 'info') => void;
+  activeTab: TabId;
+  onTabChange: (tab: TabId) => void;
+  tabs?: TabId[];
 }
 
-export const BottomNav = ({ activeTab, onTabChange }: BottomNavProps) => {
+type TabId = 'map' | 'places' | 'park' | 'eat' | 'info';
+
+export const BottomNav = ({ activeTab, onTabChange, tabs }: BottomNavProps) => {
   const { language } = useLanguage();
   const copy = getTranslations(language);
 
-  const tabs = [
-    { id: 'map' as const, icon: Map, label: copy.bottomNav.map },
-    { id: 'list' as const, icon: List, label: copy.bottomNav.list },
-    { id: 'park' as const, icon: Car, label: copy.bottomNav.park },
-    { id: 'eat' as const, icon: UtensilsCrossed, label: copy.bottomNav.eat },
-    { id: 'info' as const, icon: Info, label: copy.bottomNav.info },
-  ];
+  const tabConfig: Record<TabId, { icon: typeof Map; label: string }> = {
+    map: { icon: Map, label: copy.bottomNav.map },
+    places: { icon: List, label: copy.bottomNav.places },
+    park: { icon: Car, label: copy.bottomNav.park },
+    eat: { icon: UtensilsCrossed, label: copy.bottomNav.eat },
+    info: { icon: Info, label: copy.bottomNav.info },
+  };
+
+  const renderedTabs = (tabs ?? ['map', 'places', 'park', 'eat', 'info']).map((id) => ({
+    id,
+    icon: tabConfig[id].icon,
+    label: tabConfig[id].label,
+  }));
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50 safe-area-bottom">
       <div className="flex items-center justify-around h-16 max-w-2xl mx-auto px-4">
-        {tabs.map(({ id, icon: Icon, label }) => (
+        {renderedTabs.map(({ id, icon: Icon, label }) => (
           <button
             key={id}
             onClick={() => onTabChange(id)}

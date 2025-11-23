@@ -29,7 +29,11 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'public',
     entryType: 'ticket',
-    image: 'https://placehold.co/600x400?text=Palacio+de+Superunda'
+    images: [
+      'https://www.turismocastillayleon.com/es/patrimonio-cultura/avila-palaciega.ficheros/64214-41633_SX_17.jpg?width=800&height=636&clipX=0&clipWidth=800&clipY=18&clipHeight=600',
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-SUPERUNDA-02.jpg',
+      'https://media-cdn.tripadvisor.com/media/photo-s/0e/f5/37/c2/palacio-de-los-superunda.jpg',
+    ]
   },
   {
     id: 'polentinos',
@@ -56,7 +60,11 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'public',
     entryType: 'free',
-    image: 'https://placehold.co/600x400?text=Palacio+de+Polentinos'
+    images: [
+      'https://frugocio.es/wp-content/uploads/2022/04/IMG_3236-scaled-e1648845363795.jpeg',
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-POLENTINOS-04.jpg',
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-POLENTINOS-02.jpg'
+    ]
   },
   {
     id: 'verdugo',
@@ -83,7 +91,12 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'partial',
     entryType: 'free',
-    image: 'https://placehold.co/600x400?text=Palacio+de+los+Verdugo'
+    images: [
+      'https://www.avilaturismo.com/wp-content/uploads/014.jpg',
+      'https://www.turismocastillayleon.com/cm/images?locale=es_ES&idMmedia=38941',
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-VERDUGO-02.jpg',
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-VERDUGO-01.jpg'
+    ]
   },
   {
     id: 'valderrabanos',
@@ -110,7 +123,11 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'partial',
     entryType: 'ticket',
-    image: 'https://placehold.co/600x400?text=Palacio+de+Valderrabanos'
+    images: [
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/686470060.jpg?k=86302a61a55422b57835c55c019642c3b8969cc1545908274ceea534f44d0850&o=',
+      'https://cdn.prod.website-files.com/67c964803f862d75ac2832b0/67c964803f862d75ac28469b_9%20copie.png',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Portada_del_Palacio_de_Valderr%C3%A1banos%2C_%C3%81vila.jpg/250px-Portada_del_Palacio_de_Valderr%C3%A1banos%2C_%C3%81vila.jpg'
+    ]
   },
   {
     id: 'velada',
@@ -137,7 +154,13 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'partial',
     entryType: 'ticket',
-    image: 'https://placehold.co/600x400?text=Palacio+de+los+Velada'
+    images: [
+      'https://www.turismocastillayleon.com/es/patrimonio-cultura/palacios/palacio-velada.ficheros/38451-35933_SD_0.jpg/g,38451-35933_SD_0.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/0/00/Mansi%C3%B3n_de_los_Velada%2C_%C3%81vila..JPG',
+      'https://cdn0.bodas.net/vendor/4329/3_2/960/jpg/fotografo-avila-juan-carlos-blanco-hotel-velada-avila-026_1_4329_v2.jpeg',
+      'https://www.atrapalo.com/hoteles/picture/l/0/7/7/644554074.jpg',
+      'https://www.hotelpalaciodelosvelada.com/wp-content/uploads/2024/02/Palacio-de-los-Veladaunnamed-1-3-1024x683.jpg'
+    ]
   },
   {
     id: 'davila',
@@ -158,7 +181,10 @@ export const palaces: Palace[] = [
     address: text({ en: '', es: '', it: '', pt: '', fr: '' }),
     publicAccess: 'private',
     entryType: 'ticket',
-    image: 'https://placehold.co/600x400?text=Palacio+de+los+Davila'
+    images: [
+      'https://www.avilaturismo.com/wp-content/uploads/PALACIO-DAVILA-02.jpg',
+      'https://placehold.co/800x600?text=Interior+Palacio+Davila',
+    ]
   },
   {
     id: 'nunezvela',
@@ -185,7 +211,10 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'partial',
     entryType: 'free',
-    image: 'https://placehold.co/600x400?text=Palacio+de+Nunez+Vela'
+    images: [
+      'https://placehold.co/800x600?text=Palacio+de+Nunez+Vela',
+      'https://placehold.co/800x600?text=Torreon+Nunez+Vela',
+    ]
   },
   {
     id: 'serrano',
@@ -212,7 +241,10 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'public',
     entryType: 'free',
-    image: 'https://placehold.co/600x400?text=Palacio+de+los+Serrano'
+    images: [
+      'https://placehold.co/800x600?text=Palacio+de+los+Serrano',
+      'https://placehold.co/800x600?text=Centro+Cultural+Serrano',
+    ]
   },
   {
     id: 'bracamonte',
@@ -239,7 +271,10 @@ export const palaces: Palace[] = [
     }),
     publicAccess: 'partial',
     entryType: 'free',
-    image: 'https://placehold.co/600x400?text=Palacio+de+Bracamonte'
+    images: [
+      'https://placehold.co/800x600?text=Palacio+de+Bracamonte',
+      'https://placehold.co/800x600?text=Patio+Palacio+Bracamonte',
+    ]
   },
   {
     id: 'almarza',
@@ -260,6 +295,9 @@ export const palaces: Palace[] = [
     address: text({ en: '', es: '', it: '', pt: '', fr: '' }),
     publicAccess: 'private',
     entryType: 'ticket',
-    image: 'https://placehold.co/600x400?text=Palacio+de+los+Almarza'
+    images: [
+      'https://placehold.co/800x600?text=Palacio+de+los+Almarza',
+      'https://placehold.co/800x600?text=Fachada+Palacio+Almarza',
+    ]
   }
 ];

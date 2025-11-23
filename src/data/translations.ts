@@ -71,7 +71,7 @@ interface NotFoundCopy {
 
 interface BottomNavCopy {
   map: string;
-  list: string;
+  places: string;
   park: string;
   eat: string;
   info: string;
@@ -231,7 +231,7 @@ export const translations: Record<Language, UiCopy> = {
     },
     bottomNav: {
       map: 'Map',
-      list: 'Places',
+      places: 'Places',
       park: 'Park',
       eat: 'Eat',
       info: 'Info',
@@ -381,7 +381,7 @@ export const translations: Record<Language, UiCopy> = {
     },
     bottomNav: {
       map: 'Mapa',
-      list: 'Lugares',
+      places: 'Lugares',
       park: 'Aparcar',
       eat: 'Comer',
       info: 'Info',
@@ -531,7 +531,7 @@ export const translations: Record<Language, UiCopy> = {
     },
     bottomNav: {
       map: 'Mappa',
-      list: 'Luoghi',
+      places: 'Luoghi',
       park: 'Parcheggio',
       eat: 'Cibo',
       info: 'Info',
@@ -681,7 +681,7 @@ export const translations: Record<Language, UiCopy> = {
     },
     bottomNav: {
       map: 'Mapa',
-      list: 'Lugares',
+      places: 'Lugares',
       park: 'Estacionar',
       eat: 'Comer',
       info: 'Info',
@@ -831,7 +831,7 @@ export const translations: Record<Language, UiCopy> = {
     },
     bottomNav: {
       map: 'Carte',
-      list: 'Lieux',
+      places: 'Lieux',
       park: 'Parking',
       eat: 'Gastronomie',
       info: 'Infos',

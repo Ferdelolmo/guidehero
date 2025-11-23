@@ -38,5 +38,5 @@ export interface Palace {
   address: LocalizedText;
   publicAccess: PalaceAccess;
   entryType: PalaceEntry;
-  image: string;
+  images: string[];
 }

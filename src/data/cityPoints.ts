@@ -1,5 +1,5 @@
-import { avilaPoints } from '@/data/avilaPoints';
-import { cataniaPoints } from '@/data/cataniaPoints';
+import { avilaPoints } from '@/pages/Avila/avilaPoints';
+import { cataniaPoints } from '@/pages/Catania/cataniaPoints';
 import type { PointOfInterest } from '@/types/tour';
 
 export interface CityDataset {
@@ -17,4 +17,3 @@ export const cityDatasets: Record<string, CityDataset> = {
     points: cataniaPoints,
   },
 };
-
