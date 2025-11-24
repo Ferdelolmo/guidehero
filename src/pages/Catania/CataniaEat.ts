@@ -1,7 +1,7 @@
 import type { Language } from '@/types/i18n';
 
 export type PriceCategory = 'economic' | 'fair' | 'upscale';
-type DishKey = 'pastaAllaNorma' | 'arancini' | 'pesceSpadaAllaGhiotta' | 'granitaConBrioche';
+type DishKey = 'pastaAllaNorma' | 'arancini' | 'pesceSpadaAllaGhiotta' | 'granitaConBrioche' | 'cannolo';
 type RestaurantKey =
   | 'trattoriaDaAntonio'
   | 'osteriaAnticaMarina'
@@ -57,6 +57,10 @@ const dishMetadata: Array<{ key: DishKey; image: string }> = [
     key: 'granitaConBrioche',
     image: 'https://www.coravin.com.es/cdn/shop/articles/AdobeStock_245883896_222f3921-ebc9-4369-b7f5-e642e7352796.jpg?v=1750420421',
   },
+  {
+    key: 'cannolo',
+    image: 'https://www.giallozafferano.es/images/2-256/Cannoli-siciliani_1200x800.jpg',
+  },
 ];
 
 const restaurantMetadata: Array<{ key: RestaurantKey; priceCategory: PriceCategory; mapUrl: string }> = [
@@ -107,11 +111,11 @@ const translations: Record<
     title: 'Taste the city: where and what to eat',
     description: 'Sample Sicily’s markets, trattorias, and bold flavours with hand-picked recommendations.',
     heroAlt: 'Traditional Sicilian pranzo spread',
-    cuisineHeading: 'Sicilian cuisine essentials',
+    cuisineHeading: 'Sicilian cuisine essentials 🍋',
     cuisineDescription:
       'Sicilian cuisine is a historical and cultural melting pot where Greek, Arab, Norman, and Spanish culinary traditions blend seamlessly. This unique fusion has made Sicily the core and foundation of Italian cuisine, as many iconic dishes and flavors originate from the island. Ingredients like olive oil, nuts (especially pistachios and almonds), citrus fruits, and fresh fish, together with emblematic dishes such as pasta alla Norma, pasta con le sarde, arancini, and couscous, reflect the rich Mediterranean complexity of its culinary tradition. More than just a regional cuisine, Sicilian food tells the story of a diverse history where each conqueror left an imprint on tastes and techniques, offering an experience that goes beyond food to narrate the Mediterranean heritage of the island. Italian cuisine owes much of its richness and diversity to Sicily, which stands as its culinary heart and Mediterranean soul.',
-    typicalDishesHeading: 'Typical dishes',
-    restaurantsHeading: 'Restaurant recommendations',
+    typicalDishesHeading: 'Typical dishes 🍽️',
+    restaurantsHeading: 'Restaurant recommendations 🍝',
     viewOnMapsLabel: 'View on Google Maps',
     typicalDishes: {
       pastaAllaNorma: {
@@ -133,6 +137,11 @@ const translations: Record<
         name: 'Granita con Brioche',
         description:
           'Almond or pistachio granita paired with warm brioche “col tuppo,” perfect in the morning heat.',
+      },
+      cannolo: {
+        name: 'Cannolo',
+        description:
+          'Crispy pastry tube filled with sweet, creamy ricotta, often with chocolate chips or candied fruit.',
       },
     },
     restaurants: {
@@ -172,11 +181,11 @@ const translations: Record<
     title: 'Saborea la ciudad: dónde y qué comer',
     description: 'Descubre mercados, trattorías y delicias que cuentan la historia gastronómica de Sicilia.',
     heroAlt: 'Mesa tradicional de un pranzo siciliano',
-    cuisineHeading: 'Esenciales de la cocina siciliana',
+    cuisineHeading: 'Esenciales de la cocina siciliana 🍋',
     cuisineDescription:
       'La gastronomía siciliana es un crisol histórico y cultural en el que se funden las tradiciones culinarias de los griegos, árabes, normandos y españoles, entre otros pueblos que dominaron y enriquecieron la isla a lo largo de los siglos. Esta fusión única ha convertido a Sicilia en el núcleo duro y la base esencial de la cocina italiana, pues muchas de sus preparaciones y sabores emblemáticos tienen origen o fuerte influencia en la isla. Ingredientes como el aceite de oliva, frutos secos (pistachos y almendras), cítricos y pescados frescos, junto con platos como la pasta alla Norma, pasta con le sarde, arancini o el couscous, reflejan la complejidad y riqueza mediterránea de su tradición culinaria, que ha conquistado paladares y se ha extendido ampliamente. Más que una simple cocina regional, la siciliana es un reflejo vivo de su historia, donde cada dominación dejó huellas bien presentes en los sabores y técnicas actuales. Desde la sencilla y sabrosa pasta con sardinas, que mezcla contraste de dulzura y sal, hasta los dulces como los cannoli o la cassata, cuyos orígenes remiten a la presencia árabe, esta cocina ofrece experiencias que trascienden lo gastronómico para narrar la propia historia mediterránea. Así, la cocina italiana debe en gran medida su riqueza y diversidad a Sicilia, que actúa como su corazón culinario y alma mediterránea.',
-    typicalDishesHeading: 'Platos típicos',
-    restaurantsHeading: 'Recomendaciones gastronómicas',
+    typicalDishesHeading: 'Platos típicos 🍽️',
+    restaurantsHeading: 'Recomendaciones gastronómicas 🍝',
     viewOnMapsLabel: 'Ver en Google Maps',
     typicalDishes: {
       pastaAllaNorma: {
@@ -198,6 +207,11 @@ const translations: Record<
         name: 'Granita con Brioche',
         description:
           'Granita de almendra o pistacho acompañada de brioche “col tuppo”, ideal para el calor.',
+      },
+      cannolo: {
+        name: 'Cannolo',
+        description:
+          'Tubo de hojaldre crujiente relleno de ricota dulce y cremosa, a menudo con trocitos de chocolate o fruta confitada.',
       },
     },
     restaurants: {
@@ -237,11 +251,11 @@ const translations: Record<
     title: 'A Napoli che in Spagna, basta che si mangia',
     description: 'Scopri mercati, trattorie e street food imperdibili per assaporare Catania.',
     heroAlt: 'Tavola tradizionale di un pranzo siciliano',
-    cuisineHeading: 'Essenziali della cucina siciliana',
+    cuisineHeading: 'Essenziali della cucina siciliana 🍋',
     cuisineDescription:
       'La cucina siciliana è un crogiolo storico e culturale in cui si fondono perfettamente le tradizioni culinarie greche, arabe, normanne e spagnole. Questa fusione unica ha fatto della Sicilia il nucleo e la base essenziale della cucina italiana, poiché molti piatti e sapori iconici hanno origine proprio dall\'isola. Ingredienti come l\'olio d\'oliva, la frutta secca (soprattutto pistacchi e mandorle), gli agrumi e il pesce fresco, insieme a piatti emblematici come la pasta alla Norma, la pasta con le sarde, gli arancini e il cous cous, riflettono la ricchezza e la complessità mediterranea della sua tradizione culinaria. Più di una semplice cucina regionale, la cucina siciliana racconta una storia di diversità in cui ogni dominatore ha lasciato la sua impronta nei sapori e nelle tecniche, offrendo un\'esperienza che va oltre il cibo per narrare il patrimonio mediterraneo dell\'isola. La cucina italiana deve gran parte della sua ricchezza e diversità alla Sicilia che ne rappresenta il cuore culinario e l’anima mediterranea.',
-    typicalDishesHeading: 'Piatti tipici',
-    restaurantsHeading: 'Raccomandazioni gastronomiche',
+    typicalDishesHeading: 'Piatti tipici 🍽️',
+    restaurantsHeading: 'Raccomandazioni gastronomiche 🍝',
     viewOnMapsLabel: 'Visualizza su Google Maps',
     typicalDishes: {
       pastaAllaNorma: {
@@ -263,6 +277,11 @@ const translations: Record<
         name: 'Granita con Brioche',
         description:
           'Granita di mandorla o pistacchio accompagnata da brioche “col tuppo”, perfetta al mattino.',
+      },
+      cannolo: {
+        name: 'Cannolo',
+        description:
+          'Tubo di pasta croccante ripieno di ricotta dolce e cremosa, spesso con gocce di cioccolato o frutta candita.',
       },
     },
     restaurants: {
@@ -302,11 +321,11 @@ const translations: Record<
     title: 'Savourez la ville : où et quoi manger',
     description: 'Nos conseils gourmands pour les spécialités, cafés et douceurs incontournables de Catane.',
     heroAlt: 'Table traditionnelle d’un pranzo sicilien',
-    cuisineHeading: 'Essentiels de la cuisine sicilienne',
+    cuisineHeading: 'Essentiels de la cuisine sicilienne 🍋',
     cuisineDescription:
       'La cuisine sicilienne est un creuset historique et culturel où se mêlent harmonieusement les traditions culinaires grecques, arabes, normandes et espagnoles. Cette fusion unique a fait de la Sicile le noyau et la base essentielle de la cuisine italienne, car de nombreux plats et saveurs emblématiques viennent de l’île. Des ingrédients comme l’huile d’olive, les fruits secs (notamment les pistaches et amandes), les agrumes et les poissons frais, ainsi que des plats emblématiques tels que les pâtes alla Norma, les pâtes aux sardines, les arancini et le couscous, reflètent la richesse et la complexité méditerranéenne de sa tradition culinaire. Plus qu’une simple cuisine régionale, la cuisine sicilienne raconte une histoire de diversité où chaque conquérant a laissé son empreinte sur les goûts et les techniques, offrant une expérience qui dépasse l’alimentaire pour narrer le patrimoine méditerranéen de l’île. La cuisine italienne doit une grande partie de sa richesse et diversité à la Sicile, qui constitue son cœur culinaire et son âme méditerranéenne.',
-    typicalDishesHeading: 'Plats typiques',
-    restaurantsHeading: 'Recommandations gourmandes',
+    typicalDishesHeading: 'Plats typiques 🍽️',
+    restaurantsHeading: 'Recommandations gourmandes 🍝',
     viewOnMapsLabel: 'Voir sur Google Maps',
     typicalDishes: {
       pastaAllaNorma: {
@@ -328,6 +347,11 @@ const translations: Record<
         name: 'Granita con Brioche',
         description:
           'Granita d’amande ou de pistache accompagnée d’un brioche “col tuppo”, parfaite le matin.',
+      },
+      cannolo: {
+        name: 'Cannolo',
+        description:
+          'Tube de pâte croustillante garni de ricotta douce et crémeuse, souvent avec des pépites de chocolat ou des fruits confits.',
       },
     },
     restaurants: {
@@ -367,11 +391,11 @@ const translations: Record<
     title: 'Saboreie a cidade: onde e o que comer',
     description: 'Conheça mercados, trattorias e petiscos que revelam a essência de Catânia.',
     heroAlt: 'Mesa tradicional de um pranzo siciliano',
-    cuisineHeading: 'Essenciais da culinária siciliana',
+    cuisineHeading: 'Essenciais da culinária siciliana 🍋',
     cuisineDescription:
       'A culinária siciliana é um caldeirão histórico e cultural onde as tradições culinárias grega, árabe, normanda e espanhola se fundem perfeitamente. Essa fusão única fez da Sicília o núcleo e a base essencial da culinária italiana, pois muitos pratos e sabores icônicos têm origem na ilha. Ingredientes como azeite de oliva, frutas secas (especialmente pistaches e amêndoas), frutas cítricas e peixes frescos, junto com pratos emblemáticos como massa alla Norma, massa com sardinhas, arancini e couscous refletem a rica complexidade mediterrânea de sua tradição culinária. Mais do que uma simples culinária regional, a cozinha siciliana conta uma história de diversidade onde cada conquistador deixou sua marca nos sabores e técnicas, oferecendo uma experiência que vai além da comida para narrar a herança mediterrânea da ilha. A culinária italiana deve grande parte de sua riqueza e diversidade à Sicília, que é seu coração culinário e alma mediterrânea.',
-    typicalDishesHeading: 'Pratos típicos',
-    restaurantsHeading: 'Recomendações gastronômicas',
+    typicalDishesHeading: 'Pratos típicos 🍽️',
+    restaurantsHeading: 'Recomendações gastronômicas 🍝',
     viewOnMapsLabel: 'Ver no Google Maps',
     typicalDishes: {
       pastaAllaNorma: {
@@ -393,6 +417,11 @@ const translations: Record<
         name: 'Granita com Brioche',
         description:
           'Granita de amêndoa ou pistache servida com brioche “col tuppo” quente.',
+      },
+      cannolo: {
+        name: 'Cannolo',
+        description:
+          'Tubo de massa crocante recheado com ricota doce e cremosa, muitas vezes com gotas de chocolate ou frutas cristalizadas.',
       },
     },
     restaurants: {
