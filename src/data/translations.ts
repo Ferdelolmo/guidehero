@@ -176,7 +176,8 @@ export const translations: Record<Language, UiCopy> = {
       parkAndGoTitle: 'Park and go',
       parkAndGoDescription: 'Find convenient parking options and set off through Ávila with ease.',
       foodTitle: 'Taste the city: where and what to eat',
-      foodDescription: 'Discover beloved local dishes, cafés, and sweets to try while you explore Ávila.',
+      foodDescription:
+        'Discover beloved local dishes, cafés, and sweets to try while you explore Ávila, where <strong>its best-preserved medieval walls</strong> keep watch over cozy taverns and pastry shops.\n\nSample robust cocido montañés and tender lamb skewers, then follow up with Santa Teresa yemas and a creamy custard dessert paired with regional wines and vermouth.',
     },
     catania: {
       listHeading: 'Explore Catania',
@@ -209,7 +210,8 @@ export const translations: Record<Language, UiCopy> = {
       parkAndGoTitle: 'Park and go',
       parkAndGoDescription: 'Locate trusted parking areas and begin your Catania adventure straight away.',
       foodTitle: 'Taste the city: where and what to eat',
-      foodDescription: 'Sample Catania\'s markets and must-try dishes with hand-picked food tips.',
+      foodDescription:
+        'Sample Catania\'s markets and must-try dishes with hand-picked food tips.\n\nSicilian cuisine is a historical and cultural melting pot where Greek, Arab, Norman, and Spanish culinary traditions blend seamlessly. This unique fusion has made Sicily the core and foundation of Italian cuisine, as many iconic dishes and flavors originate from the island. Ingredients like olive oil, nuts (especially pistachios and almonds), citrus fruits, and fresh fish, together with emblematic dishes such as pasta alla Norma, pasta con le sarde, arancini, and couscous, reflect the rich Mediterranean complexity of its culinary tradition. More than just a regional cuisine, Sicilian food tells the story of a diverse history where each conqueror left an imprint on tastes and techniques, offering an experience that goes beyond food to narrate the Mediterranean heritage of the island. Italian cuisine owes much of its richness and diversity to Sicily, which stands as its culinary heart and Mediterranean soul.',
     },
     poiDetail: {
       notFoundTitle: 'Location not found',
@@ -359,7 +361,8 @@ export const translations: Record<Language, UiCopy> = {
       parkAndGoTitle: 'Aparca y arranca',
       parkAndGoDescription: 'Descubre dónde estacionar en Catania y lánzate a explorar sin estrés.',
       foodTitle: 'Saborea la ciudad: dónde y qué comer',
-      foodDescription: 'Te guiamos por mercados, trattorias y delicias imprescindibles para saborear Catania.',
+      foodDescription:
+        'Te guiamos por mercados, trattorias y delicias imprescindibles para saborear Catania.\n\nLa gastronomía siciliana es un crisol histórico y cultural en el que se funden las tradiciones culinarias de los griegos, árabes, normandos y españoles, entre otros pueblos que dominaron y enriquecieron la isla a lo largo de los siglos. Esta fusión única ha convertido a Sicilia en el núcleo duro y la base esencial de la cocina italiana, pues muchas de sus preparaciones y sabores emblemáticos tienen origen o fuerte influencia en la isla. Ingredientes como el aceite de oliva, frutos secos (pistachos y almendras), cítricos y pescados frescos, junto con platos como la pasta alla Norma, pasta con le sarde, arancini o el couscous, reflejan la complejidad y riqueza mediterránea de su tradición culinaria, que ha conquistado paladares y se ha extendido ampliamente. Más que una simple cocina regional, la siciliana es un reflejo vivo de su historia, donde cada dominación dejó huellas bien presentes en los sabores y técnicas actuales. Desde la sencilla y sabrosa pasta con sardinas, que mezcla contraste de dulzura y sal, hasta los dulces como los cannoli o la cassata, cuyos orígenes remiten a la presencia árabe, esta cocina ofrece experiencias que trascienden lo gastronómico para narrar la propia historia mediterránea. Así, la cocina italiana debe en gran medida su riqueza y diversidad a Sicilia, que actúa como su corazón culinario y alma mediterránea.',
     },
     poiDetail: {
       notFoundTitle: 'No encontramos este lugar',
@@ -509,7 +512,8 @@ export const translations: Record<Language, UiCopy> = {
       parkAndGoTitle: 'Parcheggia e via',
       parkAndGoDescription: 'Trova le aree consigliate dove parcheggiare a Catania e inizia subito la visita.',
       foodTitle: 'A Napoli che in Spagna, basta che si mangia',
-      foodDescription: 'Scopri mercati, trattorie e street food imperdibili per assaporare Catania.',
+      foodDescription:
+        'Scopri mercati, trattorie e street food imperdibili per assaporare Catania.\n\nLa cucina siciliana è un crogiolo storico e culturale in cui si fondono perfettamente le tradizioni culinarie greche, arabe, normanne e spagnole. Questa fusione unica ha fatto della Sicilia il nucleo e la base essenziale della cucina italiana, poiché molti piatti e sapori iconici hanno origine proprio dall\'isola. Ingredienti come l\'olio d\'oliva, la frutta secca (soprattutto pistacchi e mandorle), gli agrumi e il pesce fresco, insieme a piatti emblematici come la pasta alla Norma, la pasta con le sarde, gli arancini e il cous cous, riflettono la ricchezza e la complessità mediterranea della sua tradizione culinaria. Più di una semplice cucina regionale, la cucina siciliana racconta una storia di diversità in cui ogni dominatore ha lasciato la sua impronta nei sapori e nelle tecniche, offrendo un\'esperienza che va oltre il cibo per narrare il patrimonio mediterraneo dell\'isola. La cucina italiana deve gran parte della sua ricchezza e diversità alla Sicilia che ne rappresenta il cuore culinario e l’anima mediterranea.',
     },
     poiDetail: {
       notFoundTitle: 'Luogo non trovato',
@@ -659,7 +663,8 @@ export const translations: Record<Language, UiCopy> = {
       parkAndGoTitle: 'Estacione e siga',
       parkAndGoDescription: 'Descubra os melhores lugares para estacionar em Catânia e iniciar a visita com tranquilidade.',
       foodTitle: 'Saboreie a cidade: onde e o que comer',
-      foodDescription: 'Receba indicações de mercados, trattorias e petiscos que revelam os sabores de Catânia.',
+      foodDescription:
+        'Receba indicações de mercados, trattorias e petiscos que revelam os sabores de Catânia.\n\nA culinária siciliana é um caldeirão histórico e cultural onde as tradições culinárias grega, árabe, normanda e espanhola se fundem perfeitamente. Essa fusão única fez da Sicília o núcleo e a base essencial da culinária italiana, pois muitos pratos e sabores icônicos têm origem na ilha. Ingredientes como azeite de oliva, frutas secas (especialmente pistaches e amêndoas), frutas cítricas e peixes frescos, junto com pratos emblemáticos como massa alla Norma, massa com sardinhas, arancini e couscous refletem a rica complexidade mediterrânea de sua tradição culinária. Mais do que uma simples culinária regional, a cozinha siciliana conta uma história de diversidade onde cada conquistador deixou sua marca nos sabores e técnicas, oferecendo uma experiência que vai além da comida para narrar a herança mediterrânea da ilha. A culinária italiana deve grande parte de sua riqueza e diversidade à Sicília, que é seu coração culinário e alma mediterrânea.',
     },
     poiDetail: {
       notFoundTitle: 'Local não encontrado',

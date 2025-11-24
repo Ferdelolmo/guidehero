@@ -25,6 +25,13 @@ const CataniaPage = () => {
   const placesContent = getCataniaPlacesContent(language);
   const parkContent = getCataniaParkContent(language);
   const eatContent = getCataniaEatContent(language);
+  const renderCuisineParagraph = (paragraph: string, index: number) => (
+    <p
+      key={`cuisine-paragraph-${index}`}
+      className="m-0"
+      dangerouslySetInnerHTML={{ __html: paragraph }}
+    />
+  );
 
   const handlePOIClick = (poi: PointOfInterest) => {
     navigate(`/italy/catania/poi/${poi.id}`);
@@ -97,8 +104,8 @@ const CataniaPage = () => {
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem value="cuisine-basics" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
               <AccordionTrigger className="text-left text-lg font-semibold">{eatContent.cuisineHeading}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
-                {eatContent.cuisineDescription}
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed space-y-4">
+                {eatContent.cuisineDescription.split('\n\n').map((paragraph, index) => renderCuisineParagraph(paragraph, index))}
               </AccordionContent>
             </AccordionItem>
 

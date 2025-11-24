@@ -11,7 +11,7 @@ import CataniaPage from "./pages/Catania/Catania";
 import CountryPage from "./pages/Country";
 import POIDetail from "./pages/POIDetail";
 import NotFound from "./pages/NotFound";
-import RutaDeLosPalaciosPage from "./pages/RutaDeLosPalacios";
+import RutaDeLosPalaciosPage from "./pages/Avila/RutaDeLosPalacios";
 
 const queryClient = new QueryClient();
 
