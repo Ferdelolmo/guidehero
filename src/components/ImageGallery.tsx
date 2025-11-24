@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 interface ImageGalleryProps {
   images: string[];
   alt: string;
   videoUrl?: string;
+  className?: string;
 }
 
 type MediaItem =
   | { type: 'image'; url: string }
   | { type: 'video'; url: string };
 
-export const ImageGallery = ({ images, alt, videoUrl }: ImageGalleryProps) => {
+export const ImageGallery = ({ images, alt, videoUrl, className }: ImageGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const mediaItems: MediaItem[] = [
     ...(videoUrl ? [{ type: 'video', url: videoUrl }] : []),
@@ -34,7 +36,13 @@ export const ImageGallery = ({ images, alt, videoUrl }: ImageGalleryProps) => {
   const currentItem = mediaItems[currentIndex];
 
   return (
-    <div className="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden" style={{ boxShadow: 'var(--shadow-medium)' }}>
+    <div
+      className={cn(
+        'relative w-full bg-muted rounded-lg overflow-hidden',
+        className ?? 'h-64 sm:h-80'
+      )}
+      style={{ boxShadow: 'var(--shadow-medium)' }}
+    >
       {currentItem.type === 'image' ? (
         <img
           src={currentItem.url}

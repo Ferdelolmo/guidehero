@@ -6,12 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import Index from "./pages/Index";
-import AvilaPage from "./pages/Avila";
-import CataniaPage from "./pages/Catania";
+import AvilaPage from "./pages/Avila/Avila";
+import CataniaPage from "./pages/Catania/Catania";
 import CountryPage from "./pages/Country";
 import POIDetail from "./pages/POIDetail";
 import NotFound from "./pages/NotFound";
-import RutaDeLosPalaciosPage from "./pages/RutaDeLosPalacios";
+import RutaDeLosPalaciosPage from "./pages/Avila/RutaDeLosPalacios";
 
 const queryClient = new QueryClient();
 

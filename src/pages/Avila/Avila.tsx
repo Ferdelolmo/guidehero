@@ -1,26 +1,39 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { avilaPoints } from '@/data/avilaPoints';
+import { avilaPoints } from '@/pages/Avila/avilaPoints';
 import { useGeolocation } from '@/hooks/useGeolocation';
 import { calculateDistance } from '@/utils/distance';
 import { POICard } from '@/components/POICard';
 import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Loader2, Castle, ArrowLeft, Car, UtensilsCrossed } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
 import { guideData } from '@/data/guideData';
+import { getAvilaParkContent } from '@/pages/Avila/avilaPark';
+import { getAvilaEatContent } from '@/pages/Avila/avilaEat';
 
 const AvilaPage = () => {
-  const [activeTab, setActiveTab] = useState<'map' | 'list' | 'park' | 'eat' | 'info'>('list');
+  const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat' | 'info'>('places');
   const { location, error, isLoading } = useGeolocation();
   const navigate = useNavigate();
   const { language } = useLanguage();
   const copy = getTranslations(language);
   const spain = guideData.find((country) => country.countrySlug === 'spain');
   const totalDuration = avilaPoints.reduce((sum, p) => sum + p.duration, 0);
+  const parkContent = getAvilaParkContent(language);
+  const eatContent = getAvilaEatContent(language);
+  const foodParagraphs = eatContent.description.split('\n\n');
+  const renderFoodParagraph = (paragraph: string, index: number) => (
+    <p
+      key={`food-paragraph-${index}`}
+      className="m-0"
+      dangerouslySetInnerHTML={{ __html: paragraph }}
+    />
+  );
 
   const handlePOIClick = (poi: PointOfInterest) => {
     if (poi.customLink) {
@@ -100,10 +113,8 @@ const AvilaPage = () => {
               <Car className="h-8 w-8 text-primary" />
             </div>
             <div className="space-y-2">
-              <h2 className="text-2xl font-semibold text-foreground">{copy.avila.parkAndGoTitle}</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {copy.avila.parkAndGoDescription}
-              </p>
+              <h2 className="text-2xl font-semibold text-foreground">{parkContent.title}</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">{parkContent.description}</p>
             </div>
           </div>
         </div>
@@ -111,21 +122,30 @@ const AvilaPage = () => {
     }
 
     if (activeTab === 'eat') {
-      return (
-        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
-          <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-              <UtensilsCrossed className="h-8 w-8 text-primary" />
+        return (
+          <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+            <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <UtensilsCrossed className="h-8 w-8 text-primary" />
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-2xl font-semibold text-foreground">{eatContent.title}</h2>
+                <p
+                  className="text-sm text-muted-foreground leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: foodParagraphs[0] }}
+                />
+              </div>
             </div>
-            <div className="space-y-2">
-              <h2 className="text-2xl font-semibold text-foreground">{copy.avila.foodTitle}</h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {copy.avila.foodDescription}
-              </p>
-            </div>
+            <Accordion type="multiple" className="space-y-4">
+              <AccordionItem value="avila-eat" className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <AccordionTrigger className="text-left text-lg font-semibold">{eatContent.title}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed space-y-4">
+                  {foodParagraphs.map((paragraph, index) => renderFoodParagraph(paragraph, index))}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
-        </div>
-      );
+        );
     }
 
     return (

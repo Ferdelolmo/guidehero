@@ -9,12 +9,10 @@ export interface PointOfInterest {
   images: string[];
   videoUrl?: string;
   audioUrl?: LocalizedText;
-  category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square' | 'eat' | 'park';
+  category: 'monument' | 'church' | 'museum' | 'viewpoint' | 'square';
   duration: number; // minutes
   order: number;
   customLink?: string;
-  googleMapsUrl?: string;
-  price?: 'Economic' | 'Fair' | 'Upscale';
 }
 
 export interface POIExtendedSection {
@@ -40,5 +38,5 @@ export interface Palace {
   address: LocalizedText;
   publicAccess: PalaceAccess;
   entryType: PalaceEntry;
-  image: string;
+  images: string[];
 }
