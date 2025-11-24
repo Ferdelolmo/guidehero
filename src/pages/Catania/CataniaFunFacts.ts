@@ -18,11 +18,11 @@ const content = {
   facts: [
     {
       title: {
-        en: 'The City of Lava and Legends',
-        es: 'La Ciudad de Lava y Leyendas',
-        it: 'La Città di Lava e Leggende',
-        fr: 'La Cité de Lave et de Légendes',
-        pt: 'A Cidade de Lava e Lendas',
+        en: 'The City of Lava and Legends 🌋',
+        es: 'La Ciudad de Lava y Leyendas 🌋',
+        it: 'La Città di Lava e Leggende 🌋',
+        fr: 'La Cité de Lave et de Légendes 🌋',
+        pt: 'A Cidade de Lava e Lendas 🌋',
       },
       content: {
         en: 'Catania is famously known as "The Black City" because its buildings, streets, and even the iconic Elephant Fountain are made from black lava stone. This volcanic material comes from Mount Etna, which has shaped the city’s appearance and character for centuries. Walking through Catania feels like strolling through a landscape forged by fire and myth.',
@@ -34,11 +34,11 @@ const content = {
     },
     {
       title: {
-        en: 'The Elephant Fountain’s Quirky Secret',
-        es: 'El Secreto Peculiar de la Fuente del Elefante',
-        it: 'Il Segreto Bizzarro della Fontana dell\'Elefante',
-        fr: 'Le Secret Insolite de la Fontaine de l\'Éléphant',
-        pt: 'O Segredo peculiar da Fonte do Elefante',
+        en: 'The Elephant Fountain’s Quirky Secret 🐘',
+        es: 'El Secreto Peculiar de la Fuente del Elefante 🐘',
+        it: 'Il Segreto Bizzarro della Fontana dell\'Elefante 🐘',
+        fr: 'Le Secret Insolite de la Fontaine de l\'Éléphant 🐘',
+        pt: 'O Segredo peculiar da Fonte do Elefante 🐘',
       },
       content: {
         en: 'The city’s mascot, "U Liotru" (the Elephant Fountain), is more than just a symbol—it’s a quirky legend. The original statue was designed without testicles, which locals found offensive to their pride. The sculptor, Giovanni Battista Vaccarini, quickly added them to appease the city’s men, making the fountain a playful nod to local pride and humor.',
@@ -50,11 +50,11 @@ const content = {
     },
     {
       title: {
-        en: 'Underground City and Hidden Rivers',
-        es: 'Ciudad Subterránea y Ríos Ocultos',
-        it: 'Città Sotterranea e Fiumi Nascosti',
-        fr: 'Ville Souterraine et Rivières Cachées',
-        pt: 'Cidade Subterrânea e Rios Escondidos',
+        en: 'Underground City and Hidden Rivers 🌊',
+        es: 'Ciudad Subterránea y Ríos Ocultos 🌊',
+        it: 'Città Sotterranea e Fiumi Nascosti 🌊',
+        fr: 'Ville Souterraine et Rivières Cachées 🌊',
+        pt: 'Cidade Subterrânea e Rios Escondidos 🌊',
       },
       content: {
         en: 'Beneath Catania’s bustling streets lies a hidden world. The city has been buried by lava flows at least seven times, and today, visitors can explore underground passages, ancient Roman ruins, and even a subterranean river called Amenano. Parts of this river are visible in Piazza Duomo, where it flows beneath the city’s main square.',
@@ -66,11 +66,11 @@ const content = {
     },
     {
       title: {
-        en: 'The Headless Horseman of Via dei Crociferi',
-        es: 'El Jinete sin Cabeza de Via dei Crociferi',
-        it: 'Il Cavaliere senza Testa di Via dei Crociferi',
-        fr: 'Le Cavalier sans Tête de la Via dei Crociferi',
-        pt: 'O Cavaleiro sem Cabeça da Via dei Crociferi',
+        en: 'The Headless Horseman of Via dei Crociferi 🐴',
+        es: 'El Jinete sin Cabeza de Via dei Crociferi 🐴',
+        it: 'Il Cavaliere senza Testa di Via dei Crociferi 🐴',
+        fr: 'Le Cavalier sans Tête de la Via dei Crociferi 🐴',
+        pt: 'O Cavaleiro sem Cabeça da Via dei Crociferi 🐴',
       },
       content: {
         en: 'One of Catania’s most famous legends is the tale of the headless horseman haunting Via dei Crociferi, a street lined with elegant Baroque palaces. According to local lore, a young man once dared to walk the street at night and was never seen again. To this day, locals say you can still hear the ghostly hoofbeats echoing through the night.',
@@ -82,11 +82,11 @@ const content = {
     },
     {
       title: {
-        en: 'Birthplace of Almond Granita',
-        es: 'Cuna de la Granita de Almendra',
-        it: 'Luogo di Nascita della Granita di Mandorle',
-        fr: 'Berceau de la Granita aux Amandes',
-        pt: 'Berço da Granita de Amêndoa',
+        en: 'Birthplace of Almond Granita 🍧',
+        es: 'Cuna de la Granita de Almendra 🍧',
+        it: 'Luogo di Nascita della Granita di Mandorle 🍧',
+        fr: 'Berceau de la Granita aux Amandes 🍧',
+        pt: 'Berço da Granita de Amêndoa 🍧',
       },
       content: {
         en: 'Catania claims to have perfected the classic Sicilian treat: almond granita served with a warm brioche. This refreshing combination is a beloved breakfast and snack, and locals proudly say it was invented (or at least perfected) in their city. The volcanic soil also produces some of the world’s best pistachios, which are used in many local desserts.',
@@ -98,11 +98,11 @@ const content = {
     },
     {
       title: {
-        en: 'A City Rebuilt from Ashes',
-        es: 'Una Ciudad Renacida de las Cenizas',
-        it: 'Una Città Ricostruita dalle Ceneri',
-        fr: 'Une Ville Reconstruite de ses Cendres',
-        pt: 'Uma Cidade Reconstruída das Cinzas',
+        en: 'A City Rebuilt from Ashes 🔥',
+        es: 'Una Ciudad Renacida de las Cenizas 🔥',
+        it: 'Una Città Ricostruita dalle Ceneri 🔥',
+        fr: 'Une Ville Reconstruite de ses Cendres 🔥',
+        pt: 'Uma Cidade Reconstruída das Cinzas 🔥',
       },
       content: {
         en: 'Catania has been destroyed and rebuilt multiple times due to earthquakes and volcanic eruptions. The most devastating events were the 1669 eruption of Mount Etna and the 1693 earthquake, which led to the city’s rebirth in the stunning Sicilian Baroque style. This resilience is a point of pride for locals and is reflected in the city’s vibrant, lively atmosphere.',
@@ -114,11 +114,11 @@ const content = {
     },
     {
       title: {
-        en: 'The Fish Market’s Sensory Explosion',
-        es: 'La Explosión Sensorial del Mercado de Pescado',
-        it: 'L\'Esplosione Sensoriale del Mercato del Pesce',
-        fr: 'L\'Explosion Sensorielle du Marché aux Poissons',
-        pt: 'A Explosão Sensorial do Mercado de Peixe',
+        en: 'The Fish Market’s Sensory Explosion 🐟',
+        es: 'La Explosión Sensorial del Mercado de Pescado 🐟',
+        it: 'L\'Esplosione Sensoriale del Mercato del Pesce 🐟',
+        fr: 'L\'Explosion Sensorielle du Marché aux Poissons 🐟',
+        pt: 'A Explosão Sensorial do Mercado de Peixe 🐟',
       },
       content: {
         en: 'La Pescheria, Catania’s legendary fish market, is not just about fish—it’s a full sensory experience. Towering pyramids of ruby-red prawns, glistening swordfish, and vendors shouting in dialect create a lively, chaotic scene that’s both chaotic and charming. The market is a must-visit for anyone wanting to experience authentic Sicilian life.',
@@ -130,11 +130,11 @@ const content = {
     },
     {
       title: {
-        en: 'Catania’s Greek Roots and Roman Glory',
-        es: 'Raíces Griegas y Gloria Romana de Catania',
-        it: 'Radici Greche e Gloria Romana di Catania',
-        fr: 'Racines Grecques et Gloire Romaine de Catane',
-        pt: 'Raízes Gregas e Glória Romana de Catânia',
+        en: 'Catania’s Greek Roots and Roman Glory 🏛️',
+        es: 'Raíces Griegas y Gloria Romana de Catania 🏛️',
+        it: 'Radici Greche e Gloria Romana di Catania 🏛️',
+        fr: 'Racines Grecques et Gloire Romaine de Catane 🏛️',
+        pt: 'Raízes Gregas e Glória Romana de Catânia 🏛️',
       },
       content: {
         en: 'Founded by Greek settlers in the 8th century BC, Catania was a major cultural and political center under Roman rule. The city’s Roman Amphitheater and Greek-Roman Theatre are still standing, offering a glimpse into its ancient past. The blend of Greek, Roman, Arab, and Norman influences makes Catania a melting pot of cultures.',
@@ -142,6 +142,22 @@ const content = {
         it: 'Fondata da coloni greci nell\'VIII secolo a.C., Catania fu un importante centro culturale e politico sotto il dominio romano. L\'Anfiteatro Romano e il Teatro Greco-Romano della città sono ancora in piedi e offrono uno spaccato del suo antico passato. La miscela di influenze greche, romane, arabe e normanne rende Catania un crogiolo di culture.',
         fr: 'Fondée par des colons grecs au VIIIe siècle avant J.-C., Catane était un centre culturel et politique majeur sous la domination romaine. L\'amphithéâtre romain et le théâtre gréco-romain de la ville sont toujours debout, offrant un aperçu de son passé antique. Le mélange d\'influences grecques, romaines, arabes et normandes fait de Catane un creuset de cultures.',
         pt: 'Fundada por colonos gregos no século VIII a.C., Catânia foi um importante centro cultural e político sob o domínio romano. O Anfiteatro Romano e o Teatro Greco-Romano da cidade ainda estão de pé, oferecendo um vislumbre de seu passado antigo. A mistura de influências gregas, romanas, árabes e normandas faz de Catânia um caldeirão de culturas.',
+      },
+    },
+    {
+      title: {
+        en: 'The Legend of the "Teste di Moro" 🏺',
+        es: 'La Leyenda de las "Teste di Moro" 🏺',
+        it: 'La Leggenda delle "Teste di Moro" 🏺',
+        fr: 'La Légende des "Teste di Moro" 🏺',
+        pt: 'A Lenda das "Teste di Moro" 🏺',
+      },
+      content: {
+        en: 'The colorful ceramic “Teste di Moro” vases found in Catania are inspired by a passionate Sicilian legend: a young woman, betrayed by her Moorish lover, used his severed head as a flower pot to keep him forever—starting a unique tradition of vibrant, hand-painted pottery symbolizing love and jealousy. This iconic art is now a beloved Sicilian craft and common decoration throughout the city.',
+        es: 'Los coloridos jarrones de cerámica “Teste di Moro” que se encuentran en Catania están inspirados en una apasionada leyenda siciliana: una joven, traicionada por su amante moro, usó su cabeza cortada como maceta para conservarlo para siempre, iniciando una tradición única de cerámica vibrante y pintada a mano que simboliza el amor y los celos. Este arte icónico es ahora una querida artesanía siciliana y una decoración común en toda la ciudad.',
+        it: 'I colorati vasi in ceramica “Teste di Moro” che si trovano a Catania si ispirano a una passionale leggenda siciliana: una giovane donna, tradita dal suo amante moro, usò la sua testa mozzata come vaso da fiori per tenerlo per sempre con sé, dando inizio a una tradizione unica di vibrante ceramica dipinta a mano che simboleggia l’amore e la gelosia. Quest’arte iconica è oggi un amato artigianato siciliano e una decorazione comune in tutta la città.',
+        fr: 'Les vases colorés en céramique “Teste di Moro” que l’on trouve à Catane sont inspirés d’une légende sicilienne passionnée : une jeune femme, trahie par son amant maure, a utilisé sa tête coupée comme pot de fleurs pour le garder à jamais, initiant une tradition unique de poterie vibrante et peinte à la main symbolisant l’amour et la jalousie. Cet art emblématique est aujourd’hui un artisanat sicilien très apprécié et une décoration courante dans toute la ville.',
+        pt: 'Os coloridos vasos de cerâmica “Teste di Moro” encontrados em Catânia são inspirados em uma apaixonada lenda siciliana: uma jovem, traída por seu amante mouro, usou sua cabeça decepada como vaso de flores para mantê-lo para sempre, dando início a uma tradição única de cerâmica vibrante e pintada à mão que simboliza o amor e o ciúme. Esta arte icônica é agora um amado artesanato siciliano e uma decoração comum em toda a cidade.',
       },
     },
   ],
