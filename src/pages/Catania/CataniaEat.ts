@@ -7,7 +7,18 @@ type RestaurantKey =
   | 'osteriaAnticaMarina'
   | 'meCumpariTuriddu'
   | 'sciroccoSicilianFishLab'
-  | 'ilSaleArtCafe';
+  | 'ilSaleArtCafe'
+  | 'alVicoloPizzaVino'
+  | 'locandaCerami'
+  | 'corteDeiMedici'
+  | 'savia'
+  | 'spinella'
+  | 'rixCatania'
+  | 'altaMira'
+  | 'nievski'
+  | 'iDolciDiNonnaVincenza'
+  | 'firstLoungeBar'
+  | 'razmataz';
 
 export interface TypicalDish {
   name: string;
@@ -87,7 +98,62 @@ const restaurantMetadata: Array<{ key: RestaurantKey; priceCategory: PriceCatego
   {
     key: 'ilSaleArtCafe',
     priceCategory: 'upscale',
-    mapUrl: 'https://maps.google.com/?q=Il+Sale+Art+Cafe+Catania',
+    mapUrl: 'https://maps.app.goo.gl/9YKzYg1Houtg66kq8',
+  },
+  {
+    key: 'alVicoloPizzaVino',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/bjvyassrb8WjqjEUA',
+  },
+  {
+    key: 'locandaCerami',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/CPJkvUhZqXvVtKBm9',
+  },
+  {
+    key: 'corteDeiMedici',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/Fmw3Ybo8ZoYskHwR9',
+  },
+  {
+    key: 'savia',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/4pY8G8G4Z3o4Y4Yx9',
+  },
+  {
+    key: 'spinella',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/qZ4Y4Y4Y4Y4Y4Yx9',
+  },
+  {
+    key: 'rixCatania',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/HP4UVWkDVJk6obau9',
+  },
+  {
+    key: 'altaMira',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/Z2EaK9tGGLyDdb7p6',
+  },
+  {
+    key: 'nievski',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/PhZ2wiXsCwfmxcwL7',
+  },
+  {
+    key: 'iDolciDiNonnaVincenza',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/GCqjvReXv3ReyxqS8',
+  },
+  {
+    key: 'firstLoungeBar',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/3b5vdZT2nGxbknPa6',
+  },
+  {
+    key: 'razmataz',
+    priceCategory: 'fair',
+    mapUrl: 'https://maps.app.goo.gl/QFu34UN2K2GHpmr79',
   },
 ];
 
@@ -169,7 +235,62 @@ More than just a regional cuisine, Sicilian food tells the story of a diverse hi
       ilSaleArtCafe: {
         name: 'Il Sale Art Cafe',
         description:
-          'Contemporary bistro near Via Santa Filomena offering creative takes on classics plus natural wines.',
+          'The pizza and beers are also very good here. Top pizzas are those with grilled zucchini, pesto, chopped pistachios and mozzarella.',
+      },
+      alVicoloPizzaVino: {
+        name: 'Al Vicolo Pizza&Vino',
+        description:
+          'Try to call first to book because it is usually full. Get pizza with the edges, mortadella and pistachio 😍',
+      },
+      locandaCerami: {
+        name: 'Locanda Cerami',
+        description:
+          'Also this excellent pizzeria, in one of the most suggestive streets which is Via Crociferi',
+      },
+      corteDeiMedici: {
+        name: 'Corte dei medici',
+        description:
+          'Or this one, really good but I think it\'s closed today',
+      },
+      savia: {
+        name: 'Savia',
+        description:
+          'For breakfast the best pastry shops are Savia and Spinella in Via Etna',
+      },
+      spinella: {
+        name: 'Spinella',
+        description:
+          'For breakfast the best pastry shops are Savia and Spinella in Via Etna',
+      },
+      rixCatania: {
+        name: 'Rix Catania',
+        description:
+          'For an aperitif or after-dinner drink',
+      },
+      altaMira: {
+        name: 'Alta Mira',
+        description:
+          'It looks ugly inside but in summer with the tables outside it\'s nice. Very nice outside and a renowned gay friendly place but from the \'68 generation',
+      },
+      nievski: {
+        name: 'Nievski',
+        description:
+          'Historic pub in Catania, a meeting point for generations of young people and students. It is located in the historic center, near the Ursino Castle.',
+      },
+      iDolciDiNonnaVincenza: {
+        name: 'I Dolci di Nonna Vincenza',
+        description:
+          'Another historic pastry shop where to go to eat',
+      },
+      firstLoungeBar: {
+        name: 'First Lounge Bar',
+        description:
+          'A modern and elegant lounge bar, ideal for an aperitif or an after-dinner drink. It offers a wide selection of cocktails and wines.',
+      },
+      razmataz: {
+        name: 'Razmataz | Wine Bar Catania',
+        description:
+          'A cozy and informal wine bar, with a wide selection of Sicilian and national wines. It also offers cutting boards with local products.',
       },
     },
     priceLabels: {
@@ -239,7 +360,62 @@ More than just a regional cuisine, Sicilian food tells the story of a diverse hi
       ilSaleArtCafe: {
         name: 'Il Sale Art Cafe',
         description:
-          'Bistró moderno cerca de Via Santa Filomena con platos creativos y vinos naturales.',
+          'Aquí también la pizza y las cervezas son muy buenas. Las mejores pizzas son las que llevan calabacín a la plancha, pesto, pistacho picado y mozzarella.',
+      },
+      alVicoloPizzaVino: {
+        name: 'Al Vicolo Pizza&Vino',
+        description:
+          'Intenta llamar antes para reservar porque suele estar lleno. Pide pizza con los bordes, mortadela y pistacho 😍',
+      },
+      locandaCerami: {
+        name: 'Locanda Cerami',
+        description:
+          'También esta excelente pizzería, en una de las calles más sugerentes que es Via Crociferi',
+      },
+      corteDeiMedici: {
+        name: 'Corte dei medici',
+        description:
+          'O este, muy bueno pero creo que hoy está cerrado',
+      },
+      savia: {
+        name: 'Savia',
+        description:
+          'Para el desayuno las mejores pastelerías son Savia y Spinella en Via Etnea',
+      },
+      spinella: {
+        name: 'Spinella',
+        description:
+          'Para el desayuno las mejores pastelerías son Savia y Spinella en Via Etnea',
+      },
+      rixCatania: {
+        name: 'Rix Catania',
+        description:
+          'Para un aperitivo o una copa después de cenar',
+      },
+      altaMira: {
+        name: 'Alta Mira',
+        description:
+          'Parece feo por dentro pero en verano con las mesas fuera es agradable. Muy agradable por fuera y un lugar conocido por ser gay friendly pero de la generación del 68',
+      },
+      nievski: {
+        name: 'Nievski',
+        description:
+          'Pub histórico de Catania, punto de encuentro de generaciones de jóvenes y estudiantes. Se encuentra en el centro histórico, cerca del Castillo de Ursino.',
+      },
+      iDolciDiNonnaVincenza: {
+        name: 'I Dolci di Nonna Vincenza',
+        description:
+          'Otra pastelería histórica donde ir a comer',
+      },
+      firstLoungeBar: {
+        name: 'First Lounge Bar',
+        description:
+          'Un lounge bar moderno y elegante, ideal para un aperitivo o una copa después de cenar. Ofrece una amplia selección de cócteles y vinos.',
+      },
+      razmataz: {
+        name: 'Razmataz | Wine Bar Catania',
+        description:
+          'Una vinoteca acogedora e informal, con una amplia selección de vinos sicilianos y nacionales. También ofrece tablas con productos locales.',
       },
     },
     priceLabels: {
@@ -309,7 +485,62 @@ More than just a regional cuisine, Sicilian food tells the story of a diverse hi
       ilSaleArtCafe: {
         name: 'Il Sale Art Cafe',
         description:
-          'Bistrot moderno vicino a Via Santa Filomena con rivisitazioni e vini naturali.',
+          'Buonissima anche qui la pizza e le birre. Pizza top quelle con le zucchine grigliate, pesto, granella di pistacchio e mozzarella.',
+      },
+      alVicoloPizzaVino: {
+        name: 'Al Vicolo Pizza&Vino',
+        description:
+          'Cercate di chiamare prima per prenotare perché di solito è pieno. Prendete pizza con i bordi, la mortadella e il pistacchio 😍',
+      },
+      locandaCerami: {
+        name: 'Locanda Cerami',
+        description:
+          'Anche questa ottima pizzeria, in una delle vie più suggestive che è Via Crociferi',
+      },
+      corteDeiMedici: {
+        name: 'Corte dei medici',
+        description:
+          'O anche questo, stra buono però oggi è chiuso mi sa',
+      },
+      savia: {
+        name: 'Savia',
+        description:
+          'Per la colazione le migliori pasticcerie sono Savia e Spinella in Via Etnea',
+      },
+      spinella: {
+        name: 'Spinella',
+        description:
+          'Per la colazione le migliori pasticcerie sono Savia e Spinella in Via Etnea',
+      },
+      rixCatania: {
+        name: 'Rix Catania',
+        description:
+          'Per aperitivo o drink post cena',
+      },
+      altaMira: {
+        name: 'Alta Mira',
+        description:
+          'Sembra brutto dentro ma d\'estate con i tavolini fuori è carino. Molto carino fuori e posto rinomatamente gay friendly ma della generazione del 68',
+      },
+      nievski: {
+        name: 'Nievski',
+        description:
+          'Pub storico di Catania, punto di ritrovo di generazioni di giovani e studenti. Si trova nel centro storico, vicino al Castello Ursino.',
+      },
+      iDolciDiNonnaVincenza: {
+        name: 'I Dolci di Nonna Vincenza',
+        description:
+          'Altra pasticceria storica dove andare a cibarsi',
+      },
+      firstLoungeBar: {
+        name: 'First Lounge Bar',
+        description:
+          'Un lounge bar moderno ed elegante, ideale per un aperitivo o un dopocena. Offre una vasta selezione di cocktail e vini.',
+      },
+      razmataz: {
+        name: 'Razmataz | Wine Bar Catania',
+        description:
+          'Un\'enoteca accogliente e informale, con un\'ampia selezione di vini siciliani e nazionali. Propone anche taglieri con prodotti del territorio.',
       },
     },
     priceLabels: {
@@ -379,7 +610,62 @@ More than just a regional cuisine, Sicilian food tells the story of a diverse hi
       ilSaleArtCafe: {
         name: 'Il Sale Art Cafe',
         description:
-          'Bistrot contemporain proche de la Via Santa Filomena, revisitant les classiques.',
+          'La pizza et les bières sont également très bonnes ici. Les meilleures pizzas sont celles avec des courgettes grillées, du pesto, des pistaches hachées et de la mozzarella.',
+      },
+      alVicoloPizzaVino: {
+        name: 'Al Vicolo Pizza&Vino',
+        description:
+          'Essayez d\'appeler d\'abord pour réserver car il est généralement complet. Prenez une pizza avec les bords, de la mortadelle et de la pistache 😍',
+      },
+      locandaCerami: {
+        name: 'Locanda Cerami',
+        description:
+          'Aussi cette excellente pizzeria, dans l\'une des rues les plus suggestives qui est la Via Crociferi',
+      },
+      corteDeiMedici: {
+        name: 'Corte dei medici',
+        description:
+          'Ou celui-ci, vraiment bien mais je pense qu\'il est fermé aujourd\'hui',
+      },
+      savia: {
+        name: 'Savia',
+        description:
+          'Pour le petit-déjeuner, les meilleures pâtisseries sont Savia et Spinella à Via Etnea',
+      },
+      spinella: {
+        name: 'Spinella',
+        description:
+          'Pour le petit-déjeuner, les meilleures pâtisseries sont Savia et Spinella à Via Etnea',
+      },
+      rixCatania: {
+        name: 'Rix Catania',
+        description:
+          'Pour un apéritif ou un verre après le dîner',
+      },
+      altaMira: {
+        name: 'Alta Mira',
+        description:
+          'Ça a l\'air moche à l\'intérieur mais en été avec les tables à l\'extérieur c\'est sympa. Très sympa à l\'extérieur et un endroit réputé pour être gay friendly mais de la génération 68',
+      },
+      nievski: {
+        name: 'Nievski',
+        description:
+          'Pub historique de Catane, point de rencontre de générations de jeunes et d\'étudiants. Il est situé dans le centre historique, près du château d\'Ursino.',
+      },
+      iDolciDiNonnaVincenza: {
+        name: 'I Dolci di Nonna Vincenza',
+        description:
+          'Une autre pâtisserie historique où aller manger',
+      },
+      firstLoungeBar: {
+        name: 'First Lounge Bar',
+        description:
+          'Un bar lounge moderne et élégant, idéal pour un apéritif ou un verre après le dîner. Il propose une large sélection de cocktails et de vins.',
+      },
+      razmataz: {
+        name: 'Razmataz | Wine Bar Catania',
+        description:
+          'Un bar à vin confortable et informel, avec une large sélection de vins siciliens et nationaux. Il propose également des planches de produits locaux.',
       },
     },
     priceLabels: {
@@ -449,7 +735,62 @@ More than just a regional cuisine, Sicilian food tells the story of a diverse hi
       ilSaleArtCafe: {
         name: 'Il Sale Art Cafe',
         description:
-          'Bistrô moderno na Via Santa Filomena com criações autorais e vinhos naturais.',
+          'A pizza e as cervejas também são muito boas aqui. As melhores pizzas são as com abobrinha grelhada, pesto, pistache picado e mussarela.',
+      },
+      alVicoloPizzaVino: {
+        name: 'Al Vicolo Pizza&Vino',
+        description:
+          'Tente ligar primeiro para reservar, pois geralmente está cheio. Peça pizza com as bordas, mortadela e pistache 😍',
+      },
+      locandaCerami: {
+        name: 'Locanda Cerami',
+        description:
+          'Também esta excelente pizzaria, em uma das ruas mais sugestivas que é a Via Crociferi',
+      },
+      corteDeiMedici: {
+        name: 'Corte dei medici',
+        description:
+          'Ou este, muito bom, mas acho que está fechado hoje',
+      },
+      savia: {
+        name: 'Savia',
+        description:
+          'Para o café da manhã, as melhores confeitarias são Savia e Spinella na Via Etnea',
+      },
+      spinella: {
+        name: 'Spinella',
+        description:
+          'Para o café da manhã, as melhores confeitarias são Savia e Spinella na Via Etnea',
+      },
+      rixCatania: {
+        name: 'Rix Catania',
+        description:
+          'Para um aperitivo ou uma bebida depois do jantar',
+      },
+      altaMira: {
+        name: 'Alta Mira',
+        description:
+          'Parece feio por dentro, mas no verão com as mesas do lado de fora é legal. Muito legal por fora e um lugar conhecido por ser gay friendly, mas da geração de 68',
+      },
+      nievski: {
+        name: 'Nievski',
+        description:
+          'Pub histórico em Catânia, ponto de encontro de gerações de jovens e estudantes. Está localizado no centro histórico, perto do Castelo Ursino.',
+      },
+      iDolciDiNonnaVincenza: {
+        name: 'I Dolci di Nonna Vincenza',
+        description:
+          'Outra pastelaria histórica onde ir comer',
+      },
+      firstLoungeBar: {
+        name: 'First Lounge Bar',
+        description:
+          'Um lounge bar moderno e elegante, ideal para um aperitivo ou uma bebida depois do jantar. Oferece uma vasta seleção de cocktails e vinhos.',
+      },
+      razmataz: {
+        name: 'Razmataz | Wine Bar Catania',
+        description:
+          'Um wine bar acolhedor e informal, com uma vasta seleção de vinhos sicilianos e nacionais. Também oferece tábuas de frios com produtos locais.',
       },
     },
     priceLabels: {
