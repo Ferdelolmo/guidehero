@@ -6,18 +6,19 @@ import { POICard } from '@/components/POICard';
 import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
-import { Loader2, ArrowLeft, Car, UtensilsCrossed, ExternalLink } from 'lucide-react';
+import { Loader2, ArrowLeft, Car, UtensilsCrossed, ExternalLink, Sparkles } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { guideData } from '@/data/guideData';
 import { getCataniaPlacesContent } from '@/pages/Catania/CataniaPlaces';
 import { getCataniaParkContent } from '@/pages/Catania/CataniaPark';
 import { getCataniaEatContent } from '@/pages/Catania/CataniaEat';
+import { getCataniaFunFactsContent } from '@/pages/Catania/CataniaFunFacts';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 
 const CataniaPage = () => {
-  const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat'>('places');
+  const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat' | 'fun-facts'>('places');
   const { location, error, isLoading } = useGeolocation();
   const navigate = useNavigate();
   const { language } = useLanguage();
@@ -25,6 +26,7 @@ const CataniaPage = () => {
   const placesContent = getCataniaPlacesContent(language);
   const parkContent = getCataniaParkContent(language);
   const eatContent = getCataniaEatContent(language);
+  const funFactsContent = getCataniaFunFactsContent(language);
   const renderCuisineParagraph = (paragraph: string, index: number) => (
     <p
       key={`cuisine-paragraph-${index}`}
@@ -162,6 +164,44 @@ const CataniaPage = () => {
       );
     }
 
+    if (activeTab === 'fun-facts') {
+      return (
+        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+          <div className="bg-card rounded-xl border border-border overflow-hidden" style={{ boxShadow: 'var(--shadow-soft)' }}>
+            <div className="h-48 w-full overflow-hidden">
+              <img
+                src={funFactsContent.heroImage}
+                alt="Catania Fun Facts"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="p-6 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground">{funFactsContent.title}</h2>
+                  <p className="text-sm text-muted-foreground">{funFactsContent.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Accordion type="multiple" className="space-y-4">
+            {funFactsContent.facts.map((fact, index) => (
+              <AccordionItem key={index} value={`fact-${index}`} className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <AccordionTrigger className="text-left text-lg font-semibold">{fact.title}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                  {fact.content}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      );
+    }
+
     return (
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         <div className="text-center space-y-2">
@@ -218,7 +258,7 @@ const CataniaPage = () => {
         </Button>
       </div>
       {renderContent()}
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} tabs={['map', 'places', 'park', 'eat']} />
+      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} tabs={['map', 'places', 'park', 'eat', 'fun-facts']} />
     </div>
   );
 };
