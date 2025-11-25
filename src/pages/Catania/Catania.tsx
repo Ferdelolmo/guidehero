@@ -225,6 +225,20 @@ const CataniaPage = () => {
           )}
         </div>
 
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-[300px] mx-auto overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/cCLAG7wuWIg?autoplay=1&loop=1&mute=1&playlist=cCLAG7wuWIg"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+              style={{ aspectRatio: '9 / 16' }}
+            ></iframe>
+          </div>
+        </div>
+
         <div className="space-y-4">
           {sortedPoints.map((poi) => {
             const distance = location
