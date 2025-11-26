@@ -6,18 +6,19 @@ import { POICard } from '@/components/POICard';
 import { MapView } from '@/components/MapView';
 import { BottomNav } from '@/components/BottomNav';
 import { Button } from '@/components/ui/button';
-import { Loader2, ArrowLeft, Car, UtensilsCrossed, ExternalLink } from 'lucide-react';
+import { Loader2, ArrowLeft, Car, UtensilsCrossed, ExternalLink, Sparkles } from 'lucide-react';
 import { PointOfInterest } from '@/types/tour';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { guideData } from '@/data/guideData';
 import { getCataniaPlacesContent } from '@/pages/Catania/CataniaPlaces';
 import { getCataniaParkContent } from '@/pages/Catania/CataniaPark';
 import { getCataniaEatContent } from '@/pages/Catania/CataniaEat';
+import { getCataniaFunFactsContent } from '@/pages/Catania/CataniaFunFacts';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 
 const CataniaPage = () => {
-  const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat'>('places');
+  const [activeTab, setActiveTab] = useState<'map' | 'places' | 'park' | 'eat' | 'fun-facts'>('places');
   const { location, error, isLoading } = useGeolocation();
   const navigate = useNavigate();
   const { language } = useLanguage();
@@ -25,6 +26,7 @@ const CataniaPage = () => {
   const placesContent = getCataniaPlacesContent(language);
   const parkContent = getCataniaParkContent(language);
   const eatContent = getCataniaEatContent(language);
+  const funFactsContent = getCataniaFunFactsContent(language);
   const renderCuisineParagraph = (paragraph: string, index: number) => (
     <p
       key={`cuisine-paragraph-${index}`}
@@ -61,7 +63,7 @@ const CataniaPage = () => {
 
     if (activeTab === 'park') {
       return (
-        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+        <div className="max-w-4xl mx-auto px-4 py-6 space-y-6">
           <div className="bg-card rounded-lg p-6 border border-border space-y-4 text-center" style={{ boxShadow: 'var(--shadow-soft)' }}>
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
               <Car className="h-8 w-8 text-primary" />
@@ -71,6 +73,57 @@ const CataniaPage = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {parkContent.description}
               </p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="grid gap-4 xl:grid-cols-2">
+              {parkContent.sections.map((section) => (
+                <section
+                  key={section.title}
+                  className="rounded-xl border border-border bg-card/70 p-5 text-sm shadow-sm"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-base font-semibold text-foreground">{section.title}</h3>
+                    <Badge
+                      variant="outline"
+                      className="text-[0.65rem] font-semibold uppercase tracking-wide"
+                    >
+                      {parkContent.labels[section.type]}
+                    </Badge>
+                  </div>
+
+                  {section.hints.length > 0 && (
+                    <ul className="mt-3 space-y-1 text-xs text-muted-foreground list-disc list-inside">
+                      {section.hints.map((hint) => (
+                        <li key={hint}>{hint}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="mt-4 space-y-3">
+                    {section.spots.map((spot) => (
+                      <article
+                        key={spot.name}
+                        className="rounded-lg border border-border/70 bg-muted/20 p-4"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <h4 className="text-sm font-semibold text-foreground">{spot.name}</h4>
+                          <Badge
+                            variant="secondary"
+                            className="text-[0.65rem] font-semibold uppercase tracking-wide"
+                          >
+                            {parkContent.labels[spot.type]}
+                          </Badge>
+                        </div>
+                        <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                          {spot.description}
+                        </p>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
           </div>
         </div>
@@ -162,6 +215,44 @@ const CataniaPage = () => {
       );
     }
 
+    if (activeTab === 'fun-facts') {
+      return (
+        <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+          <div className="bg-card rounded-xl border border-border overflow-hidden" style={{ boxShadow: 'var(--shadow-soft)' }}>
+            <div className="h-48 w-full overflow-hidden">
+              <img
+                src={funFactsContent.heroImage}
+                alt="Catania Fun Facts"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="p-6 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground">{funFactsContent.title}</h2>
+                  <p className="text-sm text-muted-foreground">{funFactsContent.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Accordion type="multiple" className="space-y-4">
+            {funFactsContent.facts.map((fact, index) => (
+              <AccordionItem key={index} value={`fact-${index}`} className="border border-border rounded-lg px-4" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <AccordionTrigger className="text-left text-lg font-semibold">{fact.title}</AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                  {fact.content}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      );
+    }
+
     return (
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         <div className="text-center space-y-2">
@@ -183,6 +274,20 @@ const CataniaPage = () => {
               <span className="block text-xs text-muted-foreground mt-1">{error}</span>
             </p>
           )}
+        </div>
+
+        <div className="w-full flex justify-center">
+          <div className="w-full max-w-[300px] mx-auto overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/cCLAG7wuWIg?autoplay=1&loop=1&mute=1&playlist=cCLAG7wuWIg"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+              style={{ aspectRatio: '9 / 16' }}
+            ></iframe>
+          </div>
         </div>
 
         <div className="space-y-4">
@@ -218,7 +323,7 @@ const CataniaPage = () => {
         </Button>
       </div>
       {renderContent()}
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} tabs={['map', 'places', 'park', 'eat']} />
+      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} tabs={['map', 'places', 'park', 'eat', 'fun-facts']} />
     </div>
   );
 };

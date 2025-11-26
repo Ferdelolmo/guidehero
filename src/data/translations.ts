@@ -75,6 +75,7 @@ interface BottomNavCopy {
   park: string;
   eat: string;
   info: string;
+  funFacts: string;
 }
 
 interface RutaDeLosPalaciosCopy {
@@ -237,6 +238,7 @@ export const translations: Record<Language, UiCopy> = {
       park: 'Park',
       eat: 'Eat',
       info: 'Info',
+      funFacts: 'Fun Facts',
     },
     categories: {
       monument: 'Monument',
@@ -388,6 +390,7 @@ export const translations: Record<Language, UiCopy> = {
       park: 'Aparcar',
       eat: 'Comer',
       info: 'Info',
+      funFacts: 'Curiosidades',
     },
     categories: {
       monument: 'Monumento',
@@ -539,6 +542,7 @@ export const translations: Record<Language, UiCopy> = {
       park: 'Parcheggio',
       eat: 'Cibo',
       info: 'Info',
+      funFacts: 'Curiosità',
     },
     categories: {
       monument: 'Monumento',
@@ -690,6 +694,7 @@ export const translations: Record<Language, UiCopy> = {
       park: 'Estacionar',
       eat: 'Comer',
       info: 'Info',
+      funFacts: 'Curiosidades',
     },
     categories: {
       monument: 'Monumento',
@@ -840,6 +845,7 @@ export const translations: Record<Language, UiCopy> = {
       park: 'Parking',
       eat: 'Gastronomie',
       info: 'Infos',
+      funFacts: 'Faits Amusants',
     },
     categories: {
       monument: 'Monument',

@@ -1,4 +1,4 @@
-import { Map, List, Info, Car, UtensilsCrossed } from 'lucide-react';
+import { Map, List, Info, Car, UtensilsCrossed, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTranslations } from '@/data/translations';
@@ -9,7 +9,7 @@ interface BottomNavProps {
   tabs?: TabId[];
 }
 
-type TabId = 'map' | 'places' | 'park' | 'eat' | 'info';
+type TabId = 'map' | 'places' | 'park' | 'eat' | 'info' | 'fun-facts';
 
 export const BottomNav = ({ activeTab, onTabChange, tabs }: BottomNavProps) => {
   const { language } = useLanguage();
@@ -21,6 +21,7 @@ export const BottomNav = ({ activeTab, onTabChange, tabs }: BottomNavProps) => {
     park: { icon: Car, label: copy.bottomNav.park },
     eat: { icon: UtensilsCrossed, label: copy.bottomNav.eat },
     info: { icon: Info, label: copy.bottomNav.info },
+    'fun-facts': { icon: Sparkles, label: copy.bottomNav.funFacts },
   };
 
   const renderedTabs = (tabs ?? ['map', 'places', 'park', 'eat', 'info']).map((id) => ({
