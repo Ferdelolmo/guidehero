@@ -34,6 +34,7 @@ export const POICard = ({ poi, distance, onClick }: POICardProps) => {
         <img
           src={poi.images[0]}
           alt={poi.name[language]}
+          loading="lazy"
           className="w-full h-full object-cover transition-transform hover:scale-110"
         />
       </div>
