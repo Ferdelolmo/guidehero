@@ -41,10 +41,10 @@ const CataniaPage = () => {
 
   const sortedPoints = location
     ? [...placesContent.points].sort((a, b) => {
-        const distA = calculateDistance(location.latitude, location.longitude, a.coordinates[0], a.coordinates[1]);
-        const distB = calculateDistance(location.latitude, location.longitude, b.coordinates[0], b.coordinates[1]);
-        return distA - distB;
-      })
+      const distA = calculateDistance(location.latitude, location.longitude, a.coordinates[0], a.coordinates[1]);
+      const distB = calculateDistance(location.latitude, location.longitude, b.coordinates[0], b.coordinates[1]);
+      return distA - distB;
+    })
     : placesContent.points;
 
   const renderContent = () => {
@@ -187,7 +187,7 @@ const CataniaPage = () => {
                 <div className="space-y-4">
                   {eatContent.restaurants.map((restaurant) => (
                     <div key={restaurant.name} className="rounded-lg border border-border p-4 space-y-3 bg-card/50">
-                        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                         <div>
                           <h3 className="text-base font-semibold text-foreground">{restaurant.name}</h3>
                           <p className="text-sm text-muted-foreground leading-relaxed">{restaurant.description}</p>

@@ -29,6 +29,7 @@ export const cataniaPoints: PointOfInterest[] = [
       fr: 'Le cœur de Catane bat sur cette place baroque, dominée par la fontaine de l\'éléphant en pierre de lave et la façade ornée de la cathédrale.',
     }),
     coordinates: [37.5024, 15.0876],
+    videoUrl: 'https://www.youtube.com/embed/EHYvPzvW3Y0?autoplay=1&mute=1&loop=1&playlist=EHYvPzvW3Y0',
     images: [
       'https://www.antichevolte.it/wp-content/uploads/2019/12/piazza-duomo-catania.jpg',
       'https://gruppoweekend.altervista.org/wp-content/uploads/2022/12/il-lenzuolo-dacqua-che-sgorga-nel-cuore-di-catania-04.jpg',
