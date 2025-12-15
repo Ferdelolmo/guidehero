@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@grafana/faro-react": "^2.0.2",
     "@grafana/faro-web-sdk": "^2.0.2",
     "@grafana/faro-web-tracing": "^2.0.2",
     "@hookform/resolvers": "^3.10.0",
