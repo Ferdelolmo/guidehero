@@ -25,7 +25,7 @@ export const POICard = ({ poi, distance, onClick }: POICardProps) => {
   const copy = getTranslations(language);
 
   return (
-    <Card 
+    <Card
       className="overflow-hidden cursor-pointer transition-all hover:shadow-lg hover:scale-[1.02] bg-card border-border"
       onClick={onClick}
       style={{ boxShadow: 'var(--shadow-soft)' }}
